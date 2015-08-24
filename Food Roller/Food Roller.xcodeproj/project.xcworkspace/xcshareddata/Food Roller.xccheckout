@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D04476B8-377E-4AE2-922C-AA945CDAD3EF</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Food Roller</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>24B78BB9D33511F0266F65BD49E680DF542847FD</key>
+		<string>github.com:bladdin/FoodRoller.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Food Roller/Food Roller.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>24B78BB9D33511F0266F65BD49E680DF542847FD</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:bladdin/FoodRoller.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>24B78BB9D33511F0266F65BD49E680DF542847FD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>24B78BB9D33511F0266F65BD49E680DF542847FD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FoodRoller</string>
+		</dict>
+	</array>
+</dict>
+</plist>
