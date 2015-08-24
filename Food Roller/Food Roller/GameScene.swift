@@ -17,10 +17,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     self.physicsWorld.gravity = CGVectorMake(0, -3)
     self.physicsWorld.contactDelegate = self
     
-//    self.background.position = CGPoint(x: self.frame.size.width / 2, y: self.frame.size.height / 2)
-//    self.background.size = CGSizeMake(self.frame.size.width, self.frame.size.height)
-//    self.addChild(self.background)
-    
     for (var i : CGFloat = 0; i < 2; i++ ) {
       let bg = SKSpriteNode(imageNamed: "background")
       bg.size = CGSize(width: self.frame.size.width, height: self.frame.size.height)
@@ -30,10 +26,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
       bg.name = "background"
       addChild(bg)
     }
-    
-//    var backgroundMoveLeft = SKAction.moveByX(-self.frame.size.width, y: 0, duration: NSTimeInterval(background.size.width*0.015))
-//    var backgroundReset = SKAction.moveByX(background.size.width, y: 0, duration: 0)
-//    var backgroundMovingLeftForever = SKAction.repeatActionForever(SKAction.sequence([backgroundMoveLeft, backgroundReset]))
     
     var hotdogTexture = SKTexture(imageNamed: "hotdog")
     self.hotdog = SKSpriteNode(texture: hotdogTexture)
