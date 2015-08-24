@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B535A7EA1B8B8BF1000AF550 /* RandomElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = B535A7E91B8B8BF1000AF550 /* RandomElements.swift */; };
+		B535A7EE1B8BA2A5000AF550 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B535A7ED1B8BA2A5000AF550 /* Constants.swift */; };
+		B535A7F01B8BB231000AF550 /* RandomCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B535A7EF1B8BB231000AF550 /* RandomCaller.swift */; };
 		6BCED71D1B8B8F9C006967AC /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BCED71C1B8B8F9C006967AC /* background.png */; };
 		6BCED7211B8B96FF006967AC /* hotdog.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BCED7201B8B96FF006967AC /* hotdog.png */; };
 		6BCED7231B8BAFBC006967AC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCED7221B8BAFBC006967AC /* MenuViewController.swift */; };
@@ -31,6 +34,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B535A7E91B8B8BF1000AF550 /* RandomElements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomElements.swift; sourceTree = "<group>"; };
+		B535A7ED1B8BA2A5000AF550 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B535A7EF1B8BB231000AF550 /* RandomCaller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomCaller.swift; sourceTree = "<group>"; };
 		6BCED71C1B8B8F9C006967AC /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		6BCED7201B8B96FF006967AC /* hotdog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hotdog.png; sourceTree = "<group>"; };
 		6BCED7221B8BAFBC006967AC /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +75,9 @@
 		B535A7E61B8B8B08000AF550 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B535A7E91B8B8BF1000AF550 /* RandomElements.swift */,
+				B535A7EF1B8BB231000AF550 /* RandomCaller.swift */,
+				B535A7ED1B8BA2A5000AF550 /* Constants.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -111,10 +120,10 @@
 			children = (
 				B57D73FD1B87D89200B3838B /* AppDelegate.swift */,
 				B535A7E61B8B8B08000AF550 /* Models */,
-				B57D73FF1B87D89200B3838B /* GameScene.sks */,
 				B535A7E71B8B8B11000AF550 /* Views */,
 				B535A7E81B8B8B26000AF550 /* Controllers */,
 				B57D74011B87D89200B3838B /* GameScene.swift */,
+				B57D73FF1B87D89200B3838B /* GameScene.sks */,
 				B57D74051B87D89200B3838B /* Main.storyboard */,
 				6BCED7221B8BAFBC006967AC /* MenuViewController.swift */,
 				B57D74081B87D89200B3838B /* Images.xcassets */,
@@ -255,8 +264,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B57D74021B87D89200B3838B /* GameScene.swift in Sources */,
+				B535A7EA1B8B8BF1000AF550 /* RandomElements.swift in Sources */,
 				B57D74041B87D89200B3838B /* GameViewController.swift in Sources */,
 				B57D73FE1B87D89200B3838B /* AppDelegate.swift in Sources */,
+				B535A7EE1B8BA2A5000AF550 /* Constants.swift in Sources */,
+				B535A7F01B8BB231000AF550 /* RandomCaller.swift in Sources */,
 				6BCED7231B8BAFBC006967AC /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
