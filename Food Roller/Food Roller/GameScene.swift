@@ -46,10 +46,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     self.addChild(self.hotdog)
     
 
-    
-    //To create path use:
-    //var bob = CreatePath.CreatePath(<#xInitialPosition: Int#>, yInitialPosition: <#Int#>, width: <#Int#>)
-    //self.addChild(bob)
+//    
+//    To create path use:
+//    var bob = CreatePath.CreatePath(<#xInitialPosition: Int#>, yInitialPosition: <#Int#>, width: <#Int#>)
+//    self.addChild(bob)
     
   }
   
