@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B535A7EA1B8B8BF1000AF550 /* RandomElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = B535A7E91B8B8BF1000AF550 /* RandomElements.swift */; };
 		B535A7EE1B8BA2A5000AF550 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B535A7ED1B8BA2A5000AF550 /* Constants.swift */; };
+		B535A7F01B8BB231000AF550 /* RandomCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B535A7EF1B8BB231000AF550 /* RandomCaller.swift */; };
 		B57D73FE1B87D89200B3838B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57D73FD1B87D89200B3838B /* AppDelegate.swift */; };
 		B57D74001B87D89200B3838B /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B57D73FF1B87D89200B3838B /* GameScene.sks */; };
 		B57D74021B87D89200B3838B /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57D74011B87D89200B3838B /* GameScene.swift */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		B535A7E91B8B8BF1000AF550 /* RandomElements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomElements.swift; sourceTree = "<group>"; };
 		B535A7ED1B8BA2A5000AF550 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B535A7EF1B8BB231000AF550 /* RandomCaller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomCaller.swift; sourceTree = "<group>"; };
 		B57D73F81B87D89200B3838B /* Food Roller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food Roller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B57D73FC1B87D89200B3838B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B57D73FD1B87D89200B3838B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				B535A7E91B8B8BF1000AF550 /* RandomElements.swift */,
+				B535A7EF1B8BB231000AF550 /* RandomCaller.swift */,
 				B535A7ED1B8BA2A5000AF550 /* Constants.swift */,
 			);
 			name = Models;
@@ -254,6 +257,7 @@
 				B57D74041B87D89200B3838B /* GameViewController.swift in Sources */,
 				B57D73FE1B87D89200B3838B /* AppDelegate.swift in Sources */,
 				B535A7EE1B8BA2A5000AF550 /* Constants.swift in Sources */,
+				B535A7F01B8BB231000AF550 /* RandomCaller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
