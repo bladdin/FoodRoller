@@ -10,6 +10,9 @@
 		B535A7EA1B8B8BF1000AF550 /* RandomElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = B535A7E91B8B8BF1000AF550 /* RandomElements.swift */; };
 		B535A7EE1B8BA2A5000AF550 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B535A7ED1B8BA2A5000AF550 /* Constants.swift */; };
 		B535A7F01B8BB231000AF550 /* RandomCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B535A7EF1B8BB231000AF550 /* RandomCaller.swift */; };
+		6BCED71D1B8B8F9C006967AC /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BCED71C1B8B8F9C006967AC /* background.png */; };
+		6BCED7211B8B96FF006967AC /* hotdog.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BCED7201B8B96FF006967AC /* hotdog.png */; };
+		6BCED7231B8BAFBC006967AC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCED7221B8BAFBC006967AC /* MenuViewController.swift */; };
 		B57D73FE1B87D89200B3838B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57D73FD1B87D89200B3838B /* AppDelegate.swift */; };
 		B57D74001B87D89200B3838B /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B57D73FF1B87D89200B3838B /* GameScene.sks */; };
 		B57D74021B87D89200B3838B /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57D74011B87D89200B3838B /* GameScene.swift */; };
@@ -34,6 +37,9 @@
 		B535A7E91B8B8BF1000AF550 /* RandomElements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomElements.swift; sourceTree = "<group>"; };
 		B535A7ED1B8BA2A5000AF550 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B535A7EF1B8BB231000AF550 /* RandomCaller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomCaller.swift; sourceTree = "<group>"; };
+		6BCED71C1B8B8F9C006967AC /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		6BCED7201B8B96FF006967AC /* hotdog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hotdog.png; sourceTree = "<group>"; };
+		6BCED7221B8BAFBC006967AC /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		B57D73F81B87D89200B3838B /* Food Roller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food Roller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B57D73FC1B87D89200B3838B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B57D73FD1B87D89200B3838B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,7 +125,10 @@
 				B57D74011B87D89200B3838B /* GameScene.swift */,
 				B57D73FF1B87D89200B3838B /* GameScene.sks */,
 				B57D74051B87D89200B3838B /* Main.storyboard */,
+				6BCED7221B8BAFBC006967AC /* MenuViewController.swift */,
 				B57D74081B87D89200B3838B /* Images.xcassets */,
+				6BCED71C1B8B8F9C006967AC /* background.png */,
+				6BCED7201B8B96FF006967AC /* hotdog.png */,
 				B57D740A1B87D89200B3838B /* LaunchScreen.xib */,
 				B57D73FB1B87D89200B3838B /* Supporting Files */,
 			);
@@ -232,9 +241,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B57D740C1B87D89200B3838B /* LaunchScreen.xib in Resources */,
+				6BCED71D1B8B8F9C006967AC /* background.png in Resources */,
 				B57D74091B87D89200B3838B /* Images.xcassets in Resources */,
 				B57D74001B87D89200B3838B /* GameScene.sks in Resources */,
 				B57D74071B87D89200B3838B /* Main.storyboard in Resources */,
+				6BCED7211B8B96FF006967AC /* hotdog.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +269,7 @@
 				B57D73FE1B87D89200B3838B /* AppDelegate.swift in Sources */,
 				B535A7EE1B8BA2A5000AF550 /* Constants.swift in Sources */,
 				B535A7F01B8BB231000AF550 /* RandomCaller.swift in Sources */,
+				6BCED7231B8BAFBC006967AC /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
