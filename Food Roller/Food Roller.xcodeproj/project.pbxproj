@@ -66,6 +66,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B535A7E61B8B8B08000AF550 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		B535A7E71B8B8B11000AF550 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		B535A7E81B8B8B26000AF550 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B57D74031B87D89200B3838B /* GameViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		B57D73EF1B87D89200B3838B = {
 			isa = PBXGroup;
 			children = (
@@ -88,9 +110,11 @@
 			isa = PBXGroup;
 			children = (
 				B57D73FD1B87D89200B3838B /* AppDelegate.swift */,
+				B535A7E61B8B8B08000AF550 /* Models */,
 				B57D73FF1B87D89200B3838B /* GameScene.sks */,
+				B535A7E71B8B8B11000AF550 /* Views */,
+				B535A7E81B8B8B26000AF550 /* Controllers */,
 				B57D74011B87D89200B3838B /* GameScene.swift */,
-				B57D74031B87D89200B3838B /* GameViewController.swift */,
 				B57D74051B87D89200B3838B /* Main.storyboard */,
 				6BCED7221B8BAFBC006967AC /* MenuViewController.swift */,
 				B57D74081B87D89200B3838B /* Images.xcassets */,
