@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B5218871B8BC3C300BF9DA4 /* spikes.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B5218861B8BC3C300BF9DA4 /* spikes.png */; };
 		6BCED71D1B8B8F9C006967AC /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BCED71C1B8B8F9C006967AC /* background.png */; };
 		6BCED7211B8B96FF006967AC /* hotdog.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BCED7201B8B96FF006967AC /* hotdog.png */; };
 		6BCED7231B8BAFBC006967AC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCED7221B8BAFBC006967AC /* MenuViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6B5218861B8BC3C300BF9DA4 /* spikes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spikes.png; sourceTree = "<group>"; };
 		6BCED71C1B8B8F9C006967AC /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		6BCED7201B8B96FF006967AC /* hotdog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hotdog.png; sourceTree = "<group>"; };
 		6BCED7221B8BAFBC006967AC /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 		B535A7E71B8B8B11000AF550 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B57D74051B87D89200B3838B /* Main.storyboard */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -95,6 +98,9 @@
 		B535A7E81B8B8B26000AF550 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B57D74011B87D89200B3838B /* GameScene.swift */,
+				B57D73FF1B87D89200B3838B /* GameScene.sks */,
+				6BCED7221B8BAFBC006967AC /* MenuViewController.swift */,
 				B57D74031B87D89200B3838B /* GameViewController.swift */,
 			);
 			name = Controllers;
@@ -125,14 +131,6 @@
 				B535A7E61B8B8B08000AF550 /* Models */,
 				B535A7E71B8B8B11000AF550 /* Views */,
 				B535A7E81B8B8B26000AF550 /* Controllers */,
-				B57D74011B87D89200B3838B /* GameScene.swift */,
-				B57D73FF1B87D89200B3838B /* GameScene.sks */,
-				B57D74051B87D89200B3838B /* Main.storyboard */,
-				6BCED7221B8BAFBC006967AC /* MenuViewController.swift */,
-				B57D74081B87D89200B3838B /* Images.xcassets */,
-				6BCED71C1B8B8F9C006967AC /* background.png */,
-				6BCED7201B8B96FF006967AC /* hotdog.png */,
-				B57D740A1B87D89200B3838B /* LaunchScreen.xib */,
 				B57D73FB1B87D89200B3838B /* Supporting Files */,
 			);
 			path = "Food Roller";
@@ -141,6 +139,11 @@
 		B57D73FB1B87D89200B3838B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B57D74081B87D89200B3838B /* Images.xcassets */,
+				6B5218861B8BC3C300BF9DA4 /* spikes.png */,
+				6BCED71C1B8B8F9C006967AC /* background.png */,
+				6BCED7201B8B96FF006967AC /* hotdog.png */,
+				B57D740A1B87D89200B3838B /* LaunchScreen.xib */,
 				B57D73FC1B87D89200B3838B /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -248,6 +251,7 @@
 				B57D74091B87D89200B3838B /* Images.xcassets in Resources */,
 				B57D74001B87D89200B3838B /* GameScene.sks in Resources */,
 				B57D74071B87D89200B3838B /* Main.storyboard in Resources */,
+				6B5218871B8BC3C300BF9DA4 /* spikes.png in Resources */,
 				6BCED7211B8B96FF006967AC /* hotdog.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
