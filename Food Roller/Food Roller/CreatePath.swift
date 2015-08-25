@@ -24,16 +24,9 @@ class CreatePath {
     
     return objectPath
     
-//    var BlocksInBigBlock = [SKSpriteNode]()
-//    var i = CGFloat(0)
-    
-//    for number in 1...numberOfBlocksNeeded {
-//     let oneBlock = SKSpriteNode(imageNamed: "indivudualBlock")
-//     oneBlock.position.x = xPosition + (i * oneBlock.frame.size.width)
-//     oneBlock.position.y = yPosition
-//     BlocksInBigBlock.append(oneBlock)
-//      i++
-//    }
-//
+  }
+  
+  class func MovePathObject(object: SKSpriteNode){
+    object.position.x = object.position.x - (kSpeedOfWorld) * (kParalaxMultiplyer)
   }
 }

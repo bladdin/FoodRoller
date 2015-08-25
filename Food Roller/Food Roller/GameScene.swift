@@ -11,6 +11,7 @@ import SpriteKit
 class GameScene: SKScene, SKPhysicsContactDelegate {
   var hotdog = SKSpriteNode()
   var backgroundSpeed : CGFloat = 3
+  var bob = SKSpriteNode()
   
   override func didMoveToView(view: SKView) {
     self.physicsWorld.gravity = CGVectorMake(0, -3)
@@ -45,12 +46,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     self.addChild(self.hotdog)
     
-
+    
 //    
 //    To create path use:
 //    var bob = CreatePath.CreatePath(<#xInitialPosition: Int#>, yInitialPosition: <#Int#>, width: <#Int#>)
 //    self.addChild(bob)
+    bob = CreatePath.CreatePath(Int(self.frame.size.width-300), yInitialPosition: Int((self.frame.height/2)-200), width: 500)
+    self.addChild(bob)
+    bob.physicsBody = SKPhysicsBody(rectangleOfSize: bob.size)
+    bob.physicsBody?.affectedByGravity = false
+    bob.physicsBody?.dynamic = false
     
+ 
   }
   
   override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
@@ -68,5 +75,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
       }
     })
+    CreatePath.MovePathObject(bob)
   }
+  
 }
