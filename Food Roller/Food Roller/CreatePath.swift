@@ -24,6 +24,9 @@ class CreatePath {
     objectPath.physicsBody?.affectedByGravity = false
     objectPath.physicsBody?.dynamic = false
     
+    
+     
+    
     return objectPath
     
   }

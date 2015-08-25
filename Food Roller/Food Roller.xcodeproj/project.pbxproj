@@ -32,6 +32,7 @@
 		B57D74071B87D89200B3838B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B57D74051B87D89200B3838B /* Main.storyboard */; };
 		B57D740C1B87D89200B3838B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B57D740A1B87D89200B3838B /* LaunchScreen.xib */; };
 		B57D74181B87D89200B3838B /* Food_RollerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57D74171B87D89200B3838B /* Food_RollerTests.swift */; };
+		B5C9A1E31B8D1EED00A6CF0F /* PopAndPushPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C9A1E21B8D1EED00A6CF0F /* PopAndPushPaths.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		B57D74111B87D89200B3838B /* Food RollerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Food RollerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B57D74161B87D89200B3838B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B57D74171B87D89200B3838B /* Food_RollerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food_RollerTests.swift; sourceTree = "<group>"; };
+		B5C9A1E21B8D1EED00A6CF0F /* PopAndPushPaths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopAndPushPaths.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				B535A7E91B8B8BF1000AF550 /* RandomElements.swift */,
 				B535A7EF1B8BB231000AF550 /* RandomCaller.swift */,
 				B535A7ED1B8BA2A5000AF550 /* Constants.swift */,
+				B5C9A1E21B8D1EED00A6CF0F /* PopAndPushPaths.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -242,7 +245,7 @@
 				TargetAttributes = {
 					B57D73F71B87D89200B3838B = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 597HR9EHGW;
+						DevelopmentTeam = A4CYB57ULV;
 					};
 					B57D74101B87D89200B3838B = {
 						CreatedOnToolsVersion = 6.4;
@@ -309,6 +312,7 @@
 			files = (
 				B57D74021B87D89200B3838B /* GameScene.swift in Sources */,
 				B535A7EA1B8B8BF1000AF550 /* RandomElements.swift in Sources */,
+				B5C9A1E31B8D1EED00A6CF0F /* PopAndPushPaths.swift in Sources */,
 				B57D74041B87D89200B3838B /* GameViewController.swift in Sources */,
 				B57D73FE1B87D89200B3838B /* AppDelegate.swift in Sources */,
 				AEC2DF471B8BD80600B99985 /* CreatePath.swift in Sources */,
@@ -373,7 +377,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Benjamin Laddin (DF9JBJX4QD)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Benjamin Laddin (DF9JBJX4QD)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -417,7 +422,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Benjamin Laddin (DF9JBJX4QD)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Benjamin Laddin (DF9JBJX4QD)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
