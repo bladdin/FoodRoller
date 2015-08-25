@@ -52,16 +52,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     self.addChild(self.hotdog)
     
     
-//    
-//    To create path use:
-//    var bob = CreatePath.CreatePath(<#xInitialPosition: Int#>, yInitialPosition: <#Int#>, width: <#Int#>)
-//    self.addChild(bob)
-    bob = CreatePath.CreatePath(Int(self.frame.size.width-300), yInitialPosition: Int((self.frame.height/2)-200), width: 500)
+    bob = CreatePath.CreatePath(Int(self.frame.size.width-300), yInitialPosition: Int((self.frame.height/2)-200), width: 5)
     self.addChild(bob)
-    bob.physicsBody = SKPhysicsBody(rectangleOfSize: bob.size)
-    bob.physicsBody?.affectedByGravity = false
-    bob.physicsBody?.dynamic = false
-    
  
   }
   
