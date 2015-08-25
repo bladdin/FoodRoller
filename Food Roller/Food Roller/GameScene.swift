@@ -97,5 +97,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
           }
         }
       })
+    CreatePath.MovePathObject(bob)
     }
-}
+  }
+   
