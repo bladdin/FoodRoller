@@ -13,7 +13,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   var backgroundSpeed : CGFloat = 1
   var spikeSpeed : CGFloat = 1
   var bob = SKSpriteNode()
-  let panRec = UIPanGestureRecognizer()
+
+
+  var arrayOfPathsInGame = [SKSpriteNode()]
+
   
   override func didMoveToView(view: SKView) {
 //    self.physicsWorld.gravity = CGVectorMake(0, -3)
@@ -66,17 +69,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     self.addChild(self.hotdog)
     
-    
-//    
-//    To create path use:
-//    var bob = CreatePath.CreatePath(<#xInitialPosition: Int#>, yInitialPosition: <#Int#>, width: <#Int#>)
-//    self.addChild(bob)
-    bob = CreatePath.CreatePath(Int(self.frame.size.width-500), yInitialPosition: Int((self.frame.height/2)-200), width: 500)
-    self.addChild(bob)
-    bob.physicsBody = SKPhysicsBody(rectangleOfSize: bob.size)
-    bob.physicsBody?.affectedByGravity = false
-    bob.physicsBody?.dynamic = false
-    
+
+
+    for index in 1...3{
+      bob = CreatePath.CreatePath(Int(RandomElements.randomPathVarYPosition(800, max: 1000))+index*50, yInitialPosition: (RandomElements.randomPathVarYPosition(180, max: Int(self.frame.height)-68)), width: (RandomElements.randomPathLength()!))
+      //println(self.frame.height)
+      self.arrayOfPathsInGame.append(bob)
+      self.addChild(bob)
+    }
+
+
  
   }
   
@@ -141,7 +143,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
           }
         }
       })
+    for bob in self.arrayOfPathsInGame{
     CreatePath.MovePathObject(bob)
+    }
     }
   }
 

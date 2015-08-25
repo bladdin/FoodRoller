@@ -16,6 +16,11 @@
 		6B5218951B8C60F400BF9DA4 /* hsbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B5218941B8C60F400BF9DA4 /* hsbg.png */; };
 		6BCED71D1B8B8F9C006967AC /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BCED71C1B8B8F9C006967AC /* background.png */; };
 		6BCED7231B8BAFBC006967AC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCED7221B8BAFBC006967AC /* MenuViewController.swift */; };
+		AE65B1EB1B8CFEAC008EF023 /* Block1.png in Resources */ = {isa = PBXBuildFile; fileRef = AE65B1E61B8CFEAC008EF023 /* Block1.png */; };
+		AE65B1ED1B8CFEAC008EF023 /* Block3.png in Resources */ = {isa = PBXBuildFile; fileRef = AE65B1E81B8CFEAC008EF023 /* Block3.png */; };
+		AE65B1EE1B8CFEAC008EF023 /* Block4.png in Resources */ = {isa = PBXBuildFile; fileRef = AE65B1E91B8CFEAC008EF023 /* Block4.png */; };
+		AE65B1EF1B8CFEAC008EF023 /* Block5.png in Resources */ = {isa = PBXBuildFile; fileRef = AE65B1EA1B8CFEAC008EF023 /* Block5.png */; };
+		AE65B1F11B8CFEE5008EF023 /* Block2.png in Resources */ = {isa = PBXBuildFile; fileRef = AE65B1F01B8CFEE5008EF023 /* Block2.png */; };
 		AEC2DF471B8BD80600B99985 /* CreatePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC2DF461B8BD80600B99985 /* CreatePath.swift */; };
 		B535A7EA1B8B8BF1000AF550 /* RandomElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = B535A7E91B8B8BF1000AF550 /* RandomElements.swift */; };
 		B535A7EE1B8BA2A5000AF550 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B535A7ED1B8BA2A5000AF550 /* Constants.swift */; };
@@ -49,6 +54,11 @@
 		6B5218941B8C60F400BF9DA4 /* hsbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hsbg.png; sourceTree = "<group>"; };
 		6BCED71C1B8B8F9C006967AC /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		6BCED7221B8BAFBC006967AC /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		AE65B1E61B8CFEAC008EF023 /* Block1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Block1.png; sourceTree = "<group>"; };
+		AE65B1E81B8CFEAC008EF023 /* Block3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Block3.png; sourceTree = "<group>"; };
+		AE65B1E91B8CFEAC008EF023 /* Block4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Block4.png; sourceTree = "<group>"; };
+		AE65B1EA1B8CFEAC008EF023 /* Block5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Block5.png; sourceTree = "<group>"; };
+		AE65B1F01B8CFEE5008EF023 /* Block2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Block2.png; sourceTree = "<group>"; };
 		AEC2DF461B8BD80600B99985 /* CreatePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePath.swift; sourceTree = "<group>"; };
 		B535A7E91B8B8BF1000AF550 /* RandomElements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomElements.swift; sourceTree = "<group>"; };
 		B535A7ED1B8BA2A5000AF550 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -150,6 +160,11 @@
 				6B52188C1B8C474D00BF9DA4 /* Images.xcassets */,
 				6B5218941B8C60F400BF9DA4 /* hsbg.png */,
 				6B5218921B8C59B200BF9DA4 /* bg.png */,
+				AE65B1E61B8CFEAC008EF023 /* Block1.png */,
+				AE65B1F01B8CFEE5008EF023 /* Block2.png */,
+				AE65B1E81B8CFEAC008EF023 /* Block3.png */,
+				AE65B1E91B8CFEAC008EF023 /* Block4.png */,
+				AE65B1EA1B8CFEAC008EF023 /* Block5.png */,
 				6B52188E1B8C51F100BF9DA4 /* backgroundai.png */,
 				6B5218861B8BC3C300BF9DA4 /* spikes.png */,
 				6B5218901B8C51F800BF9DA4 /* spike.png */,
@@ -227,7 +242,7 @@
 				TargetAttributes = {
 					B57D73F71B87D89200B3838B = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 597HR9EHGW;
+						DevelopmentTeam = A4CYB57ULV;
 					};
 					B57D74101B87D89200B3838B = {
 						CreatedOnToolsVersion = 6.4;
@@ -261,13 +276,18 @@
 			files = (
 				6B5218931B8C59B200BF9DA4 /* bg.png in Resources */,
 				B57D740C1B87D89200B3838B /* LaunchScreen.xib in Resources */,
+				AE65B1EE1B8CFEAC008EF023 /* Block4.png in Resources */,
 				6B5218951B8C60F400BF9DA4 /* hsbg.png in Resources */,
 				6B5218911B8C51F800BF9DA4 /* spike.png in Resources */,
 				6BCED71D1B8B8F9C006967AC /* background.png in Resources */,
+				AE65B1EB1B8CFEAC008EF023 /* Block1.png in Resources */,
 				6B52188D1B8C474D00BF9DA4 /* Images.xcassets in Resources */,
 				B57D74001B87D89200B3838B /* GameScene.sks in Resources */,
+				AE65B1ED1B8CFEAC008EF023 /* Block3.png in Resources */,
+				AE65B1F11B8CFEE5008EF023 /* Block2.png in Resources */,
 				B57D74071B87D89200B3838B /* Main.storyboard in Resources */,
 				6B52188F1B8C51F100BF9DA4 /* backgroundai.png in Resources */,
+				AE65B1EF1B8CFEAC008EF023 /* Block5.png in Resources */,
 				6B5218871B8BC3C300BF9DA4 /* spikes.png in Resources */,
 				6B5218891B8BE15700BF9DA4 /* hotdog.png in Resources */,
 			);
@@ -353,7 +373,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Benjamin Laddin (DF9JBJX4QD)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Benjamin Laddin (DF9JBJX4QD)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -397,7 +418,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Benjamin Laddin (DF9JBJX4QD)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Benjamin Laddin (DF9JBJX4QD)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
