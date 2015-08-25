@@ -22,6 +22,9 @@ class CreatePath {
     objectPath.position.y = yPosition
     objectPath.zPosition = CGFloat(kForeground)
     
+    
+     
+    
     return objectPath
     
 //    var BlocksInBigBlock = [SKSpriteNode]()
