@@ -53,9 +53,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     self.addChild(self.hotdog)
 
     for index in 1...3{
-      bob = CreatePath.CreatePath(Int(RandomElements.randomPathVarYPosition(300, max: 750)), yInitialPosition: (RandomElements.randomPathVarYPosition(180, max: Int(self.frame.height)-68)), width: (RandomElements.randomPathLength()!))
+      bob = CreatePath.CreatePath(Int(RandomElements.randomPathVarYPosition(800, max: 1000))+index*50, yInitialPosition: (RandomElements.randomPathVarYPosition(180, max: Int(self.frame.height)-68)), width: (RandomElements.randomPathLength()!))
       //println(self.frame.height)
-
+      self.arrayOfPathsInGame.append(bob)
       self.addChild(bob)
     }
 
@@ -91,7 +91,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
           }
         }
       })
+    for bob in self.arrayOfPathsInGame{
     CreatePath.MovePathObject(bob)
+    }
     }
   }
    
