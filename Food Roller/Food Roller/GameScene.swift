@@ -30,7 +30,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
       let spikeNode = SKSpriteNode(texture: groundTexture)
       spikeNode.anchorPoint = CGPointZero
       spikeNode.size = CGSize(width: spikeNode.size.width, height: spikeNode.size.height)
-      spikeNode.position = CGPoint(x: i * spikeNode.size.width, y: -self.view!.frame.height + 400 )
+      spikeNode.position = CGPoint(x: i * spikeNode.size.width, y: -50 )
 //      spikeNode.physicsBody = SKPhysicsBody(rectangleOfSize: spikeNode.size)
       spikeNode.physicsBody = SKPhysicsBody(texture: groundTexture, size: spikeNode.size)
       spikeNode.physicsBody?.affectedByGravity = false
@@ -61,8 +61,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
     self.hotdog.physicsBody?.velocity = CGVectorMake(0, 10)
     self.hotdog.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 300))
-
-
   }
   
   override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
