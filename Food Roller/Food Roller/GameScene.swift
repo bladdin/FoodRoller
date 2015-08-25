@@ -10,13 +10,9 @@ import SpriteKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
   var hotdog = SKSpriteNode()
-<<<<<<< HEAD
   var backgroundSpeed : CGFloat = 1
   var spikeSpeed : CGFloat = 1
-=======
-  var backgroundSpeed : CGFloat = 3
   var bob = SKSpriteNode()
->>>>>>> master
   
   override func didMoveToView(view: SKView) {
 //    self.physicsWorld.gravity = CGVectorMake(0, -3)
@@ -88,7 +84,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
           bg.position = CGPoint(x: bg.position.x + bg.size.width * 2, y: bg.position.y)
         }
       }
-<<<<<<< HEAD
       })
       
       enumerateChildNodesWithName("spike", usingBlock: { (node, stop) -> Void in
@@ -99,11 +94,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
           }
         }
       })
-    }
-=======
-    })
     CreatePath.MovePathObject(bob)
+    }
   }
-  
->>>>>>> master
-}
+   
