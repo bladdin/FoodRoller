@@ -21,6 +21,9 @@ class CreatePath {
     objectPath.position.x = xPosition
     objectPath.position.y = yPosition
     objectPath.zPosition = CGFloat(kForeground)
+    objectPath.physicsBody = SKPhysicsBody(rectangleOfSize: objectPath.size)
+    objectPath.physicsBody?.affectedByGravity = false
+    objectPath.physicsBody?.dynamic = false
     
     return objectPath
     
