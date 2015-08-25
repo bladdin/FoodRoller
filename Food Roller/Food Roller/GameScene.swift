@@ -19,18 +19,27 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
       let bg = SKSpriteNode(imageNamed: "background")
       let groundTexture = SKTexture(imageNamed: "spikes")
       let spikeNode = SKSpriteNode(texture: groundTexture)
+      let spikeNode2 = SKSpriteNode(texture: groundTexture)
       bg.size = CGSize(width: self.frame.size.width, height: self.frame.size.height)
       bg.anchorPoint = CGPointZero
       bg.position = CGPoint(x: i * bg.size.width, y: 0)
       
       bg.name = "background"
       spikeNode.size = CGSize(width: bg.size.width, height: spikeNode.size.height)
-      spikeNode.position = CGPoint(x: 0, y: self.frame.size.height / 6 )
+      spikeNode.position = CGPoint(x: 0, y: self.frame.size.height / 12 )
       spikeNode.physicsBody = SKPhysicsBody(texture: groundTexture, size: spikeNode.size)
       spikeNode.physicsBody?.affectedByGravity = false
       spikeNode.physicsBody?.dynamic = false
+      
+      spikeNode2.size = CGSize(width: bg.size.width, height: spikeNode.size.height)
+      spikeNode2.position = CGPoint(x: 0, y: self.frame.size.height * (10/12))
+      spikeNode2.physicsBody = SKPhysicsBody(texture: groundTexture, size: spikeNode.size)
+      spikeNode2.physicsBody?.affectedByGravity = false
+      spikeNode2.physicsBody?.dynamic = false
+      spikeNode2.zRotation = CGFloat(M_PI)
       hotdog.physicsBody?.dynamic = true
       bg.addChild(spikeNode)
+      bg.addChild(spikeNode2)
 
       addChild(bg)
     }
