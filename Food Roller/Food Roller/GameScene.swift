@@ -52,7 +52,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     self.addChild(self.hotdog)
     
     
-    bob = CreatePath.CreatePath(Int(self.frame.size.width-300), yInitialPosition: Int((self.frame.height/2)-200), width: 500)
+    bob = CreatePath.CreatePath(Int(self.frame.size.width-300), yInitialPosition: Int((self.frame.height/2)-200), width: 5)
     self.addChild(bob)
  
   }

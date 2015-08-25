@@ -15,9 +15,8 @@ class CreatePath {
     
     let xPosition = CGFloat(xInitialPosition)
     let yPosition = CGFloat(yInitialPosition)
-    let objectWidth = CGFloat(width)
 
-    let objectPath = SKSpriteNode(color: UIColor.redColor(), size: CGSizeMake(objectWidth, 20.0))
+    let objectPath = SKSpriteNode(imageNamed: "Block\(width).png")
     objectPath.position.x = xPosition
     objectPath.position.y = yPosition
     objectPath.zPosition = CGFloat(kForeground)
