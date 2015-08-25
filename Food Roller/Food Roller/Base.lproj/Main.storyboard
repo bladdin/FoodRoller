@@ -130,7 +130,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="LVB-YS-i5n" kind="show" id="T84-ft-Scv"/>
+                                    <segue destination="LVB-YS-i5n" kind="presentation" id="T84-ft-Scv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -281,7 +281,7 @@
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YSN-dg-rSd">
                                 <rect key="frame" x="36" y="108" width="528" height="472"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -309,7 +309,6 @@
         <!--Navigation Controller-->
         <scene sceneID="MHo-Pf-wOD">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c88-bH-zf5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DEN-s7-MT2" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mVa-G7-FKA">
@@ -321,6 +320,7 @@
                         <segue destination="u0I-zM-b83" kind="relationship" relationship="rootViewController" id="Oug-6u-K5f"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c88-bH-zf5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="446" y="-382"/>
         </scene>
