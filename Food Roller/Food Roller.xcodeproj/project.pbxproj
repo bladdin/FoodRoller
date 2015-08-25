@@ -8,8 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		6B5218871B8BC3C300BF9DA4 /* spikes.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B5218861B8BC3C300BF9DA4 /* spikes.png */; };
+		6B5218891B8BE15700BF9DA4 /* hotdog.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B5218881B8BE15700BF9DA4 /* hotdog.png */; };
+		6B52188D1B8C474D00BF9DA4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B52188C1B8C474D00BF9DA4 /* Images.xcassets */; };
+		6B52188F1B8C51F100BF9DA4 /* backgroundai.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B52188E1B8C51F100BF9DA4 /* backgroundai.png */; };
+		6B5218911B8C51F800BF9DA4 /* spike.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B5218901B8C51F800BF9DA4 /* spike.png */; };
+		6B5218931B8C59B200BF9DA4 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B5218921B8C59B200BF9DA4 /* bg.png */; };
+		6B5218951B8C60F400BF9DA4 /* hsbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B5218941B8C60F400BF9DA4 /* hsbg.png */; };
 		6BCED71D1B8B8F9C006967AC /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BCED71C1B8B8F9C006967AC /* background.png */; };
-		6BCED7211B8B96FF006967AC /* hotdog.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BCED7201B8B96FF006967AC /* hotdog.png */; };
 		6BCED7231B8BAFBC006967AC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCED7221B8BAFBC006967AC /* MenuViewController.swift */; };
 		AEC2DF471B8BD80600B99985 /* CreatePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC2DF461B8BD80600B99985 /* CreatePath.swift */; };
 		B535A7EA1B8B8BF1000AF550 /* RandomElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = B535A7E91B8B8BF1000AF550 /* RandomElements.swift */; };
@@ -20,7 +25,6 @@
 		B57D74021B87D89200B3838B /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57D74011B87D89200B3838B /* GameScene.swift */; };
 		B57D74041B87D89200B3838B /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57D74031B87D89200B3838B /* GameViewController.swift */; };
 		B57D74071B87D89200B3838B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B57D74051B87D89200B3838B /* Main.storyboard */; };
-		B57D74091B87D89200B3838B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B57D74081B87D89200B3838B /* Images.xcassets */; };
 		B57D740C1B87D89200B3838B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B57D740A1B87D89200B3838B /* LaunchScreen.xib */; };
 		B57D74181B87D89200B3838B /* Food_RollerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57D74171B87D89200B3838B /* Food_RollerTests.swift */; };
 /* End PBXBuildFile section */
@@ -37,8 +41,13 @@
 
 /* Begin PBXFileReference section */
 		6B5218861B8BC3C300BF9DA4 /* spikes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spikes.png; sourceTree = "<group>"; };
+		6B5218881B8BE15700BF9DA4 /* hotdog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hotdog.png; sourceTree = "<group>"; };
+		6B52188C1B8C474D00BF9DA4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6B52188E1B8C51F100BF9DA4 /* backgroundai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroundai.png; sourceTree = "<group>"; };
+		6B5218901B8C51F800BF9DA4 /* spike.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spike.png; sourceTree = "<group>"; };
+		6B5218921B8C59B200BF9DA4 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		6B5218941B8C60F400BF9DA4 /* hsbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hsbg.png; sourceTree = "<group>"; };
 		6BCED71C1B8B8F9C006967AC /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
-		6BCED7201B8B96FF006967AC /* hotdog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hotdog.png; sourceTree = "<group>"; };
 		6BCED7221B8BAFBC006967AC /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		AEC2DF461B8BD80600B99985 /* CreatePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePath.swift; sourceTree = "<group>"; };
 		B535A7E91B8B8BF1000AF550 /* RandomElements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomElements.swift; sourceTree = "<group>"; };
@@ -51,7 +60,6 @@
 		B57D74011B87D89200B3838B /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		B57D74031B87D89200B3838B /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		B57D74061B87D89200B3838B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B57D74081B87D89200B3838B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B57D740B1B87D89200B3838B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		B57D74111B87D89200B3838B /* Food RollerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Food RollerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B57D74161B87D89200B3838B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -139,10 +147,14 @@
 		B57D73FB1B87D89200B3838B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B57D74081B87D89200B3838B /* Images.xcassets */,
+				6B52188C1B8C474D00BF9DA4 /* Images.xcassets */,
+				6B5218941B8C60F400BF9DA4 /* hsbg.png */,
+				6B5218921B8C59B200BF9DA4 /* bg.png */,
+				6B52188E1B8C51F100BF9DA4 /* backgroundai.png */,
 				6B5218861B8BC3C300BF9DA4 /* spikes.png */,
+				6B5218901B8C51F800BF9DA4 /* spike.png */,
 				6BCED71C1B8B8F9C006967AC /* background.png */,
-				6BCED7201B8B96FF006967AC /* hotdog.png */,
+				6B5218881B8BE15700BF9DA4 /* hotdog.png */,
 				B57D740A1B87D89200B3838B /* LaunchScreen.xib */,
 				B57D73FC1B87D89200B3838B /* Info.plist */,
 			);
@@ -215,6 +227,7 @@
 				TargetAttributes = {
 					B57D73F71B87D89200B3838B = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 597HR9EHGW;
 					};
 					B57D74101B87D89200B3838B = {
 						CreatedOnToolsVersion = 6.4;
@@ -246,13 +259,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B5218931B8C59B200BF9DA4 /* bg.png in Resources */,
 				B57D740C1B87D89200B3838B /* LaunchScreen.xib in Resources */,
+				6B5218951B8C60F400BF9DA4 /* hsbg.png in Resources */,
+				6B5218911B8C51F800BF9DA4 /* spike.png in Resources */,
 				6BCED71D1B8B8F9C006967AC /* background.png in Resources */,
-				B57D74091B87D89200B3838B /* Images.xcassets in Resources */,
+				6B52188D1B8C474D00BF9DA4 /* Images.xcassets in Resources */,
 				B57D74001B87D89200B3838B /* GameScene.sks in Resources */,
 				B57D74071B87D89200B3838B /* Main.storyboard in Resources */,
+				6B52188F1B8C51F100BF9DA4 /* backgroundai.png in Resources */,
 				6B5218871B8BC3C300BF9DA4 /* spikes.png in Resources */,
-				6BCED7211B8B96FF006967AC /* hotdog.png in Resources */,
+				6B5218891B8BE15700BF9DA4 /* hotdog.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,9 +421,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Food Roller/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos8.4;
 			};
 			name = Debug;
 		};
@@ -414,9 +436,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Food Roller/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos8.4;
 			};
 			name = Release;
 		};

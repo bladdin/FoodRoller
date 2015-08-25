@@ -31,11 +31,13 @@ let kPathPosition1Divider = 5
 let kPathPosition2Divider = 10
 let kPathPosition3Divider = 15
 let kPathPosition4Divider = 20
+let kPathPosition5Divider = 25
 
 //Mark: Foreground Z constant
 let kForeground = 100
-let kPathPosition5Divider = 25
+
 
 //Mark: Speeds
 let kSpeedOfWorld = CGFloat(3)
 let kParalaxMultiplyer = CGFloat(1.15)
+
