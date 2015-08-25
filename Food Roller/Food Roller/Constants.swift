@@ -20,11 +20,11 @@ let krandomNumber4 = 4
 let krandomNumber5 = 5
 
 //MARK: Path Lenght Constants
-let kPath1Length = 100
-let kPath2Length = 150
-let kPath3Length = 200
-let kPath4Length = 250
-let kPath5Length = 300
+let kPath1Length = 1
+let kPath2Length = 2
+let kPath3Length = 3
+let kPath4Length = 4
+let kPath5Length = 5
 
 //MARK: Position Divider Constants
 let kPathPosition1Divider = 5
