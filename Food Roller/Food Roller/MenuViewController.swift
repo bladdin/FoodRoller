@@ -9,27 +9,28 @@
 import UIKit
 
 class MenuViewController: UIViewController {
+  
+  let clickedStartButton = UIImage(named: "startClicked")
+  let clickedSettingsButton = UIImage(named: "settingsClicked")
+  let clickedHelpButton = UIImage(named: "helpClicked")
+  
+  @IBOutlet weak var startButtonOutlet: UIButton!
+  @IBOutlet weak var settingsButtonOutlet: UIButton!
+  @IBOutlet weak var helpButtonOutlet: UIButton!
+  
+  
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    startButtonOutlet.setImage(clickedStartButton, forState: UIControlState.Highlighted)
+    settingsButtonOutlet.setImage(clickedSettingsButton, forState: UIControlState.Highlighted)
+    helpButtonOutlet.setImage(clickedHelpButton, forState: UIControlState.Highlighted)
 
-        // Do any additional setup after loading the view.
-    }
+  }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+  }
 
 }

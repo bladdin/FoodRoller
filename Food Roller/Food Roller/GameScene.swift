@@ -9,54 +9,95 @@
 import SpriteKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
-  var background = SKSpriteNode(imageNamed: "background")
   var hotdog = SKSpriteNode()
-  var backgroundSpeed : CGFloat = 3
+  var backgroundSpeed : CGFloat = 1
+  var spikeSpeed : CGFloat = 1
+  var bob = SKSpriteNode()
+  
   override func didMoveToView(view: SKView) {
+//    self.physicsWorld.gravity = CGVectorMake(0, -3)
+//    self.physicsWorld.contactDelegate = self
     
-    self.physicsWorld.gravity = CGVectorMake(0, -3)
-    self.physicsWorld.contactDelegate = self
-    
-//    self.background.position = CGPoint(x: self.frame.size.width / 2, y: self.frame.size.height / 2)
-//    self.background.size = CGSizeMake(self.frame.size.width, self.frame.size.height)
-//    self.addChild(self.background)
-    
+    // loop through the background image
     for (var i : CGFloat = 0; i < 2; i++ ) {
-      let bg = SKSpriteNode(imageNamed: "background")
+      let bg = SKSpriteNode(imageNamed: "backgroundai")
+      let groundTexture = SKTexture(imageNamed: "spike")
       bg.size = CGSize(width: self.frame.size.width, height: self.frame.size.height)
       bg.anchorPoint = CGPointZero
       bg.position = CGPoint(x: i * bg.size.width, y: 0)
-      
-      bg.name = "background"
+      bg.name = "backgroundai"
       addChild(bg)
+      
+      let spikeNode = SKSpriteNode(texture: groundTexture)
+      spikeNode.anchorPoint = CGPointZero
+      spikeNode.size = CGSize(width: spikeNode.size.width, height: spikeNode.size.height)
+      spikeNode.position = CGPoint(x: i * spikeNode.size.width, y: -50 )
+//      spikeNode.physicsBody = SKPhysicsBody(rectangleOfSize: spikeNode.size)
+      spikeNode.physicsBody = SKPhysicsBody(texture: groundTexture, size: spikeNode.size)
+      spikeNode.physicsBody?.affectedByGravity = false
+      spikeNode.physicsBody?.dynamic = false
+      hotdog.physicsBody?.dynamic = true
+      addChild(spikeNode)
+      spikeNode.name = "spike"
     }
     
-//    var backgroundMoveLeft = SKAction.moveByX(-self.frame.size.width, y: 0, duration: NSTimeInterval(background.size.width*0.015))
-//    var backgroundReset = SKAction.moveByX(background.size.width, y: 0, duration: 0)
-//    var backgroundMovingLeftForever = SKAction.repeatActionForever(SKAction.sequence([backgroundMoveLeft, backgroundReset]))
-    
-    var hotdogTexture = SKTexture(imageNamed: "hotdog")
+    let hotdogTexture = SKTexture(imageNamed: "hotdog")
     self.hotdog = SKSpriteNode(texture: hotdogTexture)
-    self.hotdog.size = CGSizeMake(self.frame.size.width / 10, self.frame.size.height / 6)
+    self.hotdog.size = CGSizeMake(self.frame.size.width / 14, self.frame.size.height / 6)
     self.hotdog.zPosition = 100
-    self.hotdog.position = CGPoint(x: self.frame.size.width / 2, y: self.frame.size.height / 2)
+    self.hotdog.position = CGPoint(x: self.frame.size.width / 2 , y: self.frame.size.height / 2)
+    
+    self.hotdog.physicsBody = SKPhysicsBody(rectangleOfSize: self.hotdog.size )
+    
     self.addChild(self.hotdog)
     
+    var bob = CreatePath.CreatePath(Int(self.frame.size.width-500), yInitialPosition: RandomElements.randomPathVarYPosition(Int(self.frame.height)), width: RandomElements.randomPathLength()!)
+    self.addChild(bob)
     
+    
+//    
+//    To create path use:
+//    var bob = CreatePath.CreatePath(<#xInitialPosition: Int#>, yInitialPosition: <#Int#>, width: <#Int#>)
+//    self.addChild(bob)
+//    bob = CreatePath.CreatePath(Int(self.frame.size.width-300), yInitialPosition: Int((self.frame.height/2)-200), width: 500)
+    //self.addChild(bob)
+    bob.physicsBody = SKPhysicsBody(rectangleOfSize: bob.size)
+    bob.physicsBody?.affectedByGravity = false
+    bob.physicsBody?.dynamic = false
+    
+ 
   }
   
   override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    self.hotdog.physicsBody?.velocity = CGVectorMake(0, 10)
+    self.hotdog.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 300))
   }
   
+  override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
+    
+  }
+  
+
   override func update(currentTime: CFTimeInterval) {
     /* Called before each frame is rendered */
-    enumerateChildNodesWithName("background", usingBlock: { (node, stop) -> Void in
+    enumerateChildNodesWithName("backgroundai", usingBlock: { (node, stop) -> Void in
       if let bg = node as? SKSpriteNode {
         bg.position = CGPoint(x: bg.position.x - self.backgroundSpeed , y: bg.position.y)
         if bg.position.x <= bg.size.width * -1 {
           bg.position = CGPoint(x: bg.position.x + bg.size.width * 2, y: bg.position.y)
         }
       }
-    })
+      })
+      
+      enumerateChildNodesWithName("spike", usingBlock: { (node, stop) -> Void in
+        if let spike = node as? SKSpriteNode {
+          spike.position = CGPoint(x: spike.position.x - self.spikeSpeed , y: spike.position.y)
+          if spike.position.x <= spike.size.width * -1 {
+            spike.position = CGPoint(x: spike.position.x + spike.size.width * 2, y: spike.position.y)
+          }
+        }
+      })
+    CreatePath.MovePathObject(bob)
+    }
   }
-}
+   
