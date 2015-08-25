@@ -51,20 +51,31 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     self.addChild(self.hotdog)
     
-    var bob = CreatePath.CreatePath(Int(self.frame.size.width-500), yInitialPosition: RandomElements.randomPathVarYPosition(Int(self.frame.height)), width: RandomElements.randomPathLength()!)
-    self.addChild(bob)
     
+    
+    bob = CreatePath.CreatePath(Int(self.frame.size.width-300), yInitialPosition: (RandomElements.randomPathVarYPosition(184, max: Int(self.frame.height)-68)), width: (RandomElements.randomPathLength()!))
+    //println(self.frame.height)
+
     
 //    
 //    To create path use:
 //    var bob = CreatePath.CreatePath(<#xInitialPosition: Int#>, yInitialPosition: <#Int#>, width: <#Int#>)
 //    self.addChild(bob)
 //    bob = CreatePath.CreatePath(Int(self.frame.size.width-300), yInitialPosition: Int((self.frame.height/2)-200), width: 500)
-    //self.addChild(bob)
-    bob.physicsBody = SKPhysicsBody(rectangleOfSize: bob.size)
-    bob.physicsBody?.affectedByGravity = false
-    bob.physicsBody?.dynamic = false
-    
+//    bob.physicsBody = SKPhysicsBody(rectangleOfSize: bob.size)
+//    bob.physicsBody?.affectedByGravity = false
+//    bob.physicsBody?.dynamic = false
+//    self.addChild(bob)
+    for I in 1...1000{
+      bob = CreatePath.CreatePath(Int(RandomElements.randomPathVarYPosition(300, max: 750)), yInitialPosition: (RandomElements.randomPathVarYPosition(180, max: Int(self.frame.height)-68)), width: (RandomElements.randomPathLength()!))
+      //println(self.frame.height)
+      
+      bob.physicsBody = SKPhysicsBody(rectangleOfSize: bob.size)
+      bob.physicsBody?.affectedByGravity = false
+      bob.physicsBody?.dynamic = false
+      self.addChild(bob)
+    }
+
  
   }
   

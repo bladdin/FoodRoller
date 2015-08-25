@@ -20,11 +20,11 @@ let krandomNumber4 = 4
 let krandomNumber5 = 5
 
 //MARK: Path Lenght Constants
-let kPath1Length = 10
-let kPath2Length = 15
-let kPath3Length = 20
-let kPath4Length = 25
-let kPath5Length = 30
+let kPath1Length = 100
+let kPath2Length = 150
+let kPath3Length = 200
+let kPath4Length = 250
+let kPath5Length = 300
 
 //MARK: Position Divider Constants
 let kPathPosition1Divider = 5
@@ -35,6 +35,10 @@ let kPathPosition5Divider = 25
 
 //Mark: Foreground Z constant
 let kForeground = 100
+let kTestForBoundsBottom = 184
+let kTestForBoundsTop = 500
+let ktestForBoundsRight = 200
+let ktestForBoundsLeft = 10
 
 
 //Mark: Speeds
