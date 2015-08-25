@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SpriteKit
 
 //Mark: Number of random numbers created
 let kNumberOfRandoms = 5
@@ -34,3 +35,7 @@ let kPathPosition4Divider = 20
 //Mark: Foreground Z constant
 let kForeground = 100
 let kPathPosition5Divider = 25
+
+//Mark: Speeds
+let kSpeedOfWorld = CGFloat(3)
+let kParalaxMultiplyer = CGFloat(1.15)
