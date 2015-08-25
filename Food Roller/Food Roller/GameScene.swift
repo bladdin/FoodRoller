@@ -13,6 +13,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   var backgroundSpeed : CGFloat = 1
   var spikeSpeed : CGFloat = 1
   var bob = SKSpriteNode()
+  var arrayOfPathsInGame = [SKSpriteNode()]
   
   override func didMoveToView(view: SKView) {
 //    self.physicsWorld.gravity = CGVectorMake(0, -3)
@@ -50,10 +51,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     self.hotdog.physicsBody = SKPhysicsBody(rectangleOfSize: self.hotdog.size )
     
     self.addChild(self.hotdog)
-    
-    
-    bob = CreatePath.CreatePath(Int(self.frame.size.width-300), yInitialPosition: Int((self.frame.height/2)-200), width: 5)
-    self.addChild(bob)
+
+    for index in 1...3{
+      bob = CreatePath.CreatePath(Int(RandomElements.randomPathVarYPosition(800, max: 1000))+index*50, yInitialPosition: (RandomElements.randomPathVarYPosition(180, max: Int(self.frame.height)-68)), width: (RandomElements.randomPathLength()!))
+      //println(self.frame.height)
+      self.arrayOfPathsInGame.append(bob)
+      self.addChild(bob)
+    }
+
  
   }
   
@@ -86,7 +91,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
           }
         }
       })
+    for bob in self.arrayOfPathsInGame{
     CreatePath.MovePathObject(bob)
+    }
     }
   }
    

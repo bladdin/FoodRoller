@@ -14,4 +14,13 @@ class RandomCaller{
     var randomNumber = Int(arc4random_uniform(UInt32(numberMax))+1)
     return randomNumber
   }
+  
+  class func cratesRandomXandY(maxNumer: Int, minNumber: Int) ->Int{
+    var newMinNumber = minNumber / 10
+    var multiplier = (maxNumer - minNumber) / 10
+    var randomNumber = Int(arc4random_uniform(UInt32(multiplier))+UInt32(newMinNumber))
+    randomNumber = randomNumber * 10
+    return randomNumber
+  }
+  
 }

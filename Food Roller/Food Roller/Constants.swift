@@ -35,6 +35,10 @@ let kPathPosition5Divider = 25
 
 //Mark: Foreground Z constant
 let kForeground = 100
+let kTestForBoundsBottom = 184
+let kTestForBoundsTop = 500
+let ktestForBoundsRight = 200
+let ktestForBoundsLeft = 10
 
 
 //Mark: Speeds
