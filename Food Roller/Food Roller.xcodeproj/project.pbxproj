@@ -27,6 +27,11 @@
 		AE65B1EE1B8CFEAC008EF023 /* Block4.png in Resources */ = {isa = PBXBuildFile; fileRef = AE65B1E91B8CFEAC008EF023 /* Block4.png */; };
 		AE65B1EF1B8CFEAC008EF023 /* Block5.png in Resources */ = {isa = PBXBuildFile; fileRef = AE65B1EA1B8CFEAC008EF023 /* Block5.png */; };
 		AE65B1F11B8CFEE5008EF023 /* Block2.png in Resources */ = {isa = PBXBuildFile; fileRef = AE65B1F01B8CFEE5008EF023 /* Block2.png */; };
+		AE8826C81B8DD7CA00486B91 /* bensoundCute.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE8826C51B8DD7CA00486B91 /* bensoundCute.mp3 */; };
+		AE8826C91B8DD7CA00486B91 /* bensoundFunnysong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE8826C61B8DD7CA00486B91 /* bensoundFunnysong.mp3 */; };
+		AE8826CA1B8DD7CA00486B91 /* bensoundBetterdays.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE8826C71B8DD7CA00486B91 /* bensoundBetterdays.mp3 */; };
+		AE8826CC1B8DD87900486B91 /* BackgroundMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8826CB1B8DD87900486B91 /* BackgroundMusic.swift */; };
+		AE8826CE1B8DE06200486B91 /* SquishFart.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE8826CD1B8DE06200486B91 /* SquishFart.mp3 */; };
 		AEC2DF471B8BD80600B99985 /* CreatePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC2DF461B8BD80600B99985 /* CreatePath.swift */; };
 		B535A7EA1B8B8BF1000AF550 /* RandomElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = B535A7E91B8B8BF1000AF550 /* RandomElements.swift */; };
 		B535A7EE1B8BA2A5000AF550 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B535A7ED1B8BA2A5000AF550 /* Constants.swift */; };
@@ -71,6 +76,11 @@
 		AE65B1E91B8CFEAC008EF023 /* Block4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Block4.png; sourceTree = "<group>"; };
 		AE65B1EA1B8CFEAC008EF023 /* Block5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Block5.png; sourceTree = "<group>"; };
 		AE65B1F01B8CFEE5008EF023 /* Block2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Block2.png; sourceTree = "<group>"; };
+		AE8826C51B8DD7CA00486B91 /* bensoundCute.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bensoundCute.mp3; sourceTree = "<group>"; };
+		AE8826C61B8DD7CA00486B91 /* bensoundFunnysong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bensoundFunnysong.mp3; sourceTree = "<group>"; };
+		AE8826C71B8DD7CA00486B91 /* bensoundBetterdays.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bensoundBetterdays.mp3; sourceTree = "<group>"; };
+		AE8826CB1B8DD87900486B91 /* BackgroundMusic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundMusic.swift; sourceTree = "<group>"; };
+		AE8826CD1B8DE06200486B91 /* SquishFart.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SquishFart.mp3; sourceTree = "<group>"; };
 		AEC2DF461B8BD80600B99985 /* CreatePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePath.swift; sourceTree = "<group>"; };
 		B535A7E91B8B8BF1000AF550 /* RandomElements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomElements.swift; sourceTree = "<group>"; };
 		B535A7ED1B8BA2A5000AF550 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -155,6 +165,7 @@
 				AEC2DF461B8BD80600B99985 /* CreatePath.swift */,
 				B535A7E91B8B8BF1000AF550 /* RandomElements.swift */,
 				B535A7EF1B8BB231000AF550 /* RandomCaller.swift */,
+				AE8826CB1B8DD87900486B91 /* BackgroundMusic.swift */,
 				B535A7ED1B8BA2A5000AF550 /* Constants.swift */,
 			);
 			name = Models;
@@ -219,6 +230,21 @@
 				6B5218C71B8DB95C00BF9DA4 /* Tiles */,
 				6B5218C61B8DB94300BF9DA4 /* HotDog */,
 				6B52188C1B8C474D00BF9DA4 /* Images.xcassets */,
+				AE8826C51B8DD7CA00486B91 /* bensoundCute.mp3 */,
+				AE8826C61B8DD7CA00486B91 /* bensoundFunnysong.mp3 */,
+				AE8826C71B8DD7CA00486B91 /* bensoundBetterdays.mp3 */,
+				6B5218941B8C60F400BF9DA4 /* hsbg.png */,
+				6B5218921B8C59B200BF9DA4 /* bg.png */,
+				AE65B1E61B8CFEAC008EF023 /* Block1.png */,
+				AE8826CD1B8DE06200486B91 /* SquishFart.mp3 */,
+				AE65B1F01B8CFEE5008EF023 /* Block2.png */,
+				AE65B1E81B8CFEAC008EF023 /* Block3.png */,
+				AE65B1E91B8CFEAC008EF023 /* Block4.png */,
+				AE65B1EA1B8CFEAC008EF023 /* Block5.png */,
+				6B52188E1B8C51F100BF9DA4 /* backgroundai.png */,
+				6B5218861B8BC3C300BF9DA4 /* spikes.png */,
+				6B5218901B8C51F800BF9DA4 /* spike.png */,
+				6BCED71C1B8B8F9C006967AC /* background.png */,
 				B57D73FD1B87D89200B3838B /* AppDelegate.swift */,
 				6B5218881B8BE15700BF9DA4 /* hotdog.png */,
 				B57D73FC1B87D89200B3838B /* Info.plist */,
@@ -340,8 +366,13 @@
 				AE65B1ED1B8CFEAC008EF023 /* Block3.png in Resources */,
 				AE65B1F11B8CFEE5008EF023 /* Block2.png in Resources */,
 				B57D74071B87D89200B3838B /* Main.storyboard in Resources */,
+				AE8826C91B8DD7CA00486B91 /* bensoundFunnysong.mp3 in Resources */,
+				AE8826C91B8DD7CA00486B91 /* bensoundFunnysong.mp3 in Resources */,
+				AE8826CA1B8DD7CA00486B91 /* bensoundBetterdays.mp3 in Resources */,
+				AE8826CE1B8DE06200486B91 /* SquishFart.mp3 in Resources */,
+				AE8826C81B8DD7CA00486B91 /* bensoundCute.mp3 in Resources */,
+				6B52188F1B8C51F100BF9DA4 /* backgroundai.png in Resources */,
 				6B52188F1B8C51F100BF9DA4 /* gameBackground.png in Resources */,
-				AE65B1EF1B8CFEAC008EF023 /* Block5.png in Resources */,
 				6B5218C21B8DAA8D00BF9DA4 /* 5.png in Resources */,
 				6B5218891B8BE15700BF9DA4 /* hotdog.png in Resources */,
 			);
@@ -363,6 +394,7 @@
 			files = (
 				B57D74021B87D89200B3838B /* GameScene.swift in Sources */,
 				B535A7EA1B8B8BF1000AF550 /* RandomElements.swift in Sources */,
+				AE8826CC1B8DD87900486B91 /* BackgroundMusic.swift in Sources */,
 				B57D74041B87D89200B3838B /* GameViewController.swift in Sources */,
 				B57D73FE1B87D89200B3838B /* AppDelegate.swift in Sources */,
 				AEC2DF471B8BD80600B99985 /* CreatePath.swift in Sources */,
