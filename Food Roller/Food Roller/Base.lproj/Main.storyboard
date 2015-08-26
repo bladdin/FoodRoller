@@ -320,6 +320,7 @@
                     </view>
                     <connections>
                         <outlet property="howToPlayLabel" destination="tAO-2B-EGK" id="VqJ-52-5yZ"/>
+                        <outlet property="howToPlayTextView" destination="YSN-dg-rSd" id="fR0-TV-ImK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1pv-pg-cYL" userLabel="First Responder" sceneMemberID="firstResponder"/>
