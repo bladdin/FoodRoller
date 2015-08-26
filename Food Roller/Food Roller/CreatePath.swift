@@ -32,6 +32,6 @@ class CreatePath {
   }
   
   class func MovePathObject(object: SKSpriteNode){
-    object.position.x = object.position.x - (kSpeedOfWorld) * (kParalaxMultiplyer)
+    object.position.x = object.position.x - (backgroundSpeed) * (kParalaxMultiplyer)
   }
 }

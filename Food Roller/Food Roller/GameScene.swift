@@ -11,26 +11,41 @@ import SpriteKit
 var musicVolume: Float = 1
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
+  
   var hotdog = SKSpriteNode()
-  var backgroundSpeed : CGFloat = 1
-  var spikeSpeed : CGFloat = 1
+  
   var bob = SKSpriteNode()
+  
   var startLocation = CGPoint()
   var endLocation = CGPoint()
+  
+  var spikeNode = SKSpriteNode()
+  
+  enum ColliderType : UInt32 {
+    case Hotdog = 1
+    case Cactus = 2
+    case Sidebounds = 3
+  }
+
   var arrayOfPathsInGame = [SKSpriteNode()]
+  
   var timerLabelNode = SKLabelNode(text: "0")
   var timer = NSTimer()
   var timerCount = 0
   
   
   override func didMoveToView(view: SKView) {
-
+    gameOver = false
     BackgroundMusic.playBackgroundMusic("bensoundFunnysong.mp3")
     
     
     physicsBody = SKPhysicsBody(edgeLoopFromRect: CGRect(x: 250, y: 0, width: self.size.width - 500, height: self.size.height))
+
     
-    // BACKGROUND AND SPIKE NODES
+    self.physicsWorld.contactDelegate = self //Setting up physics world for contact with boundaries
+      physicsWorld.gravity = CGVectorMake(0.0, -5.8)
+    
+    // loop through the background image
     for (var i : CGFloat = 0; i < 2; i++ ) {
       let bg = SKSpriteNode(imageNamed: "gameBackground")
       let groundTexture = SKTexture(imageNamed: "cactus")
@@ -40,15 +55,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
       bg.position = CGPoint(x: i * bg.size.width, y: 0)
       bg.name = "gameBackground"
       addChild(bg)
-      let spikeNode2 = SKSpriteNode(texture: groundTexture)
-      let spikeNode = SKSpriteNode(texture: groundTexture)
+      self.spikeNode = SKSpriteNode(texture: groundTexture)
       spikeNode.anchorPoint = CGPointZero
       spikeNode.position = CGPoint(x: i * spikeNode.size.width, y: -30 )
       let bottomBoundSize = CGSize(width: spikeNode.size.width + 200, height: spikeNode.size.height + 120)
       spikeNode.physicsBody = SKPhysicsBody(rectangleOfSize: bottomBoundSize)
-      spikeNode.physicsBody?.affectedByGravity = false
-      spikeNode.physicsBody?.dynamic = false
-      
+      spikeNode.physicsBody!.affectedByGravity = false
+      spikeNode.physicsBody!.dynamic = false
+      spikeNode.physicsBody!.categoryBitMask = ColliderType.Cactus.rawValue
+      spikeNode.physicsBody!.contactTestBitMask = ColliderType.Hotdog.rawValue
+      spikeNode.physicsBody!.collisionBitMask = ColliderType.Hotdog.rawValue
       
       hotdog.physicsBody?.dynamic = true
       spikeNode.name = "spikeBottom"
@@ -69,7 +85,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     self.hotdog.size = CGSizeMake(self.frame.size.width / 16, self.frame.size.height / 8)
     self.hotdog.zPosition = 100
     self.hotdog.position = CGPoint(x: self.frame.size.width / 2 , y: self.frame.size.height / 2)
-    self.hotdog.physicsBody = SKPhysicsBody(rectangleOfSize: self.hotdog.size)
+    self.hotdog.physicsBody = SKPhysicsBody(circleOfRadius: self.hotdog.size.height / 2)
+    hotdog.physicsBody!.affectedByGravity = false
+  //  self.hotdog.physicsBody = SKPhysicsBody(rectangleOfSize: self.hotdog.size)
+    self.hotdog.physicsBody?.categoryBitMask = ColliderType.Hotdog.rawValue //Sets collider type to raw value 1
+    self.hotdog.physicsBody?.contactTestBitMask = ColliderType.Cactus.rawValue
+    self.hotdog.physicsBody?.collisionBitMask = ColliderType.Cactus.rawValue
+
+    
+    
+    
     var run = SKAction.animateWithTextures([hotdogTexture1, hotdogTexture2, hotdogTexture3, hotdogTexture4, hotdogTexture5, hotdogTexture6], timePerFrame: 0.12)
     var runForever = SKAction.repeatActionForever(run)
     self.hotdog.runAction(runForever)
@@ -95,7 +120,37 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
   }
   
+  //Mark: Game over function called when gameOver is true
+  func gameIsOver () {
+    spikeSpeed = 0
+    backgroundSpeed = 0
+    hotdog.paused = true
+   
+    let gameOverScreen = SKView()
+    gameOverScreen.frame = CGRect(x: self.view!.frame.width / 2, y: self.view!.frame.size.height / 2, width: 100, height: 100)
+    gameOverScreen.backgroundColor = UIColor.blackColor()
+    gameOverScreen.alpha = 0
+    self.view?.addSubview(gameOverScreen)
+    SKView.animateWithDuration(1.0, animations: { () -> Void in
+      gameOverScreen.alpha = 1
+    })
+    
+    
+  }
+  
+  func didBeginContact(contact: SKPhysicsContact) {
+    let bodyA = contact.bodyA
+    let bodyB = contact.bodyB
+    
+    if (bodyA == spikeNode.physicsBody && bodyB == hotdog.physicsBody) {
+      println("collision2")
+      gameOver = true
+      gameIsOver()
+    }
+  }
+  
   override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    hotdog.physicsBody?.affectedByGravity = true
     for touch in touches {
       if let touch = touch as? UITouch {
         startLocation = touch.locationInNode(self)
@@ -122,7 +177,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   override func update(currentTime: CFTimeInterval) {
     enumerateChildNodesWithName("gameBackground", usingBlock: { (node, stop) -> Void in
       if let bg = node as? SKSpriteNode {
-        bg.position = CGPoint(x: bg.position.x - self.backgroundSpeed , y: bg.position.y)
+        bg.position = CGPoint(x: bg.position.x - backgroundSpeed , y: bg.position.y)
         if bg.position.x <= bg.size.width * -1 {
           bg.position = CGPoint(x: bg.position.x + bg.size.width * 2, y: bg.position.y)
         }
@@ -131,7 +186,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     enumerateChildNodesWithName("spikeBottom", usingBlock: { (node, stop) -> Void in
       if let spike = node as? SKSpriteNode {
-        spike.position = CGPoint(x: spike.position.x - self.spikeSpeed , y: spike.position.y)
+        spike.position = CGPoint(x: spike.position.x - spikeSpeed , y: spike.position.y)
         if spike.position.x <= spike.size.width * -1 {
           spike.position = CGPoint(x: spike.position.x + spike.size.width * 2, y: spike.position.y)
         }
@@ -143,7 +198,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   }
 
   func updateTimer() {
-    if timerCount >= 0 {
+    if !gameOver {
       timerCount++
       timerLabelNode.text = String(timerCount)
     }
