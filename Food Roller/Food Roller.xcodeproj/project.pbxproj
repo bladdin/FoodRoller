@@ -242,7 +242,7 @@
 				TargetAttributes = {
 					B57D73F71B87D89200B3838B = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = A4CYB57ULV;
+						DevelopmentTeam = VY8QJTK3VG;
 					};
 					B57D74101B87D89200B3838B = {
 						CreatedOnToolsVersion = 6.4;
@@ -373,8 +373,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Benjamin Laddin (DF9JBJX4QD)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Benjamin Laddin (DF9JBJX4QD)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Sau Chung Loh (H379EFQZDB)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sau Chung Loh (H379EFQZDB)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -418,8 +418,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Benjamin Laddin (DF9JBJX4QD)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Benjamin Laddin (DF9JBJX4QD)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Sau Chung Loh (H379EFQZDB)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sau Chung Loh (H379EFQZDB)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
