@@ -22,6 +22,8 @@ class MenuViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    BackgroundMusic.playBackgroundMusic("bensoundCute.mp3")
+
     startButtonOutlet.setImage(clickedStartButton, forState: UIControlState.Highlighted)
     settingsButtonOutlet.setImage(clickedSettingsButton, forState: UIControlState.Highlighted)
     helpButtonOutlet.setImage(clickedHelpButton, forState: UIControlState.Highlighted)

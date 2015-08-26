@@ -22,6 +22,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   
   override func didMoveToView(view: SKView) {
 
+    BackgroundMusic.playBackgroundMusic("bensoundFunnysong.mp3")
     
     physicsBody = SKPhysicsBody(edgeLoopFromRect: CGRect(x: 250, y: 0, width: self.size.width - 500, height: self.size.height))
     
@@ -108,6 +109,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     for touch in touches {
       if let touch = touch as? UITouch {
         endLocation = touch.locationInNode(self)
+        
+        runAction(SKAction.playSoundFileNamed("SquishFart.mp3", waitForCompletion: false))
+
         let difference = CGVectorMake(CGFloat((endLocation.x - startLocation.x) * -1), abs(endLocation.y - startLocation.y) * 1.6)
         
         
@@ -140,4 +144,5 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
       CreatePath.MovePathObject(bob)
     }
   }
+  
 }
