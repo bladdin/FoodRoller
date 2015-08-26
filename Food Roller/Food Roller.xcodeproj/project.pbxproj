@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3490E0BB1B8E40C900EA760D /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3490E0BA1B8E40C900EA760D /* GlobalVariables.swift */; };
 		6B5218891B8BE15700BF9DA4 /* hotdog.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B5218881B8BE15700BF9DA4 /* hotdog.png */; };
 		6B52188D1B8C474D00BF9DA4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B52188C1B8C474D00BF9DA4 /* Images.xcassets */; };
 		6B52188F1B8C51F100BF9DA4 /* gameBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B52188E1B8C51F100BF9DA4 /* gameBackground.png */; };
@@ -25,7 +26,6 @@
 		AE65B1EB1B8CFEAC008EF023 /* Block1.png in Resources */ = {isa = PBXBuildFile; fileRef = AE65B1E61B8CFEAC008EF023 /* Block1.png */; };
 		AE65B1ED1B8CFEAC008EF023 /* Block3.png in Resources */ = {isa = PBXBuildFile; fileRef = AE65B1E81B8CFEAC008EF023 /* Block3.png */; };
 		AE65B1EE1B8CFEAC008EF023 /* Block4.png in Resources */ = {isa = PBXBuildFile; fileRef = AE65B1E91B8CFEAC008EF023 /* Block4.png */; };
-		AE65B1EF1B8CFEAC008EF023 /* Block5.png in Resources */ = {isa = PBXBuildFile; fileRef = AE65B1EA1B8CFEAC008EF023 /* Block5.png */; };
 		AE65B1F11B8CFEE5008EF023 /* Block2.png in Resources */ = {isa = PBXBuildFile; fileRef = AE65B1F01B8CFEE5008EF023 /* Block2.png */; };
 		AE8826C81B8DD7CA00486B91 /* bensoundCute.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE8826C51B8DD7CA00486B91 /* bensoundCute.mp3 */; };
 		AE8826C91B8DD7CA00486B91 /* bensoundFunnysong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE8826C61B8DD7CA00486B91 /* bensoundFunnysong.mp3 */; };
@@ -56,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3490E0BA1B8E40C900EA760D /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		6B5218881B8BE15700BF9DA4 /* hotdog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hotdog.png; sourceTree = "<group>"; };
 		6B52188C1B8C474D00BF9DA4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6B52188E1B8C51F100BF9DA4 /* gameBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameBackground.png; sourceTree = "<group>"; };
@@ -116,6 +117,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3490E0B91B8E2FBA00EA760D /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				AE8826C51B8DD7CA00486B91 /* bensoundCute.mp3 */,
+				AE8826C61B8DD7CA00486B91 /* bensoundFunnysong.mp3 */,
+				AE8826C71B8DD7CA00486B91 /* bensoundBetterdays.mp3 */,
+				AE8826CD1B8DE06200486B91 /* SquishFart.mp3 */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
 		6B5218C61B8DB94300BF9DA4 /* HotDog */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,8 +165,8 @@
 		6B5218C91B8DB99C00BF9DA4 /* GameSceneImages */ = {
 			isa = PBXGroup;
 			children = (
-				6B52189A1B8D4FE000BF9DA4 /* cactus.png */,
 				6B52188E1B8C51F100BF9DA4 /* gameBackground.png */,
+				6B52189A1B8D4FE000BF9DA4 /* cactus.png */,
 			);
 			name = GameSceneImages;
 			sourceTree = "<group>";
@@ -166,6 +178,7 @@
 				B535A7E91B8B8BF1000AF550 /* RandomElements.swift */,
 				B535A7EF1B8BB231000AF550 /* RandomCaller.swift */,
 				AE8826CB1B8DD87900486B91 /* BackgroundMusic.swift */,
+				3490E0BA1B8E40C900EA760D /* GlobalVariables.swift */,
 				B535A7ED1B8BA2A5000AF550 /* Constants.swift */,
 			);
 			name = Models;
@@ -230,21 +243,7 @@
 				6B5218C71B8DB95C00BF9DA4 /* Tiles */,
 				6B5218C61B8DB94300BF9DA4 /* HotDog */,
 				6B52188C1B8C474D00BF9DA4 /* Images.xcassets */,
-				AE8826C51B8DD7CA00486B91 /* bensoundCute.mp3 */,
-				AE8826C61B8DD7CA00486B91 /* bensoundFunnysong.mp3 */,
-				AE8826C71B8DD7CA00486B91 /* bensoundBetterdays.mp3 */,
-				6B5218941B8C60F400BF9DA4 /* hsbg.png */,
-				6B5218921B8C59B200BF9DA4 /* bg.png */,
-				AE65B1E61B8CFEAC008EF023 /* Block1.png */,
-				AE8826CD1B8DE06200486B91 /* SquishFart.mp3 */,
-				AE65B1F01B8CFEE5008EF023 /* Block2.png */,
-				AE65B1E81B8CFEAC008EF023 /* Block3.png */,
-				AE65B1E91B8CFEAC008EF023 /* Block4.png */,
-				AE65B1EA1B8CFEAC008EF023 /* Block5.png */,
-				6B52188E1B8C51F100BF9DA4 /* backgroundai.png */,
-				6B5218861B8BC3C300BF9DA4 /* spikes.png */,
-				6B5218901B8C51F800BF9DA4 /* spike.png */,
-				6BCED71C1B8B8F9C006967AC /* background.png */,
+				3490E0B91B8E2FBA00EA760D /* Sounds */,
 				B57D73FD1B87D89200B3838B /* AppDelegate.swift */,
 				6B5218881B8BE15700BF9DA4 /* hotdog.png */,
 				B57D73FC1B87D89200B3838B /* Info.plist */,
@@ -371,7 +370,7 @@
 				AE8826CA1B8DD7CA00486B91 /* bensoundBetterdays.mp3 in Resources */,
 				AE8826CE1B8DE06200486B91 /* SquishFart.mp3 in Resources */,
 				AE8826C81B8DD7CA00486B91 /* bensoundCute.mp3 in Resources */,
-				6B52188F1B8C51F100BF9DA4 /* backgroundai.png in Resources */,
+				6B52188F1B8C51F100BF9DA4 /* gameBackground.png in Resources */,
 				6B52188F1B8C51F100BF9DA4 /* gameBackground.png in Resources */,
 				6B5218C21B8DAA8D00BF9DA4 /* 5.png in Resources */,
 				6B5218891B8BE15700BF9DA4 /* hotdog.png in Resources */,
@@ -398,6 +397,7 @@
 				B57D74041B87D89200B3838B /* GameViewController.swift in Sources */,
 				B57D73FE1B87D89200B3838B /* AppDelegate.swift in Sources */,
 				AEC2DF471B8BD80600B99985 /* CreatePath.swift in Sources */,
+				3490E0BB1B8E40C900EA760D /* GlobalVariables.swift in Sources */,
 				B535A7EE1B8BA2A5000AF550 /* Constants.swift in Sources */,
 				B535A7F01B8BB231000AF550 /* RandomCaller.swift in Sources */,
 				6BCED7231B8BAFBC006967AC /* MenuViewController.swift in Sources */,

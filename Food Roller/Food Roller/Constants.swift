@@ -9,6 +9,7 @@
 import Foundation
 import SpriteKit
 
+
 //Mark: Number of random numbers created
 let kNumberOfRandoms = 5
 
@@ -42,6 +43,5 @@ let ktestForBoundsLeft = 10
 
 
 //Mark: Speeds
-let kSpeedOfWorld = CGFloat(3)
 let kParalaxMultiplyer = CGFloat(1.15)
 
