@@ -13,9 +13,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   var backgroundSpeed : CGFloat = 1
   var spikeSpeed : CGFloat = 1
   var bob = SKSpriteNode()
+  
   var startLocation = CGPoint()
   var endLocation = CGPoint()
-
+  
+  enum ColliderType : UInt32 {
+    case Hotdog = 1
+    case Boundary = 2
+  }
 
   var arrayOfPathsInGame = [SKSpriteNode()]
 
@@ -25,6 +30,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     physicsBody = SKPhysicsBody(edgeLoopFromRect: CGRect(x: 250, y: 0, width: self.size.width - 500, height: self.size.height))
     
+    self.physicsWorld.contactDelegate = self //Setting up physics world for contact with boundaries
+  
     // loop through the background image
     for (var i : CGFloat = 0; i < 2; i++ ) {
 
@@ -41,6 +48,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
       spikeNode.anchorPoint = CGPointZero
       spikeNode.position = CGPoint(x: i * spikeNode.size.width, y: -30 )
       let bottomBoundSize = CGSize(width: bg.size.width, height: spikeNode.size.height + 100)
+      println(spikeNode.size.height)
       spikeNode.physicsBody = SKPhysicsBody(rectangleOfSize: bottomBoundSize)
       spikeNode.physicsBody?.affectedByGravity = false
       spikeNode.physicsBody?.dynamic = false
@@ -77,6 +85,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     self.hotdog.position = CGPoint(x: self.frame.size.width / 2 , y: self.frame.size.height / 2)
     
     self.hotdog.physicsBody = SKPhysicsBody(rectangleOfSize: self.hotdog.size)
+    self.hotdog.physicsBody?.categoryBitMask = ColliderType.Hotdog.rawValue //Sets collider type to raw value 1
+  //  self.hotdog.physicsBody?.contactTestBitMask = Collider.
   //  self.hotdog.physicsBody = SKPhysicsBody(circleOfRadius: self.hotdog.size.height / 2)
     
     self.addChild(self.hotdog)
@@ -89,9 +99,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
       self.arrayOfPathsInGame.append(bob)
       self.addChild(bob)
     }
-
+  
 
  
+  }
+  
+  func didBeginContact(contact: SKPhysicsContact) {
+    <#code#>
   }
   
   override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
