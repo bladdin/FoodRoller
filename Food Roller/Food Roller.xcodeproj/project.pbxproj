@@ -245,6 +245,7 @@
 				6B5218861B8BC3C300BF9DA4 /* spikes.png */,
 				6B5218901B8C51F800BF9DA4 /* spike.png */,
 				6BCED71C1B8B8F9C006967AC /* background.png */,
+				B57D73FD1B87D89200B3838B /* AppDelegate.swift */,
 				6B5218881B8BE15700BF9DA4 /* hotdog.png */,
 				B57D73FC1B87D89200B3838B /* Info.plist */,
 			);
@@ -366,11 +367,12 @@
 				AE65B1F11B8CFEE5008EF023 /* Block2.png in Resources */,
 				B57D74071B87D89200B3838B /* Main.storyboard in Resources */,
 				AE8826C91B8DD7CA00486B91 /* bensoundFunnysong.mp3 in Resources */,
+				AE8826C91B8DD7CA00486B91 /* bensoundFunnysong.mp3 in Resources */,
 				AE8826CA1B8DD7CA00486B91 /* bensoundBetterdays.mp3 in Resources */,
 				AE8826CE1B8DE06200486B91 /* SquishFart.mp3 in Resources */,
 				AE8826C81B8DD7CA00486B91 /* bensoundCute.mp3 in Resources */,
 				6B52188F1B8C51F100BF9DA4 /* backgroundai.png in Resources */,
-				AE65B1EF1B8CFEAC008EF023 /* Block5.png in Resources */,
+				6B52188F1B8C51F100BF9DA4 /* gameBackground.png in Resources */,
 				6B5218C21B8DAA8D00BF9DA4 /* 5.png in Resources */,
 				6B5218891B8BE15700BF9DA4 /* hotdog.png in Resources */,
 			);

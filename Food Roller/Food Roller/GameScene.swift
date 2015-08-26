@@ -24,6 +24,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     BackgroundMusic.playBackgroundMusic("bensoundFunnysong.mp3")
     
+    
     physicsBody = SKPhysicsBody(edgeLoopFromRect: CGRect(x: 250, y: 0, width: self.size.width - 500, height: self.size.height))
     
     // BACKGROUND AND SPIKE NODES
@@ -136,6 +137,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     for bob in self.arrayOfPathsInGame{
       CreatePath.MovePathObject(bob)
     }
+  }
+
+  func updateTimer() {
+    if timerCount >= 0 {
+      timerCount++
+      timerLabelNode.text = String(timerCount)
+    }
+  }
+  
+  func resetGame() {
+    timerLabelNode.text = "0" // reset the timer
   }
   
 }
