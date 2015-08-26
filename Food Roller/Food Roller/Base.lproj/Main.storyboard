@@ -225,12 +225,18 @@
                             </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="SBM-an-FeE">
                                 <rect key="frame" x="153" y="177" width="294" height="31"/>
+                                <connections>
+                                    <action selector="MusicSlider:" destination="ILQ-wP-xnC" eventType="valueChanged" id="wc1-dX-zIv"/>
+                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="v7I-p9-XQS">
                                 <rect key="frame" x="153" y="303" width="294" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="290" id="EF8-t0-m24"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="SFXSlider:" destination="ILQ-wP-xnC" eventType="valueChanged" id="9FL-hc-dCk"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vfw-08-RfL">
                                 <rect key="frame" x="54" y="169" width="0.0" height="0.0"/>

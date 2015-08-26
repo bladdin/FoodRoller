@@ -10,6 +10,14 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+  @IBAction func MusicSlider(sender: UISlider) {
+     var currentValue = Int(sender.value)
+     musicVolume = currentValue
+  }
+  @IBAction func SFXSlider(sender: UISlider) {
+    
+  }
+  
   @IBOutlet weak var backgroundMusicLabel: UILabel!
   @IBOutlet weak var soundEffectLabel: UILabel!
     override func viewDidLoad() {
@@ -19,6 +27,8 @@ class SettingsViewController: UIViewController {
       soundEffectLabel.text = "Sound Effect"
       backgroundMusicLabel.font = UIFont(name: "ChalkboardSE-Regular", size: 24)
       soundEffectLabel.font = UIFont(name: "ChalkboardSE-Regular", size: 24)
+      
+      
     }
 
     override func didReceiveMemoryWarning() {

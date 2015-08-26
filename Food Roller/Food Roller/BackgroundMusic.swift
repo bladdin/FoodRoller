@@ -12,6 +12,8 @@ import AVFoundation
 class BackgroundMusic{
   
   static var backgroundMusicPlayer: AVAudioPlayer!
+  static var musicVolume: Float!
+  static var sfxVolume: Float!
 
   
 class func playBackgroundMusic(filename: String) {
@@ -32,4 +34,8 @@ class func playBackgroundMusic(filename: String) {
   backgroundMusicPlayer.prepareToPlay()
   backgroundMusicPlayer.play()
 }
+  
+  class func adjustVolume(musicVolume: Float){
+  backgroundMusicPlayer.volume = musicVolume
+  }
 }

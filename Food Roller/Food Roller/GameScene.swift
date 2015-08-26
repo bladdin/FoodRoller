@@ -8,6 +8,8 @@
 
 import SpriteKit
 
+var musicVolume: Float = 1
+
 class GameScene: SKScene, SKPhysicsContactDelegate {
   var hotdog = SKSpriteNode()
   var backgroundSpeed : CGFloat = 1
@@ -19,6 +21,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   var timerLabelNode = SKLabelNode(text: "0")
   var timer = NSTimer()
   var timerCount = 0
+  
   
   override func didMoveToView(view: SKView) {
 
