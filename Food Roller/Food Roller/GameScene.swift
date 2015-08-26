@@ -15,6 +15,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   var bob = SKSpriteNode()
   var startLocation = CGPoint()
   var endLocation = CGPoint()
+
+
+  var arrayOfPathsInGame = [SKSpriteNode()]
+
   
   override func didMoveToView(view: SKView) {
 
@@ -132,6 +136,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
       }
     })
-    CreatePath.MovePathObject(bob)
+    for bob in self.arrayOfPathsInGame{
+      CreatePath.MovePathObject(bob)
+    }
   }
 }
