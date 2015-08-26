@@ -46,7 +46,6 @@ class RandomElements{
 //      return screenHeight / kPathPosition5Divider
 //    default:
 //      return nil
-    println(random)
     return random
     
   }

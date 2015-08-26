@@ -28,6 +28,12 @@ class MenuViewController: UIViewController {
     settingsButtonOutlet.setImage(clickedSettingsButton, forState: UIControlState.Highlighted)
     helpButtonOutlet.setImage(clickedHelpButton, forState: UIControlState.Highlighted)
 
+
+  }
+  
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+       navigationController?.navigationBarHidden = true
   }
 
   
