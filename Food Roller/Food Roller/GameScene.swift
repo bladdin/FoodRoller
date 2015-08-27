@@ -7,17 +7,20 @@
 //
 
 import SpriteKit
+import Foundation
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
   
   var hotdog = SKSpriteNode()
   
   var bob = SKSpriteNode()
+  var lastBob = SKSpriteNode()
   
   var startLocation = CGPoint()
   var endLocation = CGPoint()
   
   var spikeNode = SKSpriteNode()
+  
   
   enum ColliderType : UInt32 {
     case Hotdog = 1
@@ -30,13 +33,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   var timerLabelNode = SKLabelNode(text: "0")
   var timer = NSTimer()
   var timerCount = 0
+  var lastFrameTime : Int!
+  var changeInTime : Int!
+  var timeSinceLastNode : Int!
+  var nextPipeTime = 3
+  var timerForPaths = NSTimer()
+  var timerForPathsCount = 0
   
   override func didMoveToView(view: SKView) {
     gameOver = false
     BackgroundMusic.playBackgroundMusic("bensoundFunnysong.mp3")
     
-    
-    physicsBody = SKPhysicsBody(edgeLoopFromRect: CGRect(x: 250, y: 0, width: self.size.width - 500, height: self.size.height))
+    // bounds
+    physicsBody = SKPhysicsBody(edgeLoopFromRect: CGRect(x: -5
+      , y: 0, width: self.size.width + 10, height: self.size.height))
 
     
     self.physicsWorld.contactDelegate = self //Setting up physics world for contact with boundaries
@@ -47,7 +57,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
       let bg = SKSpriteNode(imageNamed: "gameBackground")
       let groundTexture = SKTexture(imageNamed: "cactus")
       
-      bg.size = CGSize(width: self.frame.size.width, height: self.frame.size.height)
+      bg.size = CGSize(width: 1024, height: 768)
       bg.anchorPoint = CGPointZero
       bg.position = CGPoint(x: i * bg.size.width, y: 0)
       bg.name = "gameBackground"
@@ -55,8 +65,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
       self.spikeNode = SKSpriteNode(texture: groundTexture)
       spikeNode.anchorPoint = CGPointZero
       spikeNode.position = CGPoint(x: i * spikeNode.size.width, y: -30 )
-      let bottomBoundSize = CGSize(width: spikeNode.size.width + 200, height: spikeNode.size.height + 120)
+      let bottomBoundSize = CGSize(width: spikeNode.size.width, height: spikeNode.size.height + 130)
       spikeNode.physicsBody = SKPhysicsBody(rectangleOfSize: bottomBoundSize)
+      
       spikeNode.physicsBody!.affectedByGravity = false
       spikeNode.physicsBody!.dynamic = false
       spikeNode.physicsBody!.categoryBitMask = ColliderType.Cactus.rawValue
@@ -79,7 +90,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var hotdogTexture6 = SKTexture(imageNamed: "6")
 
     self.hotdog = SKSpriteNode(texture: hotdogTexture1)
-    self.hotdog.size = CGSizeMake(self.frame.size.width / 16, self.frame.size.height / 8)
+    self.hotdog.name = "hotdog"
+    self.hotdog.size = CGSizeMake(self.frame.size.width / 7, self.frame.size.height / 7)
     self.hotdog.zPosition = 100
     self.hotdog.position = CGPoint(x: self.frame.size.width / 2 , y: self.frame.size.height / 2)
     self.hotdog.physicsBody = SKPhysicsBody(circleOfRadius: self.hotdog.size.height / 2)
@@ -100,22 +112,52 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     // TIMER:
-    timerLabelNode.position = CGPoint(x: self.frame.size.width/2 + 150  , y: self.frame.size.height/2 + 310)
+    timerLabelNode.position = CGPoint(x: self.frame.size.width/2 + 135  , y: self.frame.size.height/2 + 270)
     timerLabelNode.zPosition = 100
     timerLabelNode.fontSize = 65
     timerLabelNode.fontName = "MarkerFelt-Wide"
     self.addChild(timerLabelNode)
     timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "updateTimer", userInfo: nil, repeats: true)
- 
     
-    // PATH NODE
-    for index in 1...3{
-      bob = CreatePath.CreatePath(Int(RandomElements.randomPathVarYPosition(800, max: 1000))+index*50, yInitialPosition: (RandomElements.randomPathVarYPosition(180, max: Int(self.frame.height)-68)), width: (RandomElements.randomPathLength()!))
-      self.arrayOfPathsInGame.append(bob)
-      self.addChild(bob)
-    }
+    //MARK: Moves the Path Nodes Aka Bobs
+    let distanceBobsMove = CGFloat(self.frame.width * 2 + (bob.frame.width * 2))
+    let moveBobs = SKAction.moveByX(-distanceBobsMove, y: 0.0, duration: NSTimeInterval(0.01 * distanceBobsMove))
+    let removeBobs = SKAction.removeFromParent()
+    moveAndRemove = SKAction.sequence([moveBobs, removeBobs])
+    
+    
+    //MARK: Spawns First Bob
+    let firstBobspawn = SKAction.runBlock({() in self.spawnFirstBob()})
+    let firstBobinitialSpawn = SKAction.sequence([firstBobspawn])
+    self.runAction(firstBobinitialSpawn)
+
+    
+    //MARK: Spawns Path Nodes AKA Bobs
+    let spawn = SKAction.runBlock({() in self.spawnBobs()})
+    let delay = SKAction.waitForDuration(NSTimeInterval(2.0))
+    let initialSpawn = SKAction.sequence([spawn, delay])
+    let respawn = SKAction.repeatActionForever(initialSpawn)
+    self.runAction(respawn)
+    
     
   }
+  func spawnFirstBob(){
+    let bob = CreatePath.CreatePath(50, yInitialPosition: Int(spikeNode.frame.height) + 20, width: 5)
+    CreatePath.MovePathObject(bob)
+    self.addChild(bob)
+    bob.runAction(moveAndRemove)
+    lastBob = bob
+
+  }
+  
+  func spawnBobs() {
+    let bob = CreatePath.CreatePath(Int(RandomElements.randomPathVarYPosition(Int(self.frame.width ), max: Int(self.frame.width))), yInitialPosition: (RandomElements.randomPathVarYPosition(180, max: Int(self.frame.height)-68)), width: (RandomElements.randomPathLength()!))
+    CreatePath.MovePathObject(bob)
+    self.addChild(bob)
+    bob.runAction(moveAndRemove)
+    lastBob = bob
+  }
+
   
   //Mark: Game over function called when gameOver is true
   func gameIsOver () {
@@ -139,10 +181,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let bodyA = contact.bodyA
     let bodyB = contact.bodyB
     
-    if (bodyA == spikeNode.physicsBody && bodyB == hotdog.physicsBody) {
+    if (bodyA == spikeNode.physicsBody && bodyB == hotdog.physicsBody) || (bodyB == spikeNode.physicsBody && bodyA == hotdog.physicsBody) {
       println("collision2")
+      println("bodyA: \(bodyA.description), bodyB: \(bodyB.description)")
       gameOver = true
       gameIsOver()
+    } else {
+      println("bodyA: \(bodyA.description), bodyB: \(bodyB.description)")
     }
   }
   
@@ -171,6 +216,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
   }
   
+  
   override func update(currentTime: CFTimeInterval) {
     enumerateChildNodesWithName("gameBackground", usingBlock: { (node, stop) -> Void in
       if let bg = node as? SKSpriteNode {
@@ -189,9 +235,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
       }
     })
-    for bob in self.arrayOfPathsInGame{
-      CreatePath.MovePathObject(bob)
-    }
+    
+
   }
 
   func updateTimer() {
@@ -204,5 +249,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   func resetGame() {
     timerLabelNode.text = "0" // reset the timer
   }
+  
+
   
 }
