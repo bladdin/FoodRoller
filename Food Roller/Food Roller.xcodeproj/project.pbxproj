@@ -8,11 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		3490E0BB1B8E40C900EA760D /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3490E0BA1B8E40C900EA760D /* GlobalVariables.swift */; };
+		6B0315521B8E72E1000AE4AA /* deadHotDog.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B03154F1B8E72E1000AE4AA /* deadHotDog.png */; };
+		6B0315531B8E72E1000AE4AA /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0315501B8E72E1000AE4AA /* pause.png */; };
+		6B0315541B8E72E1000AE4AA /* resume.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0315511B8E72E1000AE4AA /* resume.png */; };
+		6B0315561B8E9101000AE4AA /* bun.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0315551B8E9101000AE4AA /* bun.png */; };
+		6B0315581B8EA48F000AE4AA /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0315571B8EA48F000AE4AA /* title.png */; };
+		6B03155A1B8EA538000AE4AA /* rope.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0315591B8EA538000AE4AA /* rope.png */; };
+		6B03155D1B8EADCD000AE4AA /* desert.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B03155B1B8EADCD000AE4AA /* desert.png */; };
+		6B03155E1B8EADCD000AE4AA /* desertWithHotDog.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B03155C1B8EADCD000AE4AA /* desertWithHotDog.png */; };
+		6B0315721B8EFCA3000AE4AA /* menuButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B03156F1B8EFCA3000AE4AA /* menuButton.png */; };
+		6B0315731B8EFCA3000AE4AA /* retryButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0315701B8EFCA3000AE4AA /* retryButton.png */; };
+		6B0315741B8EFCA3000AE4AA /* shareButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0315711B8EFCA3000AE4AA /* shareButton.png */; };
+		6B0315761B8F816D000AE4AA /* bunView.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0315751B8F816D000AE4AA /* bunView.png */; };
 		6B5218891B8BE15700BF9DA4 /* hotdog.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B5218881B8BE15700BF9DA4 /* hotdog.png */; };
 		6B52188D1B8C474D00BF9DA4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B52188C1B8C474D00BF9DA4 /* Images.xcassets */; };
 		6B52188F1B8C51F100BF9DA4 /* gameBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B52188E1B8C51F100BF9DA4 /* gameBackground.png */; };
-		6B5218931B8C59B200BF9DA4 /* desertWithHotDog.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B5218921B8C59B200BF9DA4 /* desertWithHotDog.png */; };
-		6B5218951B8C60F400BF9DA4 /* desert.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B5218941B8C60F400BF9DA4 /* desert.png */; };
 		6B5218991B8D44F400BF9DA4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5218981B8D44F400BF9DA4 /* SettingsViewController.swift */; };
 		6B52189B1B8D4FE000BF9DA4 /* cactus.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B52189A1B8D4FE000BF9DA4 /* cactus.png */; };
 		6B5218BE1B8DAA8D00BF9DA4 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B5218B81B8DAA8D00BF9DA4 /* 1.png */; };
@@ -58,11 +68,21 @@
 
 /* Begin PBXFileReference section */
 		3490E0BA1B8E40C900EA760D /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
+		6B03154F1B8E72E1000AE4AA /* deadHotDog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deadHotDog.png; sourceTree = "<group>"; };
+		6B0315501B8E72E1000AE4AA /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
+		6B0315511B8E72E1000AE4AA /* resume.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = resume.png; sourceTree = "<group>"; };
+		6B0315551B8E9101000AE4AA /* bun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bun.png; sourceTree = "<group>"; };
+		6B0315571B8EA48F000AE4AA /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title.png; sourceTree = "<group>"; };
+		6B0315591B8EA538000AE4AA /* rope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rope.png; sourceTree = "<group>"; };
+		6B03155B1B8EADCD000AE4AA /* desert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = desert.png; sourceTree = "<group>"; };
+		6B03155C1B8EADCD000AE4AA /* desertWithHotDog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = desertWithHotDog.png; sourceTree = "<group>"; };
+		6B03156F1B8EFCA3000AE4AA /* menuButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuButton.png; sourceTree = "<group>"; };
+		6B0315701B8EFCA3000AE4AA /* retryButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = retryButton.png; sourceTree = "<group>"; };
+		6B0315711B8EFCA3000AE4AA /* shareButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shareButton.png; sourceTree = "<group>"; };
+		6B0315751B8F816D000AE4AA /* bunView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bunView.png; sourceTree = "<group>"; };
 		6B5218881B8BE15700BF9DA4 /* hotdog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hotdog.png; sourceTree = "<group>"; };
 		6B52188C1B8C474D00BF9DA4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6B52188E1B8C51F100BF9DA4 /* gameBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameBackground.png; sourceTree = "<group>"; };
-		6B5218921B8C59B200BF9DA4 /* desertWithHotDog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = desertWithHotDog.png; sourceTree = "<group>"; };
-		6B5218941B8C60F400BF9DA4 /* desert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = desert.png; sourceTree = "<group>"; };
 		6B5218981B8D44F400BF9DA4 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		6B52189A1B8D4FE000BF9DA4 /* cactus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cactus.png; sourceTree = "<group>"; };
 		6B5218B81B8DAA8D00BF9DA4 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
@@ -157,8 +177,10 @@
 		6B5218C81B8DB97A00BF9DA4 /* MenuImages */ = {
 			isa = PBXGroup;
 			children = (
-				6B5218941B8C60F400BF9DA4 /* desert.png */,
-				6B5218921B8C59B200BF9DA4 /* desertWithHotDog.png */,
+				6B03155B1B8EADCD000AE4AA /* desert.png */,
+				6B03155C1B8EADCD000AE4AA /* desertWithHotDog.png */,
+				6B0315591B8EA538000AE4AA /* rope.png */,
+				6B0315571B8EA48F000AE4AA /* title.png */,
 			);
 			name = MenuImages;
 			sourceTree = "<group>";
@@ -166,6 +188,14 @@
 		6B5218C91B8DB99C00BF9DA4 /* GameSceneImages */ = {
 			isa = PBXGroup;
 			children = (
+				6B03154F1B8E72E1000AE4AA /* deadHotDog.png */,
+				6B03156F1B8EFCA3000AE4AA /* menuButton.png */,
+				6B0315701B8EFCA3000AE4AA /* retryButton.png */,
+				6B0315711B8EFCA3000AE4AA /* shareButton.png */,
+				6B0315551B8E9101000AE4AA /* bun.png */,
+				6B0315501B8E72E1000AE4AA /* pause.png */,
+				6B0315751B8F816D000AE4AA /* bunView.png */,
+				6B0315511B8E72E1000AE4AA /* resume.png */,
 				6B52188E1B8C51F100BF9DA4 /* gameBackground.png */,
 				6B52189A1B8D4FE000BF9DA4 /* cactus.png */,
 			);
@@ -199,10 +229,10 @@
 			children = (
 				B57D74011B87D89200B3838B /* GameScene.swift */,
 				B57D73FF1B87D89200B3838B /* GameScene.sks */,
-				6BCED7221B8BAFBC006967AC /* MenuViewController.swift */,
 				B57D74031B87D89200B3838B /* GameViewController.swift */,
 				6B5218981B8D44F400BF9DA4 /* SettingsViewController.swift */,
 				6B5218C41B8DABE000BF9DA4 /* HelpViewController.swift */,
+				6BCED7221B8BAFBC006967AC /* MenuViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -355,26 +385,35 @@
 				6B5218C31B8DAA8D00BF9DA4 /* 6.png in Resources */,
 				6B52189B1B8D4FE000BF9DA4 /* cactus.png in Resources */,
 				6B5218BE1B8DAA8D00BF9DA4 /* 1.png in Resources */,
-				B5B9BDA11B8F6C47000B7D4B /* Block5.png in Resources */,
-				6B5218931B8C59B200BF9DA4 /* desertWithHotDog.png in Resources */,
+				6B0315721B8EFCA3000AE4AA /* menuButton.png in Resources */,
+				6B0315741B8EFCA3000AE4AA /* shareButton.png in Resources */,
+				6B0315731B8EFCA3000AE4AA /* retryButton.png in Resources */,
 				B57D740C1B87D89200B3838B /* LaunchScreen.xib in Resources */,
 				AE65B1EE1B8CFEAC008EF023 /* Block4.png in Resources */,
 				6B5218C01B8DAA8D00BF9DA4 /* 3.png in Resources */,
-				6B5218951B8C60F400BF9DA4 /* desert.png in Resources */,
+				6B03155A1B8EA538000AE4AA /* rope.png in Resources */,
 				6B5218BF1B8DAA8D00BF9DA4 /* 2.png in Resources */,
 				6B5218C11B8DAA8D00BF9DA4 /* 4.png in Resources */,
 				AE65B1EB1B8CFEAC008EF023 /* Block1.png in Resources */,
 				6B52188D1B8C474D00BF9DA4 /* Images.xcassets in Resources */,
 				B57D74001B87D89200B3838B /* GameScene.sks in Resources */,
+				6B03155D1B8EADCD000AE4AA /* desert.png in Resources */,
 				AE65B1ED1B8CFEAC008EF023 /* Block3.png in Resources */,
+				6B0315581B8EA48F000AE4AA /* title.png in Resources */,
+				6B0315521B8E72E1000AE4AA /* deadHotDog.png in Resources */,
+				6B03155E1B8EADCD000AE4AA /* desertWithHotDog.png in Resources */,
 				AE65B1F11B8CFEE5008EF023 /* Block2.png in Resources */,
 				B57D74071B87D89200B3838B /* Main.storyboard in Resources */,
 				AE8826C91B8DD7CA00486B91 /* bensoundFunnysong.mp3 in Resources */,
+				6B0315541B8E72E1000AE4AA /* resume.png in Resources */,
 				AE8826C91B8DD7CA00486B91 /* bensoundFunnysong.mp3 in Resources */,
 				AE8826CA1B8DD7CA00486B91 /* bensoundBetterdays.mp3 in Resources */,
 				AE8826CE1B8DE06200486B91 /* SquishFart.mp3 in Resources */,
 				AE8826C81B8DD7CA00486B91 /* bensoundCute.mp3 in Resources */,
 				6B52188F1B8C51F100BF9DA4 /* gameBackground.png in Resources */,
+				6B0315561B8E9101000AE4AA /* bun.png in Resources */,
+				6B0315761B8F816D000AE4AA /* bunView.png in Resources */,
+				6B0315531B8E72E1000AE4AA /* pause.png in Resources */,
 				6B52188F1B8C51F100BF9DA4 /* gameBackground.png in Resources */,
 				6B5218C21B8DAA8D00BF9DA4 /* 5.png in Resources */,
 				6B5218891B8BE15700BF9DA4 /* hotdog.png in Resources */,
