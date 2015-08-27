@@ -50,9 +50,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     physicsBody = SKPhysicsBody(edgeLoopFromRect: CGRect(x: -5
       , y: 0, width: self.size.width + 10, height: self.size.height))
     
-    
-    
 //    let timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "doSomething", userInfo: nil, repeats: true)
+    
     
     self.physicsWorld.contactDelegate = self //Setting up physics world for contact with boundaries
       physicsWorld.gravity = CGVectorMake(0.0, gravityMagnitude)
@@ -191,19 +190,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   func gameIsOver() {
     spikeSpeed = 0
     backgroundSpeed = 0
-    hotdog.paused = true
-   
-    
-    self.speed = 0.0
-    let gameOverScreen = SKView()
-    gameOverScreen.frame = CGRect(x: self.view!.frame.width / 2, y: self.view!.frame.size.height / 2, width: 100, height: 100)
-    gameOverScreen.backgroundColor = UIColor.blackColor()
-    gameOverScreen.alpha = 0
-    self.view?.addSubview(gameOverScreen)
-    SKView.animateWithDuration(1.0, animations: { () -> Void in
-      gameOverScreen.alpha = 1
-    })
-    
+    gameStop = true
+    self.speed = 0
     
     var dead = SKAction.animateWithTextures([deadHotdogTexture], timePerFrame: 1)
     self.hotdog.size = CGSize(width: 100, height: 85)
@@ -219,7 +207,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     if (bodyA == spikeNode.physicsBody && bodyB == hotdog.physicsBody) || (bodyB == spikeNode.physicsBody && bodyA == hotdog.physicsBody) {
       //println("collision2")
 //      println("bodyA: \(bodyA.description), bodyB: \(bodyB.description)")
-      gameOver = true
       gameIsOver()
     } else {
 //      println("bodyA: \(bodyA.description), bodyB: \(bodyB.description)")
@@ -301,6 +288,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     backgroundSpeed = 1
     spikeSpeed = 1
     timerLabelNode.text = "0" // reset the timer
+    gameStarted = false 
     timeForDifficultyIncrease = 10
   }
 
@@ -329,5 +317,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     diffiultyTimer.invalidate()
   }
 
+  
   
 }
