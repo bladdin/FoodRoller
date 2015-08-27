@@ -10,4 +10,7 @@ import SpriteKit
 
   var backgroundSpeed : CGFloat = 1
   var spikeSpeed : CGFloat = 1
-  var gameOver = false 
+  var gameOver = false
+  var musicVolume:Float = 0.5
+  var sfxVolume: Float = 0.5
+ 

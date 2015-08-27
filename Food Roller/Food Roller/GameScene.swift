@@ -8,7 +8,6 @@
 
 import SpriteKit
 
-var musicVolume: Float = 1
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
   
@@ -165,7 +164,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
       if let touch = touch as? UITouch {
         endLocation = touch.locationInNode(self)
         
-        runAction(SKAction.playSoundFileNamed("SquishFart.mp3", waitForCompletion: false))
+        BackgroundSFX.playBackgroundSFX("SquishFart.mp3")
 
         let difference = CGVectorMake(CGFloat((endLocation.x - startLocation.x) * -1), abs(endLocation.y - startLocation.y) * 1.6)
         //   let difference = CGVectorMake(0, abs(endLocation.y - startLocation.y) * 1.6)
