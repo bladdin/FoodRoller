@@ -16,4 +16,5 @@ var lastBob :SKSpriteNode!
 var bobMinStart : Int!
 var bobMaxStart : Int!
 var moveAndRemove : SKAction!
-  
+var timeForDifficultyIncrease : NSTimeInterval = 10
+var nodeSpeed:CGFloat = 0.01
