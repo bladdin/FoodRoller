@@ -27,16 +27,13 @@ extension SKNode {
 }
 
 
-
 class GameViewController: UIViewController {
   var gameoverView = UIView()
-//  var pauseButton = UIButton()
   let pauseImage = UIImage(named: "pause")
   let resumeImage = UIImage(named: "resume")
 
   @IBOutlet weak var pauseButton: UIButton!
   @IBOutlet weak var retryButton: UIButton!
-//  @IBOutlet weak var gameoverView: UIView!
   @IBOutlet weak var bunImageView: UIImageView!
   var sc : GameScene!
 
@@ -59,10 +56,9 @@ class GameViewController: UIViewController {
   @IBAction func retryButtonAction(sender: UIButton) {
     println("retry")
     sc.resetGame()
-    sc.removeAllChildren()
-    sc.removeAllActions()
-    sc.removeFromParent()
-    
+//    sc.removeAllChildren()
+//    sc.removeAllActions()
+//    sc.removeFromParent()
     presentScene()
   
     
@@ -71,20 +67,23 @@ class GameViewController: UIViewController {
   
   @IBAction func shareButtonAction(sender: UIButton) {
     println("share")
+    var score : String = sc.timerLabelNode.text
+    let activityViewController = UIActivityViewController(activityItems: ["Your Score: " + score], applicationActivities: nil)
+    self.presentViewController(activityViewController, animated: true, completion: nil)
   }
   
   
   
   
   func presentScene() {
-    if let scene = GameScene.unarchiveFromFile("GameScene") as? GameScene {
+      let scene = GameScene()
       // Configure the view.
       sc = scene
       let skView = self.view as! SKView
       skView.showsFPS = true
       skView.showsNodeCount = true
       gameoverView.hidden = true
-      
+      scene.size = self.view.frame.size
       
       /* Sprite Kit applies additional optimizations to improve rendering performance */
       skView.ignoresSiblingOrder = true
@@ -92,8 +91,6 @@ class GameViewController: UIViewController {
       scene.scaleMode = .AspectFill
       scene.gameVC = self
       skView.presentScene(scene)
-      
-    }
   }
   
   override func shouldAutorotate() -> Bool {
