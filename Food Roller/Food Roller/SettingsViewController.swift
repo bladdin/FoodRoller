@@ -30,6 +30,7 @@ class SettingsViewController: UIViewController {
     sfxVolume = sender.value
     println("SFXSlider IBAction sender.value: \(sender.value)")
     BackgroundSFX.adjustVolume(sfxVolume)
+    BackgroundSFX.playBackgroundSFX("SquishFart.mp3")
   }
   
   @IBOutlet weak var SFXSliderOutlet: UISlider!

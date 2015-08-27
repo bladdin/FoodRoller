@@ -44,9 +44,9 @@
 		AE8826CE1B8DE06200486B91 /* SquishFart.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE8826CD1B8DE06200486B91 /* SquishFart.mp3 */; };
 		AEC2DF471B8BD80600B99985 /* CreatePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC2DF461B8BD80600B99985 /* CreatePath.swift */; };
 		AECDC3CB1B8F83F400310CE0 /* SoundFX.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECDC3CA1B8F83F400310CE0 /* SoundFX.swift */; };
-		AECDC3CD1B8F8A5300310CE0 /* jump.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AECDC3CC1B8F8A5300310CE0 /* jump.mp3 */; };
-		AECDC3CF1B8F8C9E00310CE0 /* death.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AECDC3CE1B8F8C9E00310CE0 /* death.mp3 */; };
 		AECDC3D11B8F9C0500310CE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AECDC3D01B8F9C0500310CE0 /* Main.storyboard */; };
+		AECDC3D61B8FAA9C00310CE0 /* pain.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AECDC3D41B8FAA9C00310CE0 /* pain.mp3 */; };
+		AECDC3D91B8FABFC00310CE0 /* jump.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AECDC3D81B8FABFC00310CE0 /* jump.mp3 */; };
 		B535A7EA1B8B8BF1000AF550 /* RandomElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = B535A7E91B8B8BF1000AF550 /* RandomElements.swift */; };
 		B535A7EE1B8BA2A5000AF550 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B535A7ED1B8BA2A5000AF550 /* Constants.swift */; };
 		B535A7F01B8BB231000AF550 /* RandomCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B535A7EF1B8BB231000AF550 /* RandomCaller.swift */; };
@@ -106,9 +106,9 @@
 		AE8826CD1B8DE06200486B91 /* SquishFart.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SquishFart.mp3; sourceTree = "<group>"; };
 		AEC2DF461B8BD80600B99985 /* CreatePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePath.swift; sourceTree = "<group>"; };
 		AECDC3CA1B8F83F400310CE0 /* SoundFX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundFX.swift; sourceTree = "<group>"; };
-		AECDC3CC1B8F8A5300310CE0 /* jump.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = jump.mp3; sourceTree = "<group>"; };
-		AECDC3CE1B8F8C9E00310CE0 /* death.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = death.mp3; sourceTree = "<group>"; };
 		AECDC3D01B8F9C0500310CE0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		AECDC3D41B8FAA9C00310CE0 /* pain.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pain.mp3; sourceTree = "<group>"; };
+		AECDC3D81B8FABFC00310CE0 /* jump.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = jump.mp3; sourceTree = "<group>"; };
 		B535A7E91B8B8BF1000AF550 /* RandomElements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomElements.swift; sourceTree = "<group>"; };
 		B535A7ED1B8BA2A5000AF550 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B535A7EF1B8BB231000AF550 /* RandomCaller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomCaller.swift; sourceTree = "<group>"; };
@@ -199,11 +199,11 @@
 		AE8826CF1B8E2FE500486B91 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				AECDC3CE1B8F8C9E00310CE0 /* death.mp3 */,
 				AE8826C51B8DD7CA00486B91 /* bensoundCute.mp3 */,
 				AE8826C61B8DD7CA00486B91 /* bensoundFunnysong.mp3 */,
+				AECDC3D41B8FAA9C00310CE0 /* pain.mp3 */,
+				AECDC3D81B8FABFC00310CE0 /* jump.mp3 */,
 				AE8826C71B8DD7CA00486B91 /* bensoundBetterdays.mp3 */,
-				AECDC3CC1B8F8A5300310CE0 /* jump.mp3 */,
 				AE8826CD1B8DE06200486B91 /* SquishFart.mp3 */,
 			);
 			name = Sounds;
@@ -391,6 +391,7 @@
 			files = (
 				6B5218C31B8DAA8D00BF9DA4 /* 6.png in Resources */,
 				6B52189B1B8D4FE000BF9DA4 /* cactus.png in Resources */,
+				AECDC3D61B8FAA9C00310CE0 /* pain.mp3 in Resources */,
 				6B5218BE1B8DAA8D00BF9DA4 /* 1.png in Resources */,
 				6B0315721B8EFCA3000AE4AA /* menuButton.png in Resources */,
 				6B0315741B8EFCA3000AE4AA /* shareButton.png in Resources */,
@@ -398,13 +399,13 @@
 				B57D740C1B87D89200B3838B /* LaunchScreen.xib in Resources */,
 				AE65B1EE1B8CFEAC008EF023 /* Block4.png in Resources */,
 				6B5218C01B8DAA8D00BF9DA4 /* 3.png in Resources */,
-				AECDC3CD1B8F8A5300310CE0 /* jump.mp3 in Resources */,
 				6B03155A1B8EA538000AE4AA /* rope.png in Resources */,
 				6B5218BF1B8DAA8D00BF9DA4 /* 2.png in Resources */,
 				6B5218C11B8DAA8D00BF9DA4 /* 4.png in Resources */,
 				AE65B1EB1B8CFEAC008EF023 /* Block1.png in Resources */,
 				6B52188D1B8C474D00BF9DA4 /* Images.xcassets in Resources */,
 				B57D74001B87D89200B3838B /* GameScene.sks in Resources */,
+				AECDC3D91B8FABFC00310CE0 /* jump.mp3 in Resources */,
 				6B03155D1B8EADCD000AE4AA /* desert.png in Resources */,
 				AECDC3D11B8F9C0500310CE0 /* Main.storyboard in Resources */,
 				AE65B1ED1B8CFEAC008EF023 /* Block3.png in Resources */,
@@ -412,7 +413,6 @@
 				6B0315521B8E72E1000AE4AA /* deadHotDog.png in Resources */,
 				6B03155E1B8EADCD000AE4AA /* desertWithHotDog.png in Resources */,
 				AE65B1F11B8CFEE5008EF023 /* Block2.png in Resources */,
-				AECDC3CF1B8F8C9E00310CE0 /* death.mp3 in Resources */,
 				AE8826C91B8DD7CA00486B91 /* bensoundFunnysong.mp3 in Resources */,
 				6B0315541B8E72E1000AE4AA /* resume.png in Resources */,
 				AE8826C91B8DD7CA00486B91 /* bensoundFunnysong.mp3 in Resources */,
