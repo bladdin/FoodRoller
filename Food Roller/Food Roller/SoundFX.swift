@@ -27,13 +27,15 @@ class BackgroundSFX{
       println("Could not create audio player: \(error!)")
       return
     }
-    backgroundSFXPlayer.numberOfLoops = -1
-    backgroundSFXPlayer.prepareToPlay()
+    
+    backgroundSFXPlayer.numberOfLoops = 0
+//    backgroundSFXPlayer.prepareToPlay()
     backgroundSFXPlayer.volume = sfxVolume
     backgroundSFXPlayer.play()
   }
   
   class func adjustVolume(sfxVolume: Float){
+    println("sfxvol: \(sfxVolume)")
     backgroundSFXPlayer.volume = sfxVolume
   }
 }

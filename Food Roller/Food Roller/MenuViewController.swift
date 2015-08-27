@@ -26,7 +26,7 @@ class MenuViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    BackgroundSFX.playBackgroundSFX("SquishFart.mp3")
     BackgroundMusic.playBackgroundMusic("bensoundCute.mp3")
     
     startButtonOutlet.setImage(clickedStartButton, forState: UIControlState.Highlighted)

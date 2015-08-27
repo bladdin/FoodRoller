@@ -284,12 +284,9 @@
                                         <include reference="tbr-7i-5Gk"/>
                                     </mask>
                                 </variation>
-                                <connections>
-                                    <segue destination="ILQ-wP-xnC" kind="show" identifier="SettingsViewController" id="Pbd-9O-lqp"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QmR-Na-JZe">
-                                <rect key="frame" x="192" y="406" width="217" height="100"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QmR-Na-JZe">
+                                <rect key="frame" x="235" y="520" width="130" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="13v-ri-LHG"/>
                                     <constraint firstAttribute="height" constant="60" id="ERR-ez-UaL"/>
@@ -476,7 +473,7 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="SBM-an-FeE">
                                 <rect key="frame" x="153" y="177" width="294" height="31"/>
                                 <connections>
-                                    <action selector="MusicSlider:" destination="ILQ-wP-xnC" eventType="valueChanged" id="wc1-dX-zIv"/>
+                                    <action selector="MusicSlider:" destination="ILQ-wP-xnC" eventType="valueChanged" id="aDg-RR-HpZ"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="v7I-p9-XQS">
@@ -485,7 +482,7 @@
                                     <constraint firstAttribute="width" constant="290" id="EF8-t0-m24"/>
                                 </constraints>
                                 <connections>
-                                    <action selector="SFXSlider:" destination="ILQ-wP-xnC" eventType="valueChanged" id="9FL-hc-dCk"/>
+                                    <action selector="SFXSlider:" destination="ILQ-wP-xnC" eventType="valueChanged" id="oVe-cL-WDH"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vfw-08-RfL">
@@ -521,8 +518,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="MusicSliderOutlet" destination="SBM-an-FeE" id="AJp-EB-2eh"/>
-                        <outlet property="SFXSliderOutlet" destination="v7I-p9-XQS" id="UJh-7h-tge"/>
+                        <outlet property="MusicSliderOutlet" destination="SBM-an-FeE" id="EOB-Fv-jhD"/>
+                        <outlet property="SFXSliderOutlet" destination="v7I-p9-XQS" id="miv-3V-Gch"/>
                         <outlet property="backgroundMusicLabel" destination="Vfw-08-RfL" id="ZWM-j5-VzW"/>
                         <outlet property="soundEffectLabel" destination="Myh-Lw-elD" id="siI-WA-ucs"/>
                     </connections>
@@ -578,7 +575,6 @@
                     </view>
                     <connections>
                         <outlet property="howToPlayLabel" destination="tAO-2B-EGK" id="VqJ-52-5yZ"/>
-                        <outlet property="howToPlayTextView" destination="YSN-dg-rSd" id="fR0-TV-ImK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1pv-pg-cYL" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -27,7 +27,9 @@ class SettingsViewController: UIViewController {
   @IBOutlet weak var MusicSliderOutlet: UISlider!
   
   @IBAction func SFXSlider(sender: UISlider) {
-     sfxVolume = sender.value
+    sfxVolume = sender.value
+    println("SFXSlider IBAction sender.value: \(sender.value)")
+    BackgroundSFX.adjustVolume(sfxVolume)
   }
   
   @IBOutlet weak var SFXSliderOutlet: UISlider!
