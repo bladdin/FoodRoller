@@ -132,8 +132,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     self.addChild(self.hotdog)
     
     
-    // TIMER:
-    timerLabelNode.position = CGPoint(x: self.frame.size.width/2 + 135  , y: self.frame.size.height/2 + 270)
+    // TIME8
+    timerLabelNode.position = CGPoint(x: 5*self.frame.size.width/6 , y: 7*self.frame.size.height/8)
     timerLabelNode.zPosition = 100
     timerLabelNode.fontSize = 65
     timerLabelNode.fontName = "MarkerFelt-Wide"
