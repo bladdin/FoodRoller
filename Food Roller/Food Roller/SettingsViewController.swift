@@ -12,6 +12,7 @@ import UIKit
 //protocol SoundVolumeDelegate {
 //}
 
+  let userDefaults = NSUserDefaults.standardUserDefaults()
 class SettingsViewController: UIViewController {
 
 //keep for sound adjustment
@@ -49,6 +50,9 @@ class SettingsViewController: UIViewController {
 //    delegate?.musicVolume = musicVolume
 //    delegate?.sfxVolume = sfxVolume
 //    delegate = nil
+    userDefaults.setObject(musicVolume, forKey: "initialMusic")
+    userDefaults.setObject(sfxVolume, forKey: "initialSFX")
+    
   }
 
     override func didReceiveMemoryWarning() {

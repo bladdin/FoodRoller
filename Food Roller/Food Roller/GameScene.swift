@@ -164,7 +164,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
       if let touch = touch as? UITouch {
         endLocation = touch.locationInNode(self)
         
-        BackgroundSFX.playBackgroundSFX("SquishFart.mp3")
+        BackgroundSFX.playBackgroundSFX("jump.mp3")
 
         let difference = CGVectorMake(CGFloat((endLocation.x - startLocation.x) * -1), abs(endLocation.y - startLocation.y) * 1.6)
         //   let difference = CGVectorMake(0, abs(endLocation.y - startLocation.y) * 1.6)
