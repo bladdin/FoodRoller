@@ -8,6 +8,12 @@
 
 import SpriteKit
 
-  var backgroundSpeed : CGFloat = 1
-  var spikeSpeed : CGFloat = 1
-  var gameOver = false 
+var backgroundSpeed : CGFloat = 1
+var spikeSpeed : CGFloat = 1
+var gameOver = false
+var bobWidth : Int!
+var lastBob :SKSpriteNode!
+var bobMinStart : Int!
+var bobMaxStart : Int!
+var moveAndRemove : SKAction!
+  

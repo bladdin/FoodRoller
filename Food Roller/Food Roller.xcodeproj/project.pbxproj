@@ -43,6 +43,7 @@
 		B57D74071B87D89200B3838B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B57D74051B87D89200B3838B /* Main.storyboard */; };
 		B57D740C1B87D89200B3838B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B57D740A1B87D89200B3838B /* LaunchScreen.xib */; };
 		B57D74181B87D89200B3838B /* Food_RollerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57D74171B87D89200B3838B /* Food_RollerTests.swift */; };
+		B5B9BDA11B8F6C47000B7D4B /* Block5.png in Resources */ = {isa = PBXBuildFile; fileRef = B5B9BDA01B8F6C47000B7D4B /* Block5.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,7 +76,6 @@
 		AE65B1E61B8CFEAC008EF023 /* Block1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Block1.png; sourceTree = "<group>"; };
 		AE65B1E81B8CFEAC008EF023 /* Block3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Block3.png; sourceTree = "<group>"; };
 		AE65B1E91B8CFEAC008EF023 /* Block4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Block4.png; sourceTree = "<group>"; };
-		AE65B1EA1B8CFEAC008EF023 /* Block5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Block5.png; sourceTree = "<group>"; };
 		AE65B1F01B8CFEE5008EF023 /* Block2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Block2.png; sourceTree = "<group>"; };
 		AE8826C51B8DD7CA00486B91 /* bensoundCute.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bensoundCute.mp3; sourceTree = "<group>"; };
 		AE8826C61B8DD7CA00486B91 /* bensoundFunnysong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bensoundFunnysong.mp3; sourceTree = "<group>"; };
@@ -97,6 +97,7 @@
 		B57D74111B87D89200B3838B /* Food RollerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Food RollerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B57D74161B87D89200B3838B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B57D74171B87D89200B3838B /* Food_RollerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food_RollerTests.swift; sourceTree = "<group>"; };
+		B5B9BDA01B8F6C47000B7D4B /* Block5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Block5.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,7 +149,7 @@
 				AE65B1F01B8CFEE5008EF023 /* Block2.png */,
 				AE65B1E81B8CFEAC008EF023 /* Block3.png */,
 				AE65B1E91B8CFEAC008EF023 /* Block4.png */,
-				AE65B1EA1B8CFEAC008EF023 /* Block5.png */,
+				B5B9BDA01B8F6C47000B7D4B /* Block5.png */,
 			);
 			name = Tiles;
 			sourceTree = "<group>";
@@ -312,6 +313,7 @@
 		B57D73F01B87D89200B3838B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Benjamin Laddin";
 				TargetAttributes = {
@@ -352,6 +354,7 @@
 				6B5218C31B8DAA8D00BF9DA4 /* 6.png in Resources */,
 				6B52189B1B8D4FE000BF9DA4 /* cactus.png in Resources */,
 				6B5218BE1B8DAA8D00BF9DA4 /* 1.png in Resources */,
+				B5B9BDA11B8F6C47000B7D4B /* Block5.png in Resources */,
 				6B5218931B8C59B200BF9DA4 /* desertWithHotDog.png in Resources */,
 				B57D740C1B87D89200B3838B /* LaunchScreen.xib in Resources */,
 				AE65B1EE1B8CFEAC008EF023 /* Block4.png in Resources */,
