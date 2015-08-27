@@ -13,6 +13,7 @@ class BackgroundMusic{
   
   static var backgroundMusicPlayer: AVAudioPlayer!
 
+
   
 class func playBackgroundMusic(filename: String) {
   let url = NSBundle.mainBundle().URLForResource(
@@ -30,6 +31,11 @@ class func playBackgroundMusic(filename: String) {
   }
   backgroundMusicPlayer.numberOfLoops = -1
   backgroundMusicPlayer.prepareToPlay()
+  backgroundMusicPlayer.volume = musicVolume
   backgroundMusicPlayer.play()
 }
+  
+  class func adjustVolume(musicVolume: Float){
+  backgroundMusicPlayer.volume = musicVolume
+  }
 }

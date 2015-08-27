@@ -56,9 +56,9 @@ class GameViewController: UIViewController {
   @IBAction func retryButtonAction(sender: UIButton) {
     println("retry")
     sc.resetGame()
-//    sc.removeAllChildren()
-//    sc.removeAllActions()
-//    sc.removeFromParent()
+    sc.removeAllChildren()
+    sc.removeAllActions()
+    sc.removeFromParent()
     presentScene()
   
     

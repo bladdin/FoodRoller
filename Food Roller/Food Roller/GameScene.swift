@@ -9,6 +9,7 @@
 import SpriteKit
 import Foundation
 
+
 class GameScene: SKScene, SKPhysicsContactDelegate {
   
   var hotdog = SKSpriteNode()
@@ -20,11 +21,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   var endLocation = CGPoint()
   var spikeNode = SKSpriteNode()
   var gameVC : GameViewController!
-  enum ColliderType : UInt32 {
-    case Hotdog = 1
-    case Cactus = 2
-    case Sidebounds = 3
-  }
+  
+  
+  let hotdogCategory : UInt32    =  0x1 << 0;
+  let killCategory : UInt32       =  0x1 << 1;
+  let bobCategory  : UInt32  =  0x1 << 2;
+  let sideboundsCategory : UInt32     =  0x1 << 3;
+  
+//  enum ColliderType : UInt32 {
+//    case Hotdog = 1
+//    case Cactus = 2
+//    case Sidebounds = 3
+//  }
   
   var arrayOfPathsInGame = [SKSpriteNode()]
   var timerLabelNode = SKLabelNode(text: "0")
@@ -40,6 +48,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   var nodeTimer = NSTimer()
   var gravityMagnitude : CGFloat = -9.8
   var moveBobs: SKAction?
+  
   
   override func didMoveToView(view: SKView) {
     gameStop = false
@@ -72,19 +81,31 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
       spikeNode.anchorPoint = CGPointZero
       spikeNode.position = CGPoint(x: i * spikeNode.size.width, y: -30 )
       let bottomBoundSize = CGSize(width: spikeNode.size.width, height: spikeNode.size.height + 130)
-      spikeNode.physicsBody = SKPhysicsBody(rectangleOfSize: bottomBoundSize)
-      spikeNode.physicsBody!.affectedByGravity = false
-      spikeNode.physicsBody!.dynamic = false
-      spikeNode.physicsBody!.categoryBitMask = ColliderType.Cactus.rawValue
-      spikeNode.physicsBody!.contactTestBitMask = ColliderType.Hotdog.rawValue
-      spikeNode.physicsBody!.collisionBitMask = ColliderType.Hotdog.rawValue
+      spikeNode.physicsBody = nil
       println(frame.width)
       println(frame.height)
       hotdog.physicsBody?.dynamic = true
       spikeNode.name = "spikeBottom"
       addChild(spikeNode)
+      println(spikeNode.position)
+      //spikeNode.position = CGPoint(x: 0, y: 0)
+      
     }
     
+    let killZone = SKSpriteNode(color: UIColor.redColor(), size: CGSize(width:size.width, height: spikeNode.size.height - 30))
+    
+    killZone.anchorPoint = CGPointZero
+    killZone.position = CGPointZero
+    
+    killZone.physicsBody = SKPhysicsBody(rectangleOfSize: killZone.size, center: CGPoint(x: size.width / 2,y: killZone.size.height / 2 - 30))
+    killZone.physicsBody?.categoryBitMask = killCategory
+    killZone.physicsBody?.contactTestBitMask = hotdogCategory
+    killZone.physicsBody?.collisionBitMask = 0
+    //killZone.zPosition = 100
+    killZone.physicsBody?.dynamic = false
+    killZone.physicsBody?.affectedByGravity = false
+    addChild(killZone)
+  
     
     // HOTDOG NODE
     
@@ -104,9 +125,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     self.hotdog.position = CGPoint(x: self.frame.size.width / 2 , y: self.frame.size.height / 2)
     self.hotdog.physicsBody = SKPhysicsBody(circleOfRadius: self.hotdog.size.height / 2)
     self.hotdog.physicsBody?.affectedByGravity = false
-    hotdog.physicsBody?.categoryBitMask = ColliderType.Hotdog.rawValue //Sets collider type to raw value 1
-    hotdog.physicsBody?.contactTestBitMask = ColliderType.Cactus.rawValue
-    hotdog.physicsBody?.collisionBitMask = ColliderType.Cactus.rawValue
+    hotdog.physicsBody?.categoryBitMask = hotdogCategory //Sets collider type to raw value 1
+    hotdog.physicsBody?.contactTestBitMask = killCategory
+    hotdog.physicsBody?.collisionBitMask = sideboundsCategory | bobCategory
+    
     var run = SKAction.animateWithTextures([hotdogTexture1, hotdogTexture2, hotdogTexture3, hotdogTexture4, hotdogTexture5, hotdogTexture6], timePerFrame: 0.12)
     var runForever = SKAction.repeatActionForever(run)
     hotdog.runAction(runForever)
@@ -114,8 +136,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     self.addChild(self.hotdog)
     
     
-    // TIMER:
-    timerLabelNode.position = CGPoint(x: self.frame.size.width/2 + 135  , y: self.frame.size.height/2 + 270)
+    // TIME8
+    timerLabelNode.position = CGPoint(x: 5*self.frame.size.width/6 , y: 7*self.frame.size.height/8)
     timerLabelNode.zPosition = 100
     timerLabelNode.fontSize = 65
     timerLabelNode.fontName = "MarkerFelt-Wide"
@@ -157,6 +179,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     CreatePath.MovePathObject(bob)
     self.addChild(bob)
     bob.runAction(moveAndRemove)
+    bob.physicsBody?.categoryBitMask = bobCategory
+    bob.physicsBody?.collisionBitMask = hotdogCategory
     lastBob = bob
     
   }
@@ -166,6 +190,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     CreatePath.MovePathObject(bob)
     self.addChild(bob)
     bob.runAction(moveAndRemove)
+    bob.physicsBody?.categoryBitMask = bobCategory
+    bob.physicsBody?.collisionBitMask = hotdogCategory
     lastBob = bob
   }
   
@@ -211,6 +237,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     } else {
 //      println("bodyA: \(bodyA.description), bodyB: \(bodyB.description)")
     }
+    
+    
+    
+//    if (bodyA == spikeNode.physicsBody && bodyB == hotdog.physicsBody) || (bodyB == spikeNode.physicsBody && bodyA == hotdog.physicsBody) {
+//       BackgroundSFX.playBackgroundSFX("pain.mp3")
+//      println("collision2")
+//      gameIsOver()
+//      
+//    } else {
+////      println("bodyA: \(bodyA.description), bodyB: \(bodyB.description)")
+    //}
   }
   
   func resumeSpeed() {
@@ -246,7 +283,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
       if let touch = touch as? UITouch {
         endLocation = touch.locationInNode(self)
         
-        runAction(SKAction.playSoundFileNamed("SquishFart.mp3", waitForCompletion: false))
+        BackgroundSFX.playBackgroundSFX("jump.mp3")
+
         let difference = CGVectorMake(CGFloat((endLocation.x - startLocation.x) * -1), abs(endLocation.y - startLocation.y) * 1.6)
         //   let difference = CGVectorMake(0, abs(endLocation.y - startLocation.y) * 1.6)
         self.hotdog.physicsBody?.applyImpulse(difference)

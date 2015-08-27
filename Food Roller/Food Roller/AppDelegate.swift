@@ -12,10 +12,20 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
-
+  
+  let userDefaults = NSUserDefaults.standardUserDefaults()
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // Override point for customization after application launch.
+    if let music = userDefaults.objectForKey("initialMusic") as? Float,
+    sfx = userDefaults.objectForKey("initialSFX") as? Float
+    {
+      musicVolume = music
+      sfxVolume = sfx
+    } else {
+      userDefaults.setObject(0.5, forKey: "initialMusic")
+      userDefaults.setObject(0.5, forKey: "initialSFX")
+    }
     return true
   }
 
