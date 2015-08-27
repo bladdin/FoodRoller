@@ -401,6 +401,7 @@
 				6B5218C01B8DAA8D00BF9DA4 /* 3.png in Resources */,
 				6B5218951B8C60F400BF9DA4 /* desert.png in Resources */,
 				AECDC3CD1B8F8A5300310CE0 /* jump.mp3 in Resources */,
+				6B03155A1B8EA538000AE4AA /* rope.png in Resources */,
 				6B5218BF1B8DAA8D00BF9DA4 /* 2.png in Resources */,
 				6B5218C11B8DAA8D00BF9DA4 /* 4.png in Resources */,
 				AE65B1EB1B8CFEAC008EF023 /* Block1.png in Resources */,
