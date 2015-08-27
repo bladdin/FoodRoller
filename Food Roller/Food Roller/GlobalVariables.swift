@@ -22,4 +22,6 @@ var lastBob :SKSpriteNode!
 var bobMinStart : Int!
 var bobMaxStart : Int!
 var moveAndRemove : SKAction!
-  
+var musicVolume:Float = 0.5
+var sfxVolume: Float = 0.5
+ 

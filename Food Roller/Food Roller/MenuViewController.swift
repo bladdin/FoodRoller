@@ -9,6 +9,10 @@
 import UIKit
 
 class MenuViewController: UIViewController {
+
+//keep for sound adjustment
+//  var musicVolume: Float?
+//  var sfxVolume: Float?
   
   let clickedStartButton = UIImage(named: "startClicked")
   let clickedSettingsButton = UIImage(named: "settingsClicked")
@@ -22,6 +26,7 @@ class MenuViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    BackgroundSFX.playBackgroundSFX("SquishFart.mp3")
     BackgroundMusic.playBackgroundMusic("bensoundCute.mp3")
     
     startButtonOutlet.setImage(clickedStartButton, forState: UIControlState.Highlighted)
@@ -35,10 +40,26 @@ class MenuViewController: UIViewController {
     super.viewWillAppear(animated)
        navigationController?.navigationBarHidden = true
   }
-
   
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "SettingsViewController"{
+      let controller = segue.destinationViewController as! SettingsViewController
+      //keep for sound adjustment
+      //      controller.delegate = self
+    }
+  }
+
+  override func viewDidAppear(animated: Bool) {
+    //
+    println(musicVolume)
+  }
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
   }
 
-}
+  }
+
+//keep for sound adjustment
+//extension SettingsViewController: SoundVolumeDelegate {
+//}
+
