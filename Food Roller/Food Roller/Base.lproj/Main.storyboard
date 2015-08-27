@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="DEN-s7-MT2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -410,12 +411,12 @@
                             <mask key="constraints">
                                 <exclude reference="aYf-hC-pGn"/>
                                 <exclude reference="sdn-27-OmK"/>
-                                <exclude reference="e9Q-OC-7NX"/>
                                 <exclude reference="4Ta-WR-G5h"/>
                                 <exclude reference="6t5-gJ-h6V"/>
                                 <exclude reference="8Cf-k8-tEF"/>
                                 <exclude reference="Iho-TJ-wgO"/>
                                 <exclude reference="Il4-yb-pFF"/>
+                                <exclude reference="e9Q-OC-7NX"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -427,8 +428,6 @@
                                 <include reference="aYf-hC-pGn"/>
                                 <exclude reference="dmI-4n-r1L"/>
                                 <include reference="sdn-27-OmK"/>
-                                <exclude reference="DYO-wT-nSi"/>
-                                <include reference="e9Q-OC-7NX"/>
                                 <exclude reference="3lE-gs-LKG"/>
                                 <include reference="4Ta-WR-G5h"/>
                                 <exclude reference="5Au-n9-HsQ"/>
@@ -439,6 +438,8 @@
                                 <exclude reference="Z3f-ut-KWE"/>
                                 <exclude reference="hvz-uB-Hoa"/>
                                 <exclude reference="wvd-SY-FZ1"/>
+                                <exclude reference="DYO-wT-nSi"/>
+                                <include reference="e9Q-OC-7NX"/>
                             </mask>
                         </variation>
                     </view>
