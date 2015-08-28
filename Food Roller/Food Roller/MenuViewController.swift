@@ -24,7 +24,7 @@ class MenuViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+ 
     if !AVAudioSession.sharedInstance().otherAudioPlaying {
       BackgroundSFX.playBackgroundSFX("SquishFart.mp3")
       BackgroundMusic.playBackgroundMusic("bensoundCute.mp3")

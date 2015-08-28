@@ -8,7 +8,7 @@
         <!--Game View Controller-->
         <scene sceneID="CtS-rA-C9T">
             <objects>
-                <viewController id="LVB-YS-i5n" customClass="GameViewController" customModule="Food_Roller" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="LVB-YS-i5n" customClass="GameViewController" customModule="Hotdog_Slinger" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PCf-gQ-wO7"/>
                         <viewControllerLayoutGuide type="bottom" id="b3d-qh-BLL"/>
@@ -18,17 +18,16 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xcC-Ag-HpL">
-                                <rect key="frame" x="50" y="175" width="500" height="250"/>
+                                <rect key="frame" x="0.0" y="175" width="600" height="250"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bunView.png" translatesAutoresizingMaskIntoConstraints="NO" id="Q2k-XV-mpB">
-                                        <rect key="frame" x="60" y="15" width="380" height="220"/>
+                                        <rect key="frame" x="10" y="30" width="580" height="190"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="220" id="GGp-q0-jwv"/>
-                                            <constraint firstAttribute="width" constant="380" id="IzH-23-C28"/>
+                                            <constraint firstAttribute="height" constant="190" id="gBf-wD-7JU"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aaq-o8-mg4">
-                                        <rect key="frame" x="198" y="100" width="104" height="50"/>
+                                        <rect key="frame" x="248" y="100" width="104" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="6SN-Nz-fsv"/>
                                             <constraint firstAttribute="width" constant="104" id="AtG-ak-ZAs"/>
@@ -39,7 +38,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Xe-fI-gCl">
-                                        <rect key="frame" x="81" y="100" width="102" height="50"/>
+                                        <rect key="frame" x="131" y="100" width="102" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="102" id="bam-rY-zq9"/>
                                             <constraint firstAttribute="height" constant="50" id="oD1-gh-qAF"/>
@@ -53,7 +52,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywR-dq-Gdh">
-                                        <rect key="frame" x="315" y="103" width="100" height="45"/>
+                                        <rect key="frame" x="365" y="103" width="100" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="cGa-vu-Ktu"/>
                                             <constraint firstAttribute="height" constant="45" id="l0N-bQ-v4E"/>
@@ -71,12 +70,13 @@
                                     <constraint firstItem="ywR-dq-Gdh" firstAttribute="leading" secondItem="aaq-o8-mg4" secondAttribute="trailing" constant="13" id="9hb-uP-S4h"/>
                                     <constraint firstAttribute="centerY" secondItem="aaq-o8-mg4" secondAttribute="centerY" id="Bzk-Ir-j6h"/>
                                     <constraint firstItem="aaq-o8-mg4" firstAttribute="leading" secondItem="7Xe-fI-gCl" secondAttribute="trailing" constant="15" id="Fzd-ZF-M89"/>
-                                    <constraint firstAttribute="centerX" secondItem="Q2k-XV-mpB" secondAttribute="centerX" id="Tfa-Ep-XTy"/>
+                                    <constraint firstItem="Q2k-XV-mpB" firstAttribute="leading" secondItem="xcC-Ag-HpL" secondAttribute="leading" constant="10" id="IvY-9H-wuH"/>
+                                    <constraint firstAttribute="centerX" secondItem="Q2k-XV-mpB" secondAttribute="centerX" id="LVp-lE-XpK"/>
                                     <constraint firstAttribute="centerY" secondItem="ywR-dq-Gdh" secondAttribute="centerY" id="VVn-pM-g1V"/>
-                                    <constraint firstAttribute="width" constant="500" id="fMX-dZ-5hV"/>
                                     <constraint firstAttribute="centerY" secondItem="7Xe-fI-gCl" secondAttribute="centerY" id="feb-nr-P7P"/>
-                                    <constraint firstAttribute="centerY" secondItem="Q2k-XV-mpB" secondAttribute="centerY" id="l4B-fR-4qy"/>
+                                    <constraint firstAttribute="trailing" secondItem="Q2k-XV-mpB" secondAttribute="trailing" constant="10" id="rNf-zA-AD4"/>
                                     <constraint firstAttribute="height" constant="250" id="z6d-hc-6iV"/>
+                                    <constraint firstAttribute="centerY" secondItem="Q2k-XV-mpB" secondAttribute="centerY" id="zgM-Kz-by8"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ms-vl-08f">
@@ -106,22 +106,48 @@
                                     <segue destination="u0I-zM-b83" kind="show" identifier="fromBackButton" id="ERl-nw-CmB"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Highest:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="siN-Pf-hVN">
+                                <rect key="frame" x="517" y="30" width="57" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="kNC-Hh-gZy"/>
+                                    <constraint firstAttribute="width" constant="57" id="wti-Kk-xH5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obp-Cd-mW8">
+                                <rect key="frame" x="525" y="50" width="40" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="gz5-Ts-psw"/>
+                                    <constraint firstAttribute="height" constant="22" id="xFd-ap-ln3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Obp-Cd-mW8" secondAttribute="trailing" constant="19" id="1NL-Xc-CrP"/>
                             <constraint firstItem="5R7-kM-SLm" firstAttribute="leading" secondItem="1Ms-vl-08f" secondAttribute="trailing" constant="15" id="6zD-Zw-Mmb"/>
                             <constraint firstItem="1Ms-vl-08f" firstAttribute="top" secondItem="5R7-kM-SLm" secondAttribute="top" constant="2" id="Ah5-w8-iee"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="siN-Pf-hVN" secondAttribute="trailing" constant="10" id="LJd-mS-F6S"/>
+                            <constraint firstItem="siN-Pf-hVN" firstAttribute="top" secondItem="PCf-gQ-wO7" secondAttribute="bottom" constant="10" id="ZI2-dg-cdi"/>
+                            <constraint firstItem="xcC-Ag-HpL" firstAttribute="width" secondItem="bdc-N1-crn" secondAttribute="width" id="d7R-lB-b2s"/>
                             <constraint firstAttribute="centerY" secondItem="xcC-Ag-HpL" secondAttribute="centerY" id="fSk-jr-W2b"/>
                             <constraint firstItem="1Ms-vl-08f" firstAttribute="leading" secondItem="bdc-N1-crn" secondAttribute="leadingMargin" constant="10" id="i4f-WM-4yb"/>
                             <constraint firstAttribute="centerX" secondItem="xcC-Ag-HpL" secondAttribute="centerX" id="kTt-kq-grT"/>
                             <constraint firstItem="1Ms-vl-08f" firstAttribute="top" secondItem="PCf-gQ-wO7" secondAttribute="bottom" constant="15" id="qSo-rd-RMn"/>
+                            <constraint firstItem="Obp-Cd-mW8" firstAttribute="top" secondItem="siN-Pf-hVN" secondAttribute="bottom" constant="3" id="sJ1-t2-c3W"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="backButton" destination="5R7-kM-SLm" id="DUu-mj-YZQ"/>
                         <outlet property="bunImageView" destination="Q2k-XV-mpB" id="7bb-ih-Zyz"/>
                         <outlet property="gameoverView" destination="xcC-Ag-HpL" id="c7h-T0-8mr"/>
+                        <outlet property="highestScore" destination="Obp-Cd-mW8" id="GQE-VR-JVg"/>
                         <outlet property="pauseButton" destination="1Ms-vl-08f" id="K5A-J8-47k"/>
                         <outlet property="retryButton" destination="aaq-o8-mg4" id="ggx-at-euu"/>
                     </connections>
@@ -133,7 +159,7 @@
         <!--Menu View Controller-->
         <scene sceneID="sjh-mL-zf8">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="u0I-zM-b83" customClass="MenuViewController" customModule="Food_Roller" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="u0I-zM-b83" customClass="MenuViewController" customModule="Hotdog_Slinger" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8Tj-eU-MIm"/>
                         <viewControllerLayoutGuide type="bottom" id="7uY-O6-7rb"/>
@@ -328,7 +354,7 @@
         <!--Settings View Controller-->
         <scene sceneID="T5I-l8-CyU">
             <objects>
-                <viewController id="ILQ-wP-xnC" customClass="SettingsViewController" customModule="Food_Roller" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ILQ-wP-xnC" customClass="SettingsViewController" customModule="Hotdog_Slinger" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hMJ-jo-fBm"/>
                         <viewControllerLayoutGuide type="bottom" id="PXM-rY-UxF"/>
@@ -416,7 +442,7 @@
         <!--Help View Controller-->
         <scene sceneID="rRg-XV-jx8">
             <objects>
-                <viewController id="Xdd-54-USa" customClass="HelpViewController" customModule="Food_Roller" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Xdd-54-USa" customClass="HelpViewController" customModule="Hotdog_Slinger" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Tdp-8c-5Uu"/>
                         <viewControllerLayoutGuide type="bottom" id="5u0-sa-9LP"/>

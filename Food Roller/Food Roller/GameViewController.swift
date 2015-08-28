@@ -30,7 +30,7 @@ extension SKNode {
 class GameViewController: UIViewController {
   var gameoverView = UIView()
   let pauseImage = UIImage(named: "pause")
-
+  @IBOutlet weak var highestScore: UILabel!
   @IBOutlet weak var backButton: UIButton!
   @IBOutlet weak var pauseButton: UIButton!
   @IBOutlet weak var retryButton: UIButton!
@@ -118,6 +118,8 @@ class GameViewController: UIViewController {
       scene.scaleMode = .AspectFill
       scene.gameVC = self
       skView.presentScene(scene)
+    var previousHighScore = sc.currentHighScore
+    highestScore.text = "\(previousHighScore)"
   }
   
   override func shouldAutorotate() -> Bool {
