@@ -7,12 +7,9 @@
 //
 
 import UIKit
+import AVFoundation
 
 class MenuViewController: UIViewController {
-  
-  //keep for sound adjustment
-  //  var musicVolume: Float?
-  //  var sfxVolume: Float?
   
   let clickedStartButton = UIImage(named: "startClicked")
   let clickedSettingsButton = UIImage(named: "settingsClicked")
@@ -27,9 +24,13 @@ class MenuViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    //    BackgroundSFX.playBackgroundSFX("SquishFart.mp3")
-    BackgroundMusic.playBackgroundMusic("bensoundCute.mp3")
     
+    if !AVAudioSession.sharedInstance().otherAudioPlaying {
+      BackgroundSFX.playBackgroundSFX("SquishFart.mp3")
+      BackgroundMusic.playBackgroundMusic("bensoundCute.mp3")
+    }
+    
+
     startButtonOutlet.setImage(clickedStartButton, forState: UIControlState.Highlighted)
     settingsButtonOutlet.setImage(clickedSettingsButton, forState: UIControlState.Highlighted)
     helpButtonOutlet.setImage(clickedHelpButton, forState: UIControlState.Highlighted)
