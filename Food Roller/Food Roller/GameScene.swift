@@ -42,8 +42,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   var changeInTime : Int!
   var timeSinceLastNode : Int!
   var nextPipeTime = 3
-  var timerForPaths = NSTimer()
-  var timerForPathsCount = 0
+  var diffiultyTimer = NSTimer()
+  var nodeTimer = NSTimer()
+  var gravityMagnitude : CGFloat = -9.8
+  var moveBobs: SKAction?
   
   
   override func didMoveToView(view: SKView) {
@@ -61,7 +63,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     self.physicsWorld.contactDelegate = self //Setting up physics world for contact with boundaries
-    physicsWorld.gravity = CGVectorMake(0.0, -5.8)
+      physicsWorld.gravity = CGVectorMake(0.0, gravityMagnitude)
+    
+
     
     // loop through the background image
     for (var i : CGFloat = 0; i < 2; i++ ) {
@@ -138,14 +142,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     timerLabelNode.fontSize = 65
     timerLabelNode.fontName = "MarkerFelt-Wide"
     self.addChild(timerLabelNode)
-    //    timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "updateTimer", userInfo: nil, repeats: true)
+    
+    
     
     
     //MARK: Moves the Path Nodes Aka Bobs
+    
+    nodeTimer = NSTimer.scheduledTimerWithTimeInterval(timeForDifficultyIncrease, target: self, selector: "nodeSpeedTimer", userInfo: nil, repeats: true)
     let distanceBobsMove = CGFloat(self.frame.width * 2 + (bob.frame.width * 2))
-    let moveBobs = SKAction.moveByX(-distanceBobsMove, y: 0.0, duration: NSTimeInterval(0.01 * distanceBobsMove))
+    moveBobs = SKAction.moveByX(-distanceBobsMove, y: 0.0, duration: NSTimeInterval(nodeSpeed * distanceBobsMove))
+    //println("node speed: \(nodeSpeed)")
     let removeBobs = SKAction.removeFromParent()
-    moveAndRemove = SKAction.sequence([moveBobs, removeBobs])
+    moveAndRemove = SKAction.sequence([moveBobs!, removeBobs])
     
     
     //MARK: Spawns First Bob
@@ -212,6 +220,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     self.hotdog.size = CGSize(width: 100, height: 85)
     self.hotdog.runAction(SKAction.repeatAction(dead, count: 1))
     gameVC.gameoverView.hidden = false
+    diffiultyTimer.invalidate()
+    nodeTimer.invalidate()
   }
   
   // Collision
@@ -229,15 +239,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     
-    
-//    if (bodyA == spikeNode.physicsBody && bodyB == hotdog.physicsBody) || (bodyB == spikeNode.physicsBody && bodyA == hotdog.physicsBody) {
-//       BackgroundSFX.playBackgroundSFX("pain.mp3")
-//      println("collision2")
-//      gameIsOver()
-//      
-//    } else {
-////      println("bodyA: \(bodyA.description), bodyB: \(bodyB.description)")
-    //}
   }
   
   func resumeSpeed() {
@@ -313,12 +314,31 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   }
   
   func resetGame() {
+    
     backgroundSpeed = 1
     spikeSpeed = 1
     timerLabelNode.text = "0" // reset the timer
-    gameStarted = false 
+    gameStarted = false
+  }
+
+  func nodeSpeedTimer() {
+    self.speed = self.speed + 1.75
+    gravityMagnitude -= CGFloat(5.0)
+    physicsWorld.gravity = CGVectorMake(0.0, gravityMagnitude)
+    timeForDifficultyIncrease = timeForDifficultyIncrease + 1
+    diffiultyTimer = NSTimer.scheduledTimerWithTimeInterval(timeForDifficultyIncrease, target: self, selector: "nodeSpeed2Timer", userInfo: nil, repeats: true)
+    nodeTimer.invalidate()
   }
   
+  func nodeSpeed2Timer() {
+    self.speed = self.speed + 1.75
+    gravityMagnitude -= CGFloat(5.0)
+    physicsWorld.gravity = CGVectorMake(0.0, gravityMagnitude)
+    timeForDifficultyIncrease = timeForDifficultyIncrease + 1
+    nodeTimer = NSTimer.scheduledTimerWithTimeInterval(timeForDifficultyIncrease, target: self, selector: "nodeSpeedTimer", userInfo: nil, repeats: true)
+    diffiultyTimer.invalidate()
+  }
+
   
   
 }

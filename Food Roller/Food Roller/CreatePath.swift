@@ -18,6 +18,7 @@ class CreatePath {
 
     let objectPath = SKSpriteNode(imageNamed: "Block\(width).png")
     objectPath.position.x = xPosition
+    //println("objectPath xposition: \(xPosition)")
     objectPath.position.y = yPosition
     objectPath.zPosition = CGFloat(kForeground)
     objectPath.physicsBody = SKPhysicsBody(rectangleOfSize: objectPath.size)
