@@ -39,9 +39,9 @@
 		6B5218C31B8DAA8D00BF9DA4 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B5218BD1B8DAA8D00BF9DA4 /* 6.png */; };
 		6B5218C51B8DABE000BF9DA4 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5218C41B8DABE000BF9DA4 /* HelpViewController.swift */; };
 		6BCED7231B8BAFBC006967AC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCED7221B8BAFBC006967AC /* MenuViewController.swift */; };
+		AE6916A21B90EF6D00DAD845 /* bensoundcreepy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE6916A11B90EF6D00DAD845 /* bensoundcreepy.mp3 */; };
 		AE8826C81B8DD7CA00486B91 /* bensoundCute.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE8826C51B8DD7CA00486B91 /* bensoundCute.mp3 */; };
 		AE8826C91B8DD7CA00486B91 /* bensoundFunnysong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE8826C61B8DD7CA00486B91 /* bensoundFunnysong.mp3 */; };
-		AE8826CA1B8DD7CA00486B91 /* bensoundBetterdays.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE8826C71B8DD7CA00486B91 /* bensoundBetterdays.mp3 */; };
 		AE8826CC1B8DD87900486B91 /* BackgroundMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8826CB1B8DD87900486B91 /* BackgroundMusic.swift */; };
 		AE8826CE1B8DE06200486B91 /* SquishFart.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE8826CD1B8DE06200486B91 /* SquishFart.mp3 */; };
 		AECDC3CB1B8F83F400310CE0 /* SoundFX.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECDC3CA1B8F83F400310CE0 /* SoundFX.swift */; };
@@ -103,9 +103,9 @@
 		6B5218BD1B8DAA8D00BF9DA4 /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
 		6B5218C41B8DABE000BF9DA4 /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		6BCED7221B8BAFBC006967AC /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		AE6916A11B90EF6D00DAD845 /* bensoundcreepy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bensoundcreepy.mp3; sourceTree = "<group>"; };
 		AE8826C51B8DD7CA00486B91 /* bensoundCute.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bensoundCute.mp3; sourceTree = "<group>"; };
 		AE8826C61B8DD7CA00486B91 /* bensoundFunnysong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bensoundFunnysong.mp3; sourceTree = "<group>"; };
-		AE8826C71B8DD7CA00486B91 /* bensoundBetterdays.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bensoundBetterdays.mp3; sourceTree = "<group>"; };
 		AE8826CB1B8DD87900486B91 /* BackgroundMusic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundMusic.swift; sourceTree = "<group>"; };
 		AE8826CD1B8DE06200486B91 /* SquishFart.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SquishFart.mp3; sourceTree = "<group>"; };
 		AECDC3CA1B8F83F400310CE0 /* SoundFX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundFX.swift; sourceTree = "<group>"; };
@@ -204,10 +204,10 @@
 			isa = PBXGroup;
 			children = (
 				AE8826C51B8DD7CA00486B91 /* bensoundCute.mp3 */,
+				AE6916A11B90EF6D00DAD845 /* bensoundcreepy.mp3 */,
 				AE8826C61B8DD7CA00486B91 /* bensoundFunnysong.mp3 */,
 				AECDC3D41B8FAA9C00310CE0 /* pain.mp3 */,
 				AECDC3D81B8FABFC00310CE0 /* jump.mp3 */,
-				AE8826C71B8DD7CA00486B91 /* bensoundBetterdays.mp3 */,
 				AE8826CD1B8DE06200486B91 /* SquishFart.mp3 */,
 			);
 			name = Sounds;
@@ -422,8 +422,8 @@
 				AE8826C91B8DD7CA00486B91 /* bensoundFunnysong.mp3 in Resources */,
 				6B3DF5FB1B90537C00F4289D /* mainHotdog.png in Resources */,
 				AE8826C91B8DD7CA00486B91 /* bensoundFunnysong.mp3 in Resources */,
-				AE8826CA1B8DD7CA00486B91 /* bensoundBetterdays.mp3 in Resources */,
 				AE8826CE1B8DE06200486B91 /* SquishFart.mp3 in Resources */,
+				AE6916A21B90EF6D00DAD845 /* bensoundcreepy.mp3 in Resources */,
 				6B3DF5EB1B902E5B00F4289D /* Block3.png in Resources */,
 				AE8826C81B8DD7CA00486B91 /* bensoundCute.mp3 in Resources */,
 				6B52188F1B8C51F100BF9DA4 /* gameBackground.png in Resources */,
