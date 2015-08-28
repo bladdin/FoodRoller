@@ -15,7 +15,8 @@ class BackgroundSFX{
   static var backgroundSFXPlayer: AVAudioPlayer!
   
 //  
-  class func playBackgroundSFX(filename: String) -> String {
+  class func playBackgroundSFX(filename: String) -> Void? {
+    if !AVAudioSession.sharedInstance().otherAudioPlaying {
     let url = NSBundle.mainBundle().URLForResource(
       filename, withExtension: nil)
     let availablePlayers = players.filter{(player) -> Bool in
@@ -25,7 +26,7 @@ class BackgroundSFX{
       playerToUse.numberOfLoops = 0
       playerToUse.volume = sfxVolume
       playerToUse.play()
-      return "hi"
+      return nil
     }
     
     var error: NSError? = nil
@@ -35,13 +36,14 @@ class BackgroundSFX{
       newPlayer.numberOfLoops = 0
       newPlayer.volume = sfxVolume
       newPlayer.play()
-      return "hi"
+      return nil
     
     }else{
       println("couldn't load \(url!.lastPathComponent): \(error)")
-      return "hi"
+      return nil
     }
-  }
+    }
+  return nil}
   
 
   class func adjustVolume(sfxVolume: Float){
