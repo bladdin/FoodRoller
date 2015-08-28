@@ -110,7 +110,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     self.hotdog.size = CGSizeMake(self.frame.size.width / 8, self.frame.size.height / 8)
     self.hotdog.zPosition = 100
     self.hotdog.position = CGPoint(x: self.frame.size.width / 2 , y: self.frame.size.height / 2)
-    self.hotdog.physicsBody = SKPhysicsBody(circleOfRadius: self.hotdog.size.height / 2)
+    self.hotdog.physicsBody = SKPhysicsBody(texture: hotdogTexture1, size: self.hotdog.size)
     self.hotdog.physicsBody?.affectedByGravity = false
     hotdog.physicsBody?.categoryBitMask = hotdogCategory //Sets collider type to raw value 1
     hotdog.physicsBody?.contactTestBitMask = killCategory
@@ -272,7 +272,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         endLocation = touch.locationInNode(self)
         BackgroundSFX.playBackgroundSFX("jump.mp3")
         
-        let difference = CGVectorMake(CGFloat((endLocation.x - startLocation.x) * -1), abs(endLocation.y - startLocation.y) * 1.6)
+        let difference = CGVectorMake(CGFloat((endLocation.x - startLocation.x) * -1), abs(endLocation.y - startLocation.y) * 0.2)
         //   let difference = CGVectorMake(0, abs(endLocation.y - startLocation.y) * 1.6)
         self.hotdog.physicsBody?.applyImpulse(difference)
       }
