@@ -7,6 +7,7 @@
 //
 import SpriteKit
 import Foundation
+import AVFoundation
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
   var highscore = 0
@@ -73,14 +74,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
       spikeNode.position = CGPoint(x: i * spikeNode.size.width, y: -30 )
       let bottomBoundSize = CGSize(width: spikeNode.size.width, height: spikeNode.size.height + 130)
       spikeNode.physicsBody = nil
-      println(frame.width)
-      println(frame.height)
       hotdog.physicsBody?.dynamic = true
       spikeNode.name = "spikeBottom"
       addChild(spikeNode)
-      println(spikeNode.position)
-      //spikeNode.position = CGPoint(x: 0, y: 0)
-      
     }
     
     //Mark: Killzone Boundary
@@ -143,7 +139,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let respawn = SKAction.repeatActionForever(initialSpawn)
     self.runAction(respawn)
   }
-
+  
   //Mark: Pathway spawning AKA Bobs
   func spawnBobs() {
     let bob = CreatePath.CreatePath(Int(RandomElements.randomPathVarYPosition(Int(self.frame.width * 1.5 ), max: Int(self.frame.width * 1.5) + 50 )), yInitialPosition: (RandomElements.randomPathVarYPosition(180, max: Int(self.frame.height)-68)), width: (RandomElements.randomPathLength()!))
@@ -207,7 +203,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     if bodyA.categoryBitMask == hotdogCategory || bodyB.categoryBitMask == hotdogCategory {
       
       if flag == true{
-      BackgroundSFX.playBackgroundSFX("pain.mp3")
+        BackgroundSFX.playBackgroundSFX("pain.mp3")
+        flag = false}
       gameIsOver()
     }
   }
@@ -221,7 +218,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     hotdog.physicsBody?.affectedByGravity = true
     self.speed = 1
   }
-
+  
   //Mark: TouchesBegan
   //Touch drag start detection for slingshot action
   //Starts the game when user interacts with game screen
