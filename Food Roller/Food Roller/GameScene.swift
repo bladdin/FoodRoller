@@ -54,7 +54,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     BackgroundMusic.playBackgroundMusic("bensoundFunnysong.mp3")
     
     //Mark: World set up physics body
-    physicsBody = SKPhysicsBody(edgeLoopFromRect: CGRect(x: -300, y: 0, width: self.size.width + 310, height: self.size.height + 100))
+    physicsBody = SKPhysicsBody(edgeLoopFromRect: CGRect(x: -300, y: 0, width: self.size.width + 310, height: self.size.height + 500))
     physicsBody?.categoryBitMask = sideboundsCategory
     self.physicsWorld.contactDelegate = self //Setting up physics world for contact with boundaries
     physicsWorld.gravity = CGVectorMake(0.0, gravityMagnitude)
@@ -107,7 +107,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     self.hotdog.size = CGSizeMake(self.frame.size.width / 8, self.frame.size.height / 8)
     self.hotdog.zPosition = 100
     self.hotdog.position = CGPoint(x: self.frame.size.width / 2 , y: self.frame.size.height / 2)
-    self.hotdog.physicsBody = SKPhysicsBody(texture: hotdogTexture1, size: self.hotdog.size)
+//    self.hotdog.physicsBody = SKPhysicsBody(texture: hotdogTexture1, size: self.hotdog.size)
+    self.hotdog.physicsBody = SKPhysicsBody(circleOfRadius: self.hotdog.size.width / 2 )
     self.hotdog.physicsBody?.affectedByGravity = false
     hotdog.physicsBody?.categoryBitMask = hotdogCategory //Sets collider type to raw value 1
     hotdog.physicsBody?.contactTestBitMask = killCategory
@@ -134,7 +135,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //MARK: Spawns Path Nodes AKA Bobs
     let spawn = SKAction.runBlock({() in self.spawnBobs()})
-    let delay = SKAction.waitForDuration(NSTimeInterval(2.0))
+    let delay = SKAction.waitForDuration(NSTimeInterval(3))
+    
+    //let delay = SKAction.waitForDuration(NSTimeInterval(2))
+    
+    
     let initialSpawn = SKAction.sequence([spawn, delay])
     let respawn = SKAction.repeatActionForever(initialSpawn)
     self.runAction(respawn)
@@ -171,6 +176,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   
   //Mark: Game Over Function
   func gameIsOver() {
+    
+    BackgroundMusic.playBackgroundMusic("bensoundcreepy.mp3")
     highscore = timerCount
     if highscore > currentHighScore {
       currentHighScore = highscore
@@ -256,7 +263,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         endLocation = touch.locationInNode(self)
         BackgroundSFX.playBackgroundSFX("jump.mp3")
         
-        let difference = CGVectorMake(CGFloat((endLocation.x - startLocation.x) * -1), abs(endLocation.y - startLocation.y) * 0.2)
+        let difference = CGVectorMake(CGFloat((endLocation.x - startLocation.x) * -1), abs(endLocation.y - startLocation.y) * 0.5)
         self.hotdog.physicsBody?.applyImpulse(difference)
       }
     }
@@ -281,7 +288,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
       }
     })
     // if the hotdog goes off screen too far away, end the game
-    if (hotdog.position.x) < -100 {
+    if ((hotdog.position.x) < -100) || ((hotdog.position.y) > self.frame.height + 250 ) {
       gameIsOver()
     }
   }
@@ -307,19 +314,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   }
   
   func nodeSpeedTimer() {
-    self.speed = self.speed + 0.25
-    gravityMagnitude -= CGFloat(3.0)
+
+    self.speed = self.speed + 0.5
+   // gravityMagnitude -= CGFloat(3.0)
     physicsWorld.gravity = CGVectorMake(0.0, gravityMagnitude)
-    timeForDifficultyIncrease = timeForDifficultyIncrease + 1
+    timeForDifficultyIncrease = timeForDifficultyIncrease + 0.5
     difficultyTimer = NSTimer.scheduledTimerWithTimeInterval(timeForDifficultyIncrease, target: self, selector: "nodeSpeed2Timer", userInfo: nil, repeats: true)
     nodeTimer.invalidate()
   }
   
   func nodeSpeed2Timer() {
-    self.speed = self.speed + 0.25
+    self.speed = self.speed + 0.5
     gravityMagnitude -= CGFloat(3.0)
     physicsWorld.gravity = CGVectorMake(0.0, gravityMagnitude)
-    timeForDifficultyIncrease = timeForDifficultyIncrease + 1
+    timeForDifficultyIncrease = timeForDifficultyIncrease + 0.5
     nodeTimer = NSTimer.scheduledTimerWithTimeInterval(timeForDifficultyIncrease, target: self, selector: "nodeSpeedTimer", userInfo: nil, repeats: true)
     difficultyTimer.invalidate()
   }

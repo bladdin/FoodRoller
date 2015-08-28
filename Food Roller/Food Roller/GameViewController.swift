@@ -107,8 +107,8 @@ class GameViewController: UIViewController {
       // Configure the view.
       sc = scene
       let skView = self.view as! SKView
-      skView.showsFPS = true
-      skView.showsNodeCount = true
+//      skView.showsFPS = true
+//      skView.showsNodeCount = true
       gameoverView.hidden = true
       scene.size = self.view.frame.size
       
