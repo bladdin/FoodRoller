@@ -173,6 +173,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   func gameIsOver() {
     
     BackgroundMusic.playBackgroundMusic("bensoundcreepy.mp3")
+    highscore = timerCount
+    if highscore > currentHighScore {
+      currentHighScore = highscore
+      userDefaults.setValue(highscore, forKey: "highscore")
+      userDefaults.synchronize()
+      println(currentHighScore)
+    }
     spikeSpeed = 0
     backgroundSpeed = 0
     gameStop = true // pause the timer
