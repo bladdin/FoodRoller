@@ -54,8 +54,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     BackgroundMusic.playBackgroundMusic("bensoundFunnysong.mp3")
     
     // bounds
-    physicsBody = SKPhysicsBody(edgeLoopFromRect: CGRect(x: -5
-      , y: 0, width: self.size.width + 10, height: self.size.height))
+    physicsBody = SKPhysicsBody(edgeLoopFromRect: CGRect(x: -300
+      , y: 0, width: self.size.width + 310, height: self.size.height))
     
     physicsBody?.categoryBitMask = sideboundsCategory
     
@@ -222,6 +222,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     gameVC.gameoverView.hidden = false
     diffiultyTimer.invalidate()
     nodeTimer.invalidate()
+    self.userInteractionEnabled = false
   }
   
   // Collision
@@ -249,6 +250,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     hotdog.physicsBody?.affectedByGravity = true
     self.speed = 1
   }
+  
+  
   
   override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
     if gameStop == true {
@@ -293,6 +296,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
       }
     })
+    
+    if (hotdog.position.x) < -100 {
+      gameIsOver()
+    }
     
     enumerateChildNodesWithName("spikeBottom", usingBlock: { (node, stop) -> Void in
       if let spike = node as? SKSpriteNode {
