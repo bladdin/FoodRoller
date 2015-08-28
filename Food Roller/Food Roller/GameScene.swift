@@ -303,6 +303,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     gameVC.pauseButton.enabled = true
     gameVC.backButton.enabled = true
     flag = true
+    gameVC.highestScore.text = "\(currentHighScore)"
   }
   
   func nodeSpeedTimer() {
