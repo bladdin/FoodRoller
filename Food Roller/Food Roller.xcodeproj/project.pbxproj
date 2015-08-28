@@ -10,16 +10,22 @@
 		3490E0BB1B8E40C900EA760D /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3490E0BA1B8E40C900EA760D /* GlobalVariables.swift */; };
 		6B0315521B8E72E1000AE4AA /* deadHotDog.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B03154F1B8E72E1000AE4AA /* deadHotDog.png */; };
 		6B0315531B8E72E1000AE4AA /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0315501B8E72E1000AE4AA /* pause.png */; };
-		6B0315541B8E72E1000AE4AA /* resume.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0315511B8E72E1000AE4AA /* resume.png */; };
 		6B0315561B8E9101000AE4AA /* bun.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0315551B8E9101000AE4AA /* bun.png */; };
 		6B0315581B8EA48F000AE4AA /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0315571B8EA48F000AE4AA /* title.png */; };
 		6B03155A1B8EA538000AE4AA /* rope.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0315591B8EA538000AE4AA /* rope.png */; };
 		6B03155D1B8EADCD000AE4AA /* desert.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B03155B1B8EADCD000AE4AA /* desert.png */; };
-		6B03155E1B8EADCD000AE4AA /* desertWithHotDog.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B03155C1B8EADCD000AE4AA /* desertWithHotDog.png */; };
-		6B0315721B8EFCA3000AE4AA /* menuButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B03156F1B8EFCA3000AE4AA /* menuButton.png */; };
-		6B0315731B8EFCA3000AE4AA /* retryButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0315701B8EFCA3000AE4AA /* retryButton.png */; };
 		6B0315741B8EFCA3000AE4AA /* shareButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0315711B8EFCA3000AE4AA /* shareButton.png */; };
 		6B0315761B8F816D000AE4AA /* bunView.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0315751B8F816D000AE4AA /* bunView.png */; };
+		6B3DF5E91B902E5B00F4289D /* Block1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3DF5E41B902E5B00F4289D /* Block1.png */; };
+		6B3DF5EA1B902E5B00F4289D /* Block2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3DF5E51B902E5B00F4289D /* Block2.png */; };
+		6B3DF5EB1B902E5B00F4289D /* Block3.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3DF5E61B902E5B00F4289D /* Block3.png */; };
+		6B3DF5EC1B902E5B00F4289D /* Block4.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3DF5E71B902E5B00F4289D /* Block4.png */; };
+		6B3DF5ED1B902E5B00F4289D /* Block5.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3DF5E81B902E5B00F4289D /* Block5.png */; };
+		6B3DF5F11B9030CB00F4289D /* menuButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3DF5F01B9030CB00F4289D /* menuButton.png */; };
+		6B3DF5F31B90311200F4289D /* retryButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3DF5F21B90311200F4289D /* retryButton.png */; };
+		6B3DF5F71B904DAB00F4289D /* backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3DF5F61B904DAB00F4289D /* backButton.png */; };
+		6B3DF5F91B90507300F4289D /* backgroundFixed.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3DF5F81B90507300F4289D /* backgroundFixed.png */; };
+		6B3DF5FB1B90537C00F4289D /* mainHotdog.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3DF5FA1B90537C00F4289D /* mainHotdog.png */; };
 		6B5218891B8BE15700BF9DA4 /* hotdog.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B5218881B8BE15700BF9DA4 /* hotdog.png */; };
 		6B52188D1B8C474D00BF9DA4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B52188C1B8C474D00BF9DA4 /* Images.xcassets */; };
 		6B52188F1B8C51F100BF9DA4 /* gameBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B52188E1B8C51F100BF9DA4 /* gameBackground.png */; };
@@ -42,11 +48,6 @@
 		AECDC3D11B8F9C0500310CE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AECDC3D01B8F9C0500310CE0 /* Main.storyboard */; };
 		AECDC3D61B8FAA9C00310CE0 /* pain.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AECDC3D41B8FAA9C00310CE0 /* pain.mp3 */; };
 		AECDC3D91B8FABFC00310CE0 /* jump.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AECDC3D81B8FABFC00310CE0 /* jump.mp3 */; };
-		AECDC3DF1B8FCC5200310CE0 /* Block1.png in Resources */ = {isa = PBXBuildFile; fileRef = AECDC3DA1B8FCC5200310CE0 /* Block1.png */; };
-		AECDC3E01B8FCC5200310CE0 /* Block5.png in Resources */ = {isa = PBXBuildFile; fileRef = AECDC3DB1B8FCC5200310CE0 /* Block5.png */; };
-		AECDC3E11B8FCC5200310CE0 /* Block4.png in Resources */ = {isa = PBXBuildFile; fileRef = AECDC3DC1B8FCC5200310CE0 /* Block4.png */; };
-		AECDC3E21B8FCC5200310CE0 /* Block3.png in Resources */ = {isa = PBXBuildFile; fileRef = AECDC3DD1B8FCC5200310CE0 /* Block3.png */; };
-		AECDC3E31B8FCC5200310CE0 /* Block2.png in Resources */ = {isa = PBXBuildFile; fileRef = AECDC3DE1B8FCC5200310CE0 /* Block2.png */; };
 		AECDC3E51B8FCCBB00310CE0 /* CreatePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECDC3E41B8FCCBB00310CE0 /* CreatePath.swift */; };
 		B535A7EA1B8B8BF1000AF550 /* RandomElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = B535A7E91B8B8BF1000AF550 /* RandomElements.swift */; };
 		B535A7EE1B8BA2A5000AF550 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B535A7ED1B8BA2A5000AF550 /* Constants.swift */; };
@@ -73,16 +74,22 @@
 		3490E0BA1B8E40C900EA760D /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		6B03154F1B8E72E1000AE4AA /* deadHotDog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deadHotDog.png; sourceTree = "<group>"; };
 		6B0315501B8E72E1000AE4AA /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
-		6B0315511B8E72E1000AE4AA /* resume.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = resume.png; sourceTree = "<group>"; };
 		6B0315551B8E9101000AE4AA /* bun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bun.png; sourceTree = "<group>"; };
 		6B0315571B8EA48F000AE4AA /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title.png; sourceTree = "<group>"; };
 		6B0315591B8EA538000AE4AA /* rope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rope.png; sourceTree = "<group>"; };
 		6B03155B1B8EADCD000AE4AA /* desert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = desert.png; sourceTree = "<group>"; };
-		6B03155C1B8EADCD000AE4AA /* desertWithHotDog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = desertWithHotDog.png; sourceTree = "<group>"; };
-		6B03156F1B8EFCA3000AE4AA /* menuButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuButton.png; sourceTree = "<group>"; };
-		6B0315701B8EFCA3000AE4AA /* retryButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = retryButton.png; sourceTree = "<group>"; };
 		6B0315711B8EFCA3000AE4AA /* shareButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shareButton.png; sourceTree = "<group>"; };
 		6B0315751B8F816D000AE4AA /* bunView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bunView.png; sourceTree = "<group>"; };
+		6B3DF5E41B902E5B00F4289D /* Block1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Block1.png; sourceTree = "<group>"; };
+		6B3DF5E51B902E5B00F4289D /* Block2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Block2.png; sourceTree = "<group>"; };
+		6B3DF5E61B902E5B00F4289D /* Block3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Block3.png; sourceTree = "<group>"; };
+		6B3DF5E71B902E5B00F4289D /* Block4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Block4.png; sourceTree = "<group>"; };
+		6B3DF5E81B902E5B00F4289D /* Block5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Block5.png; sourceTree = "<group>"; };
+		6B3DF5F01B9030CB00F4289D /* menuButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuButton.png; sourceTree = "<group>"; };
+		6B3DF5F21B90311200F4289D /* retryButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = retryButton.png; sourceTree = "<group>"; };
+		6B3DF5F61B904DAB00F4289D /* backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButton.png; sourceTree = "<group>"; };
+		6B3DF5F81B90507300F4289D /* backgroundFixed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroundFixed.png; sourceTree = "<group>"; };
+		6B3DF5FA1B90537C00F4289D /* mainHotdog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainHotdog.png; sourceTree = "<group>"; };
 		6B5218881B8BE15700BF9DA4 /* hotdog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hotdog.png; sourceTree = "<group>"; };
 		6B52188C1B8C474D00BF9DA4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6B52188E1B8C51F100BF9DA4 /* gameBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameBackground.png; sourceTree = "<group>"; };
@@ -105,16 +112,11 @@
 		AECDC3D01B8F9C0500310CE0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AECDC3D41B8FAA9C00310CE0 /* pain.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pain.mp3; sourceTree = "<group>"; };
 		AECDC3D81B8FABFC00310CE0 /* jump.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = jump.mp3; sourceTree = "<group>"; };
-		AECDC3DA1B8FCC5200310CE0 /* Block1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Block1.png; sourceTree = "<group>"; };
-		AECDC3DB1B8FCC5200310CE0 /* Block5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Block5.png; sourceTree = "<group>"; };
-		AECDC3DC1B8FCC5200310CE0 /* Block4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Block4.png; sourceTree = "<group>"; };
-		AECDC3DD1B8FCC5200310CE0 /* Block3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Block3.png; sourceTree = "<group>"; };
-		AECDC3DE1B8FCC5200310CE0 /* Block2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Block2.png; sourceTree = "<group>"; };
 		AECDC3E41B8FCCBB00310CE0 /* CreatePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePath.swift; sourceTree = "<group>"; };
 		B535A7E91B8B8BF1000AF550 /* RandomElements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomElements.swift; sourceTree = "<group>"; };
 		B535A7ED1B8BA2A5000AF550 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B535A7EF1B8BB231000AF550 /* RandomCaller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomCaller.swift; sourceTree = "<group>"; };
-		B57D73F81B87D89200B3838B /* Food Roller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food Roller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B57D73F81B87D89200B3838B /* Hotdog Slinger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hotdog Slinger.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B57D73FC1B87D89200B3838B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B57D73FD1B87D89200B3838B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B57D73FF1B87D89200B3838B /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -160,11 +162,11 @@
 		6B5218C71B8DB95C00BF9DA4 /* Tiles */ = {
 			isa = PBXGroup;
 			children = (
-				AECDC3DA1B8FCC5200310CE0 /* Block1.png */,
-				AECDC3DB1B8FCC5200310CE0 /* Block5.png */,
-				AECDC3DC1B8FCC5200310CE0 /* Block4.png */,
-				AECDC3DD1B8FCC5200310CE0 /* Block3.png */,
-				AECDC3DE1B8FCC5200310CE0 /* Block2.png */,
+				6B3DF5E41B902E5B00F4289D /* Block1.png */,
+				6B3DF5E51B902E5B00F4289D /* Block2.png */,
+				6B3DF5E61B902E5B00F4289D /* Block3.png */,
+				6B3DF5E71B902E5B00F4289D /* Block4.png */,
+				6B3DF5E81B902E5B00F4289D /* Block5.png */,
 			);
 			name = Tiles;
 			sourceTree = "<group>";
@@ -172,8 +174,9 @@
 		6B5218C81B8DB97A00BF9DA4 /* MenuImages */ = {
 			isa = PBXGroup;
 			children = (
+				6B3DF5F81B90507300F4289D /* backgroundFixed.png */,
+				6B3DF5FA1B90537C00F4289D /* mainHotdog.png */,
 				6B03155B1B8EADCD000AE4AA /* desert.png */,
-				6B03155C1B8EADCD000AE4AA /* desertWithHotDog.png */,
 				6B0315591B8EA538000AE4AA /* rope.png */,
 				6B0315571B8EA48F000AE4AA /* title.png */,
 			);
@@ -184,13 +187,13 @@
 			isa = PBXGroup;
 			children = (
 				6B03154F1B8E72E1000AE4AA /* deadHotDog.png */,
-				6B03156F1B8EFCA3000AE4AA /* menuButton.png */,
-				6B0315701B8EFCA3000AE4AA /* retryButton.png */,
+				6B3DF5F61B904DAB00F4289D /* backButton.png */,
+				6B3DF5F21B90311200F4289D /* retryButton.png */,
+				6B3DF5F01B9030CB00F4289D /* menuButton.png */,
 				6B0315711B8EFCA3000AE4AA /* shareButton.png */,
 				6B0315551B8E9101000AE4AA /* bun.png */,
 				6B0315501B8E72E1000AE4AA /* pause.png */,
 				6B0315751B8F816D000AE4AA /* bunView.png */,
-				6B0315511B8E72E1000AE4AA /* resume.png */,
 				6B52188E1B8C51F100BF9DA4 /* gameBackground.png */,
 				6B52189A1B8D4FE000BF9DA4 /* cactus.png */,
 			);
@@ -236,12 +239,12 @@
 		B535A7E81B8B8B26000AF550 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6BCED7221B8BAFBC006967AC /* MenuViewController.swift */,
 				B57D74011B87D89200B3838B /* GameScene.swift */,
-				B57D73FF1B87D89200B3838B /* GameScene.sks */,
 				B57D74031B87D89200B3838B /* GameViewController.swift */,
 				6B5218981B8D44F400BF9DA4 /* SettingsViewController.swift */,
 				6B5218C41B8DABE000BF9DA4 /* HelpViewController.swift */,
-				6BCED7221B8BAFBC006967AC /* MenuViewController.swift */,
+				B57D73FF1B87D89200B3838B /* GameScene.sks */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -258,7 +261,7 @@
 		B57D73F91B87D89200B3838B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B57D73F81B87D89200B3838B /* Food Roller.app */,
+				B57D73F81B87D89200B3838B /* Hotdog Slinger.app */,
 				B57D74111B87D89200B3838B /* Food RollerTests.xctest */,
 			);
 			name = Products;
@@ -325,7 +328,7 @@
 			);
 			name = "Food Roller";
 			productName = "Food Roller";
-			productReference = B57D73F81B87D89200B3838B /* Food Roller.app */;
+			productReference = B57D73F81B87D89200B3838B /* Hotdog Slinger.app */;
 			productType = "com.apple.product-type.application";
 		};
 		B57D74101B87D89200B3838B /* Food RollerTests */ = {
@@ -354,11 +357,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
-				ORGANIZATIONNAME = "Benjamin Laddin";
+				ORGANIZATIONNAME = CodeFellows;
 				TargetAttributes = {
 					B57D73F71B87D89200B3838B = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = A4CYB57ULV;
+						DevelopmentTeam = 7BYM9FUB94;
 					};
 					B57D74101B87D89200B3838B = {
 						CreatedOnToolsVersion = 6.4;
@@ -391,41 +394,42 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AECDC3E21B8FCC5200310CE0 /* Block3.png in Resources */,
 				6B5218C31B8DAA8D00BF9DA4 /* 6.png in Resources */,
 				6B52189B1B8D4FE000BF9DA4 /* cactus.png in Resources */,
+				6B3DF5F71B904DAB00F4289D /* backButton.png in Resources */,
 				AECDC3D61B8FAA9C00310CE0 /* pain.mp3 in Resources */,
+				6B3DF5F91B90507300F4289D /* backgroundFixed.png in Resources */,
 				6B5218BE1B8DAA8D00BF9DA4 /* 1.png in Resources */,
-				6B0315721B8EFCA3000AE4AA /* menuButton.png in Resources */,
 				6B0315741B8EFCA3000AE4AA /* shareButton.png in Resources */,
-				6B0315731B8EFCA3000AE4AA /* retryButton.png in Resources */,
-				AECDC3E01B8FCC5200310CE0 /* Block5.png in Resources */,
 				B57D740C1B87D89200B3838B /* LaunchScreen.xib in Resources */,
 				6B5218C01B8DAA8D00BF9DA4 /* 3.png in Resources */,
+				6B3DF5EC1B902E5B00F4289D /* Block4.png in Resources */,
 				6B03155A1B8EA538000AE4AA /* rope.png in Resources */,
 				6B5218BF1B8DAA8D00BF9DA4 /* 2.png in Resources */,
 				6B5218C11B8DAA8D00BF9DA4 /* 4.png in Resources */,
 				6B52188D1B8C474D00BF9DA4 /* Images.xcassets in Resources */,
-				AECDC3DF1B8FCC5200310CE0 /* Block1.png in Resources */,
+				6B3DF5E91B902E5B00F4289D /* Block1.png in Resources */,
 				B57D74001B87D89200B3838B /* GameScene.sks in Resources */,
 				AECDC3D91B8FABFC00310CE0 /* jump.mp3 in Resources */,
 				6B03155D1B8EADCD000AE4AA /* desert.png in Resources */,
+				6B3DF5F31B90311200F4289D /* retryButton.png in Resources */,
+				6B3DF5EA1B902E5B00F4289D /* Block2.png in Resources */,
 				AECDC3D11B8F9C0500310CE0 /* Main.storyboard in Resources */,
-				AECDC3E31B8FCC5200310CE0 /* Block2.png in Resources */,
 				6B0315581B8EA48F000AE4AA /* title.png in Resources */,
+				6B3DF5ED1B902E5B00F4289D /* Block5.png in Resources */,
+				6B3DF5F11B9030CB00F4289D /* menuButton.png in Resources */,
 				6B0315521B8E72E1000AE4AA /* deadHotDog.png in Resources */,
-				6B03155E1B8EADCD000AE4AA /* desertWithHotDog.png in Resources */,
 				AE8826C91B8DD7CA00486B91 /* bensoundFunnysong.mp3 in Resources */,
-				6B0315541B8E72E1000AE4AA /* resume.png in Resources */,
+				6B3DF5FB1B90537C00F4289D /* mainHotdog.png in Resources */,
 				AE8826C91B8DD7CA00486B91 /* bensoundFunnysong.mp3 in Resources */,
 				AE8826CA1B8DD7CA00486B91 /* bensoundBetterdays.mp3 in Resources */,
 				AE8826CE1B8DE06200486B91 /* SquishFart.mp3 in Resources */,
+				6B3DF5EB1B902E5B00F4289D /* Block3.png in Resources */,
 				AE8826C81B8DD7CA00486B91 /* bensoundCute.mp3 in Resources */,
 				6B52188F1B8C51F100BF9DA4 /* gameBackground.png in Resources */,
 				6B0315561B8E9101000AE4AA /* bun.png in Resources */,
 				6B0315761B8F816D000AE4AA /* bunView.png in Resources */,
 				6B0315531B8E72E1000AE4AA /* pause.png in Resources */,
-				AECDC3E11B8FCC5200310CE0 /* Block4.png in Resources */,
 				6B52188F1B8C51F100BF9DA4 /* gameBackground.png in Resources */,
 				6B5218C21B8DAA8D00BF9DA4 /* 5.png in Resources */,
 				6B5218891B8BE15700BF9DA4 /* hotdog.png in Resources */,
@@ -509,8 +513,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Mark Lin (M8GNN87XV6)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mark Lin (M8GNN87XV6)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yi-Ching Oun (5P2UAK588S)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yi-Ching Oun (5P2UAK588S)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -532,7 +536,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "9260ddfc-b6ac-4631-8acd-b721d1b779a9";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -555,8 +559,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Mark Lin (M8GNN87XV6)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mark Lin (M8GNN87XV6)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yi-Ching Oun (5P2UAK588S)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yi-Ching Oun (5P2UAK588S)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -571,7 +575,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "9260ddfc-b6ac-4631-8acd-b721d1b779a9";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -581,14 +585,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Benjamin Laddin (DF9JBJX4QD)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mark Lin (M8GNN87XV6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mark Lin (M8GNN87XV6)";
 				INFOPLIST_FILE = "Food Roller/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Hotdog Slinger";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos8.4;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -596,14 +601,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Benjamin Laddin (DF9JBJX4QD)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mark Lin (M8GNN87XV6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mark Lin (M8GNN87XV6)";
 				INFOPLIST_FILE = "Food Roller/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Hotdog Slinger";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos8.4;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -611,8 +617,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mark Lin (M8GNN87XV6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mark Lin (M8GNN87XV6)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -624,7 +630,7 @@
 				INFOPLIST_FILE = "Food RollerTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "9260ddfc-b6ac-4631-8acd-b721d1b779a9";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Food Roller.app/Food Roller";
 			};
 			name = Debug;
@@ -633,8 +639,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mark Lin (M8GNN87XV6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mark Lin (M8GNN87XV6)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -642,7 +648,7 @@
 				INFOPLIST_FILE = "Food RollerTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "9260ddfc-b6ac-4631-8acd-b721d1b779a9";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Food Roller.app/Food Roller";
 			};
 			name = Release;
