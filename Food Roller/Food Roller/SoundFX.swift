@@ -47,7 +47,7 @@ class BackgroundSFX{
   
 
   class func adjustVolume(sfxVolume: Float){
-    println("sfxvol: \(sfxVolume)")
+  //  println("sfxvol: \(sfxVolume)")
     players.map { (player) in
       player.volume = sfxVolume
     }

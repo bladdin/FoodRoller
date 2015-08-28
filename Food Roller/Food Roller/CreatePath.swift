@@ -24,12 +24,7 @@ class CreatePath {
     objectPath.physicsBody = SKPhysicsBody(rectangleOfSize: objectPath.size)
     objectPath.physicsBody?.affectedByGravity = false
     objectPath.physicsBody?.dynamic = false
-    
-    
-     
-    
     return objectPath
-    
   }
   
   class func MovePathObject(object: SKSpriteNode){

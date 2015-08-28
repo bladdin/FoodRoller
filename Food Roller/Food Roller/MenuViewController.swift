@@ -67,8 +67,7 @@ class MenuViewController: UIViewController {
   }
   
   override func viewDidAppear(animated: Bool) {
-    //
-    println(musicVolume)
+   // println(musicVolume)
   }
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
