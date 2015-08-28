@@ -48,7 +48,7 @@
                                             </mask>
                                         </variation>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gb-7R-qLD">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gb-7R-qLD">
                                         <rect key="frame" x="307" y="109" width="100" height="45"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
@@ -74,17 +74,17 @@
                                         </variation>
                                         <variation key="widthClass=compact">
                                             <mask key="constraints">
-                                                <include reference="VIc-r1-4lO"/>
-                                                <exclude reference="Bh7-G7-h8g"/>
-                                                <include reference="dtS-nY-553"/>
                                                 <exclude reference="0Le-PD-Ry1"/>
+                                                <exclude reference="Bh7-G7-h8g"/>
+                                                <include reference="VIc-r1-4lO"/>
+                                                <include reference="dtS-nY-553"/>
                                             </mask>
                                         </variation>
                                         <connections>
                                             <action selector="shareButtonAction:" destination="LVB-YS-i5n" eventType="touchUpInside" id="EdU-35-TpI"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Xe-fI-gCl">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Xe-fI-gCl">
                                         <rect key="frame" x="94" y="109" width="100" height="52"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="65" id="Hba-LA-SaA">
@@ -114,7 +114,7 @@
                                             <segue destination="u0I-zM-b83" kind="show" id="ky1-Hn-hY5"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aaq-o8-mg4">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aaq-o8-mg4">
                                         <rect key="frame" x="202" y="109" width="100" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="120" id="a6Y-cd-g7V">
@@ -127,14 +127,14 @@
                                         <state key="normal" image="retryButton.png" backgroundImage="retryButton.png"/>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="v9T-5t-UGG"/>
                                                 <exclude reference="a6Y-cd-g7V"/>
+                                                <exclude reference="v9T-5t-UGG"/>
                                             </mask>
                                         </variation>
                                         <variation key="widthClass=compact">
                                             <mask key="constraints">
-                                                <include reference="v9T-5t-UGG"/>
                                                 <include reference="a6Y-cd-g7V"/>
+                                                <include reference="v9T-5t-UGG"/>
                                             </mask>
                                         </variation>
                                         <connections>
@@ -416,16 +416,16 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="aYf-hC-pGn"/>
-                                <exclude reference="sdn-27-OmK"/>
                                 <exclude reference="Doe-9w-M1d"/>
                                 <exclude reference="KFb-EY-5jm"/>
                                 <exclude reference="TtI-DX-BCh"/>
+                                <exclude reference="aYf-hC-pGn"/>
+                                <exclude reference="sdn-27-OmK"/>
                                 <exclude reference="48k-bu-Epa"/>
-                                <exclude reference="0uA-Yc-Q7Z"/>
                                 <exclude reference="iL8-g6-tda"/>
                                 <exclude reference="j8T-Xr-gDo"/>
                                 <exclude reference="kQF-Ea-WJg"/>
+                                <exclude reference="0uA-Yc-Q7Z"/>
                                 <exclude reference="5RG-2o-tbe"/>
                             </mask>
                         </variation>
@@ -434,10 +434,6 @@
                                 <include reference="WUH-wz-brC"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="H8a-Ns-D1e"/>
-                                <include reference="aYf-hC-pGn"/>
-                                <exclude reference="dmI-4n-r1L"/>
-                                <include reference="sdn-27-OmK"/>
                                 <exclude reference="6NI-kv-tmy"/>
                                 <include reference="Doe-9w-M1d"/>
                                 <include reference="KFb-EY-5jm"/>
@@ -446,17 +442,21 @@
                                 <exclude reference="eOy-9K-g4L"/>
                                 <exclude reference="gFI-eM-CsE"/>
                                 <exclude reference="u8I-bV-gCh"/>
+                                <exclude reference="H8a-Ns-D1e"/>
+                                <include reference="aYf-hC-pGn"/>
+                                <exclude reference="dmI-4n-r1L"/>
+                                <include reference="sdn-27-OmK"/>
                                 <include reference="48k-bu-Epa"/>
-                                <include reference="0uA-Yc-Q7Z"/>
-                                <exclude reference="1TQ-3Z-tuK"/>
-                                <exclude reference="Gdf-Xq-9rM"/>
-                                <exclude reference="TdO-18-6MO"/>
                                 <exclude reference="dmh-YS-qgy"/>
                                 <exclude reference="eOx-c4-Fue"/>
                                 <exclude reference="hyv-2A-WZq"/>
                                 <include reference="iL8-g6-tda"/>
                                 <include reference="j8T-Xr-gDo"/>
                                 <include reference="kQF-Ea-WJg"/>
+                                <include reference="0uA-Yc-Q7Z"/>
+                                <exclude reference="1TQ-3Z-tuK"/>
+                                <exclude reference="Gdf-Xq-9rM"/>
+                                <exclude reference="TdO-18-6MO"/>
                                 <include reference="5RG-2o-tbe"/>
                             </mask>
                         </variation>
