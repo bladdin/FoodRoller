@@ -142,29 +142,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     moveAndRemove = SKAction.sequence([moveBobs!, removeBobs])
     
     
-    //MARK: Spawns First Bob
-//    let firstBobspawn = SKAction.runBlock({() in self.spawnFirstBob()})
-//    let firstBobinitialSpawn = SKAction.sequence([firstBobspawn])
-//    self.runAction(firstBobinitialSpawn)
-//    
-    
     //MARK: Spawns Path Nodes AKA Bobs
     let spawn = SKAction.runBlock({() in self.spawnBobs()})
     let delay = SKAction.waitForDuration(NSTimeInterval(2.0))
     let initialSpawn = SKAction.sequence([spawn, delay])
     let respawn = SKAction.repeatActionForever(initialSpawn)
     self.runAction(respawn)
-  }
-  
-  
-  func spawnFirstBob(){
-    let bob = CreatePath.CreatePath(50, yInitialPosition: Int(spikeNode.frame.height) + 20, width: 5)
-    CreatePath.MovePathObject(bob)
-    self.addChild(bob)
-    bob.runAction(moveAndRemove)
-    bob.physicsBody?.categoryBitMask = bobCategory
-    bob.physicsBody?.collisionBitMask = hotdogCategory
-    lastBob = bob
   }
   
   func spawnBobs() {
@@ -220,7 +203,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let bodyB = contact.bodyB
     
     if bodyA.categoryBitMask == hotdogCategory || bodyB.categoryBitMask == hotdogCategory {
+      
+      if flag == true{
       BackgroundSFX.playBackgroundSFX("pain.mp3")
+        flag = false}
       println("collision2")
       gameIsOver()
     }
@@ -318,6 +304,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     gameStarted = false
     gameVC.pauseButton.enabled = true
     gameVC.backButton.enabled = true
+    flag = true
   }
   
   func nodeSpeedTimer() {
