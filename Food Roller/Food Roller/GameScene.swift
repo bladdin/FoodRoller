@@ -179,6 +179,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   
   //Mark: Game over function called when gameOver is true
   func gameIsOver() {
+    
+    BackgroundMusic.playBackgroundMusic("bensoundcreepy.mp3")
     spikeSpeed = 0
     backgroundSpeed = 0
     gameStop = true // pause the timer
