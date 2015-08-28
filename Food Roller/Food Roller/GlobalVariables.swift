@@ -24,3 +24,6 @@ var bobMaxStart : Int!
 var moveAndRemove : SKAction!
 var timeForDifficultyIncrease : NSTimeInterval = 10
 var nodeSpeed:CGFloat = 0.01
+var musicVolume:Float = 0.5
+var sfxVolume: Float = 0.5
+ 
