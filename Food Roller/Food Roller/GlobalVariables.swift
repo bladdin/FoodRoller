@@ -17,6 +17,7 @@ var backgroundSpeed : CGFloat = 1
 var spikeSpeed : CGFloat = 1
 var gameStop = false
 var gameStarted = false
+var gameOver = false
 var bobWidth : Int!
 var lastBob :SKSpriteNode!
 var bobMinStart : Int!
