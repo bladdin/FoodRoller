@@ -171,6 +171,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   
   //Mark: Game Over Function
   func gameIsOver() {
+    
+    BackgroundMusic.playBackgroundMusic("bensoundcreepy.mp3")
     highscore = timerCount
     if highscore > currentHighScore {
       currentHighScore = highscore
