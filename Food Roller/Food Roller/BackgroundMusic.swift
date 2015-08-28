@@ -16,26 +16,30 @@ class BackgroundMusic{
 
   
 class func playBackgroundMusic(filename: String) {
-  let url = NSBundle.mainBundle().URLForResource(
-    filename, withExtension: nil)
-  if (url == nil) {
-    println("Could not find file: \(filename)")
-    return
+  if !AVAudioSession.sharedInstance().otherAudioPlaying {
+    let url = NSBundle.mainBundle().URLForResource(
+      filename, withExtension: nil)
+    if (url == nil) {
+      println("Could not find file: \(filename)")
+      return
+    }
+    var error: NSError? = nil
+    backgroundMusicPlayer =
+      AVAudioPlayer(contentsOfURL: url, error: &error)
+    if backgroundMusicPlayer == nil {
+      println("Could not create audio player: \(error!)")
+      return
+    }
+    backgroundMusicPlayer.numberOfLoops = -1
+    backgroundMusicPlayer.prepareToPlay()
+    backgroundMusicPlayer.volume = musicVolume
+    backgroundMusicPlayer.play()
   }
-  var error: NSError? = nil
-  backgroundMusicPlayer =
-    AVAudioPlayer(contentsOfURL: url, error: &error)
-  if backgroundMusicPlayer == nil {
-    println("Could not create audio player: \(error!)")
-    return
-  }
-  backgroundMusicPlayer.numberOfLoops = -1
-  backgroundMusicPlayer.prepareToPlay()
-  backgroundMusicPlayer.volume = musicVolume
-  backgroundMusicPlayer.play()
 }
   
   class func adjustVolume(musicVolume: Float){
-  backgroundMusicPlayer.volume = musicVolume
+    if let bmPlayer = backgroundMusicPlayer {
+      bmPlayer.volume = musicVolume
+    }
   }
 }

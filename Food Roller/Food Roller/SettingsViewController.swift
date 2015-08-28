@@ -22,6 +22,7 @@ class SettingsViewController: UIViewController {
   
   @IBAction func MusicSlider(sender: UISlider) {
      musicVolume = sender.value
+    println("music slider")
     BackgroundMusic.adjustVolume(musicVolume)
   }
   @IBOutlet weak var MusicSliderOutlet: UISlider!

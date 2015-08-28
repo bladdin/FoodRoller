@@ -205,6 +205,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let bodyB = contact.bodyB
     
     if bodyA.categoryBitMask == hotdogCategory || bodyB.categoryBitMask == hotdogCategory {
+      
+      if flag == true{
       BackgroundSFX.playBackgroundSFX("pain.mp3")
       gameIsOver()
     }
@@ -303,6 +305,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     gameStarted = false
     gameVC.pauseButton.enabled = true
     gameVC.backButton.enabled = true
+    flag = true
   }
   
   func nodeSpeedTimer() {
