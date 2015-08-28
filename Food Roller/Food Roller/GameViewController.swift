@@ -30,8 +30,8 @@ extension SKNode {
 class GameViewController: UIViewController {
   var gameoverView = UIView()
   let pauseImage = UIImage(named: "pause")
-  let resumeImage = UIImage(named: "resume")
 
+  @IBOutlet weak var backButton: UIButton!
   @IBOutlet weak var pauseButton: UIButton!
   @IBOutlet weak var retryButton: UIButton!
   @IBOutlet weak var bunImageView: UIImageView!
@@ -46,34 +46,61 @@ class GameViewController: UIViewController {
     sc.gamePause()
   }
   
+  @IBAction func backButtonAction(sender: UIButton) {
+  }
   
   @IBAction func menuButtonAction(sender: UIButton) {
-    println("menu")
+    // segue to menu
     sc.resetGame()
-
+    
   }
   
   @IBAction func retryButtonAction(sender: UIButton) {
-    println("retry")
+    BackgroundSFX.playBackgroundSFX("SquishFart.mp3")
     sc.resetGame()
     sc.removeAllChildren()
     sc.removeAllActions()
     sc.removeFromParent()
     presentScene()
-  
-    
-  
   }
   
   @IBAction func shareButtonAction(sender: UIButton) {
-    println("share")
+    BackgroundSFX.playBackgroundSFX("SquishFart.mp3")
     var score : String = sc.timerLabelNode.text
-    let activityViewController = UIActivityViewController(activityItems: ["Your Score: " + score], applicationActivities: nil)
-    self.presentViewController(activityViewController, animated: true, completion: nil)
+//    let activityViewController = UIActivityViewController(activityItems: ["WOW! My Score on Hotdog Slinger is: " + score + "\nThis is AWESOME!\nTry Hotdog Slinger now and beat my score!"], applicationActivities: nil)
+//    
+    //Generate the screenshot
+    UIGraphicsBeginImageContext(view.frame.size)
+    let context: CGContextRef = UIGraphicsGetCurrentContext()
+    view.layer.renderInContext(context)
+    let screenShot: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+    UIGraphicsEndImageContext()
+    
+    var postImage = UIImage(named: "\(screenShot)")
+    
+    
+    socialShare(sharingText: "I just hit \(score) on Hotdog Slinger! Beat it!", sharingImage: postImage)
+
+//    self.presentViewController(activityViewController, animated: true, completion: nil)
   }
   
-  
-  
+  func socialShare(#sharingText: String?, sharingImage: UIImage?) {
+    var sharingItems = [AnyObject]()
+    
+    if let text = sharingText {
+      sharingItems.append(text)
+    }
+    if let image = sharingImage {
+      sharingItems.append(image)
+    }
+//    if let url = sharingURL {
+//      sharingItems.append(url)
+//    }
+    
+    let activityViewController = UIActivityViewController(activityItems: sharingItems, applicationActivities: nil)
+    activityViewController.excludedActivityTypes = [UIActivityTypeCopyToPasteboard,UIActivityTypeAirDrop,UIActivityTypeAddToReadingList,UIActivityTypeAssignToContact,UIActivityTypePostToTencentWeibo,UIActivityTypePostToVimeo,UIActivityTypePrint,UIActivityTypeSaveToCameraRoll,UIActivityTypePostToWeibo]
+    self.presentViewController(activityViewController, animated: true, completion: nil)
+  }
   
   func presentScene() {
       let scene = GameScene()
