@@ -15,12 +15,13 @@ class MenuViewController: UIViewController {
   let clickedSettingsButton = UIImage(named: "settingsClicked")
   let clickedHelpButton = UIImage(named: "helpClicked")
   
+  @IBOutlet weak var titleImageView: UIImageView!
   @IBOutlet weak var startButtonOutlet: UIButton!
   @IBOutlet weak var settingsButtonOutlet: UIButton!
   @IBOutlet weak var helpButtonOutlet: UIButton!
   
   
-
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -33,13 +34,28 @@ class MenuViewController: UIViewController {
     startButtonOutlet.setImage(clickedStartButton, forState: UIControlState.Highlighted)
     settingsButtonOutlet.setImage(clickedSettingsButton, forState: UIControlState.Highlighted)
     helpButtonOutlet.setImage(clickedHelpButton, forState: UIControlState.Highlighted)
-
-
+    
+    
   }
   
+//  func animation() {
+//    var destLocation = CGPoint(x: 130, y: 28)
+//    titleImageView.
+//  }
+  
+  @IBAction func startButtonAction(sender: UIButton) {
+    BackgroundSFX.playBackgroundSFX("SquishFart.mp3")
+  }
+  @IBAction func helpButtonAction(sender: UIButton) {
+    BackgroundSFX.playBackgroundSFX("SquishFart.mp3")
+  }
+  
+  @IBAction func settingsButton(sender: UIButton) {
+    BackgroundSFX.playBackgroundSFX("SquishFart.mp3")
+  }
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
-       navigationController?.navigationBarHidden = true
+    navigationController?.navigationBarHidden = true
   }
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -49,7 +65,7 @@ class MenuViewController: UIViewController {
       //      controller.delegate = self
     }
   }
-
+  
   override func viewDidAppear(animated: Bool) {
     //
     println(musicVolume)
@@ -57,8 +73,8 @@ class MenuViewController: UIViewController {
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
   }
-
-  }
+  
+}
 
 //keep for sound adjustment
 //extension SettingsViewController: SoundVolumeDelegate {
