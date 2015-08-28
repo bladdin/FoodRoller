@@ -5,15 +5,15 @@
 //  Created by Benjamin Laddin on 8/21/15.
 //  Copyright (c) 2015 Benjamin Laddin. All rights reserved.
 //
-
 import SpriteKit
 import Foundation
 import AVFoundation
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
+  var highscore = 0
+  var currentHighScore = 0
   
   var hotdog = SKSpriteNode()
-  var bun = SKSpriteNode()
   var bob = SKSpriteNode()
   var lastBob = SKSpriteNode()
   
@@ -22,12 +22,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   var spikeNode = SKSpriteNode()
   var gameVC : GameViewController!
   
-  
   let hotdogCategory : UInt32 = 0x1 << 0;
   let killCategory : UInt32 = 0x1 << 1;
   let bobCategory  : UInt32 = 0x1 << 2;
   let sideboundsCategory : UInt32 = 0x1 << 3;
-  
   
   var arrayOfPathsInGame = [SKSpriteNode()]
   var timerLabelNode = SKLabelNode(text: "0")
@@ -42,22 +40,26 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   var gravityMagnitude : CGFloat = -9.8
   var moveBobs: SKAction?
   
-  
+  //Mark: DidMoveToView initial screen
   override func didMoveToView(view: SKView) {
+    //Mark: Loading high score
+    if let loadHighScore = userDefaults.valueForKey("highscore") as? Int {
+      currentHighScore = loadHighScore
+    } else {
+      currentHighScore = 0
+    }
+    
     gameStop = false
     self.speed = 0
     BackgroundMusic.playBackgroundMusic("bensoundFunnysong.mp3")
     
-    // bounds
+    //Mark: World set up physics body
     physicsBody = SKPhysicsBody(edgeLoopFromRect: CGRect(x: -300, y: 0, width: self.size.width + 310, height: self.size.height + 100))
     physicsBody?.categoryBitMask = sideboundsCategory
-    
     self.physicsWorld.contactDelegate = self //Setting up physics world for contact with boundaries
     physicsWorld.gravity = CGVectorMake(0.0, gravityMagnitude)
     
-    
-    
-    // loop through the background image
+    //Mark: Creating and looping through background and cactus images.
     for (var i : CGFloat = 0; i < 2; i++ ) {
       let bg = SKSpriteNode(imageNamed: "gameBackground")
       let groundTexture = SKTexture(imageNamed: "cactus")
@@ -72,16 +74,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
       spikeNode.position = CGPoint(x: i * spikeNode.size.width, y: -30 )
       let bottomBoundSize = CGSize(width: spikeNode.size.width, height: spikeNode.size.height + 130)
       spikeNode.physicsBody = nil
-      println(frame.width)
-      println(frame.height)
       hotdog.physicsBody?.dynamic = true
       spikeNode.name = "spikeBottom"
       addChild(spikeNode)
-      println(spikeNode.position)
-      //spikeNode.position = CGPoint(x: 0, y: 0)
-      
     }
     
+    //Mark: Killzone Boundary
     let killZone = SKSpriteNode(color: UIColor.redColor(), size: CGSize(width:size.width, height: spikeNode.size.height - 30))
     
     killZone.anchorPoint = CGPointZero
@@ -90,7 +88,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     killZone.physicsBody?.categoryBitMask = killCategory
     killZone.physicsBody?.contactTestBitMask = hotdogCategory
     killZone.physicsBody?.collisionBitMask = 0
-    //killZone.zPosition = 100
     killZone.physicsBody?.dynamic = false
     killZone.physicsBody?.affectedByGravity = false
     addChild(killZone)
@@ -119,25 +116,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var run = SKAction.animateWithTextures([hotdogTexture1, hotdogTexture2, hotdogTexture3, hotdogTexture4, hotdogTexture5, hotdogTexture6], timePerFrame: 0.12)
     var runForever = SKAction.repeatActionForever(run)
     hotdog.runAction(runForever)
-    //      self.hotdog.physicsBody = SKPhysicsBody(circleOfRadius: self.hotdog.size.height / 2)
     self.addChild(self.hotdog)
     
-    
-    // TIME8
+    //Mark: Time Label Node
     timerLabelNode.position = CGPoint(x: self.frame.size.width/2 , y: 7*self.frame.size.height/8)
     timerLabelNode.zPosition = 100
     timerLabelNode.fontSize = 65
     timerLabelNode.fontName = "MarkerFelt-Wide"
     self.addChild(timerLabelNode)
     
-    
-    
-    
-    //MARK: Moves the Path Nodes Aka Bobs
-    
-      let distanceBobsMove = CGFloat(self.frame.width * 2 + (bob.frame.width * 2))
+    //MARK: Moves the Path Nodes AKA Bobs
+    let distanceBobsMove = CGFloat(self.frame.width * 2 + (bob.frame.width * 2))
     moveBobs = SKAction.moveByX(-distanceBobsMove, y: 0.0, duration: NSTimeInterval(nodeSpeed * distanceBobsMove))
-    //println("node speed: \(nodeSpeed)")
     let removeBobs = SKAction.removeFromParent()
     moveAndRemove = SKAction.sequence([moveBobs!, removeBobs])
     
@@ -150,6 +140,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     self.runAction(respawn)
   }
   
+  //Mark: Pathway spawning AKA Bobs
   func spawnBobs() {
     let bob = CreatePath.CreatePath(Int(RandomElements.randomPathVarYPosition(Int(self.frame.width * 1.5 ), max: Int(self.frame.width * 1.5) + 50 )), yInitialPosition: (RandomElements.randomPathVarYPosition(180, max: Int(self.frame.height)-68)), width: (RandomElements.randomPathLength()!))
     CreatePath.MovePathObject(bob)
@@ -160,6 +151,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     lastBob = bob
   }
   
+  //Mark: Game Pause Function
   func gamePause() {
     if gameStop == false {
       gameStop = true
@@ -177,7 +169,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   }
   
   
-  //Mark: Game over function called when gameOver is true
+  //Mark: Game Over Function
   func gameIsOver() {
     
     BackgroundMusic.playBackgroundMusic("bensoundcreepy.mp3")
@@ -196,10 +188,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     gameVC.gameoverView.hidden = false
     difficultyTimer.invalidate()
     nodeTimer.invalidate()
-//    self.userInteractionEnabled = false
   }
   
-  // Collision
+  //Mark: Collision Detection didBeginContact
   func didBeginContact(contact: SKPhysicsContact) {
     let bodyA = contact.bodyA
     let bodyB = contact.bodyB
@@ -207,15 +198,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     if bodyA.categoryBitMask == hotdogCategory || bodyB.categoryBitMask == hotdogCategory {
       
       if flag == true{
-      BackgroundSFX.playBackgroundSFX("pain.mp3")
+        BackgroundSFX.playBackgroundSFX("pain.mp3")
         flag = false}
-      println("collision2")
       gameIsOver()
     }
-    
-    
   }
   
+  //Mark: Game Resume function
   func resumeSpeed() {
     spikeSpeed = 1
     backgroundSpeed = 1
@@ -225,10 +214,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     self.speed = 1
   }
   
-  
-
+  //Mark: TouchesBegan
+  //Touch drag start detection for slingshot action
+  //Starts the game when user interacts with game screen
+  //Initializes timers for the games when it starts.
   override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-    
     if (gameStop == true) && (gameOver == false) {
       // pausing the game and get back to the game
       gameStop = false
@@ -254,6 +244,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
   }
   
+  //Mark: Touch end detection, Force Vector created
   override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
     for touch in touches {
       if let touch = touch as? UITouch {
@@ -261,13 +252,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         BackgroundSFX.playBackgroundSFX("jump.mp3")
         
         let difference = CGVectorMake(CGFloat((endLocation.x - startLocation.x) * -1), abs(endLocation.y - startLocation.y) * 0.2)
-        //   let difference = CGVectorMake(0, abs(endLocation.y - startLocation.y) * 1.6)
         self.hotdog.physicsBody?.applyImpulse(difference)
       }
     }
   }
   
-  
+  //Mark: Update screen function
   override func update(currentTime: CFTimeInterval) {
     enumerateChildNodesWithName("gameBackground", usingBlock: { (node, stop) -> Void in
       if let bg = node as? SKSpriteNode {
@@ -291,7 +281,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
   }
   
-  
+  //Mark: Timer counter
   func updateTimer() {
     if !gameStop {
       timerCount++
@@ -299,6 +289,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
   }
   
+  //Mark: Reset game function
   func resetGame() {
     backgroundSpeed = 1
     spikeSpeed = 1
@@ -326,7 +317,4 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     nodeTimer = NSTimer.scheduledTimerWithTimeInterval(timeForDifficultyIncrease, target: self, selector: "nodeSpeedTimer", userInfo: nil, repeats: true)
     difficultyTimer.invalidate()
   }
-  
-  
-  
 }
