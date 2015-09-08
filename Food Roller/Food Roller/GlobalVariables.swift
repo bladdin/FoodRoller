@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Benjamin Laddin. All rights reserved.
 //
 
+import AVFoundation
 import SpriteKit
 
 // hot dog textures
@@ -24,6 +25,7 @@ var lastBob :SKSpriteNode!
 var bobMinStart : Int!
 var bobMaxStart : Int!
 var moveAndRemove : SKAction!
+var musicPlayer : AVAudioPlayer!
 //var timeForDifficultyIncrease : NSTimeInterval = 10
 
 

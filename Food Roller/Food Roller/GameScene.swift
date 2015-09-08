@@ -311,6 +311,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     gameVC.backButton.enabled = true
     flag = true
     gameVC.highestScore.text = "\(currentHighScore)"
+    nodeTimer.invalidate()
+    difficultyTimer.invalidate()
+    timer.invalidate()
+    timeForDifficultyIncrease = 3;
   }
   
   func nodeSpeedTimer() {
