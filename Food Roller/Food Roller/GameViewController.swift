@@ -52,6 +52,10 @@ class GameViewController: UIViewController {
   @IBAction func menuButtonAction(sender: UIButton) {
     // segue to menu
     sc.resetGame()
+    sc.removeAllChildren()
+    sc.removeAllActions()
+    sc.removeFromParent()
+    self.dismissViewControllerAnimated(true, completion: nil)
     
   }
   

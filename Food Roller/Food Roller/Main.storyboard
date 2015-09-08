@@ -378,6 +378,7 @@
                                     <constraint firstAttribute="width" constant="290" id="EF8-t0-m24"/>
                                 </constraints>
                                 <connections>
+                                    <action selector="SFXSlider:" destination="ILQ-wP-xnC" eventType="touchUpInside" id="2xv-bL-xKq"/>
                                     <action selector="SFXSlider:" destination="ILQ-wP-xnC" eventType="valueChanged" id="oVe-cL-WDH"/>
                                 </connections>
                             </slider>
@@ -525,6 +526,6 @@
         <image name="title.png" width="600" height="349"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ky1-Hn-hY5"/>
+        <segue reference="ezO-OF-UVQ"/>
     </inferredMetricsTieBreakers>
 </document>
