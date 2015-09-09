@@ -59,7 +59,7 @@ class GameViewController: UIViewController {
     sc.removeAllChildren()
     sc.removeAllActions()
     sc.removeFromParent()
-    
+    self.dismissViewControllerAnimated(true, completion: nil)
   }
   
   @IBAction func retryButtonAction(sender: UIButton) {
