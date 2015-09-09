@@ -149,7 +149,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   
   //Mark: Pathway spawning AKA Bobs
   func spawnBobs() {
-    let bob = CreatePath.CreatePath(Int(RandomElements.randomPathVarYPosition(Int(self.frame.width * 1.5 ), max: Int(self.frame.width * 1.5) + 50 )), yInitialPosition: (RandomElements.randomPathVarYPosition(180, max: Int(self.frame.height)-68)), width: (RandomElements.randomPathLength()!))
+    let bob = CreatePath.CreatePath(Int(RandomElements.randomPathVarYPosition(Int(self.frame.width * 1.5 ), max: Int(self.frame.width * 1.5) + 50 )), yInitialPosition: (RandomElements.randomPathVarYPosition(180, max: Int(self.frame.height))), width: (RandomElements.randomPathLength()!))
     CreatePath.MovePathObject(bob)
     self.addChild(bob)
     bob.runAction(moveAndRemove)
@@ -322,7 +322,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   func nodeSpeedTimer() {
 
     self.speed = self.speed + 0.25
-   // gravityMagnitude -= CGFloat(3.0)
+    gravityMagnitude -= CGFloat(1.5)
     physicsWorld.gravity = CGVectorMake(0.0, gravityMagnitude)
     timeForDifficultyIncrease = timeForDifficultyIncrease + 0.5
     difficultyTimer = NSTimer.scheduledTimerWithTimeInterval(timeForDifficultyIncrease, target: self, selector: "nodeSpeed2Timer", userInfo: nil, repeats: true)
@@ -331,7 +331,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   
   func nodeSpeed2Timer() {
     self.speed = self.speed + 0.25
-    gravityMagnitude -= CGFloat(3.0)
+    gravityMagnitude -= CGFloat(1.5)
     physicsWorld.gravity = CGVectorMake(0.0, gravityMagnitude)
     timeForDifficultyIncrease = timeForDifficultyIncrease + 0.5
     nodeTimer = NSTimer.scheduledTimerWithTimeInterval(timeForDifficultyIncrease, target: self, selector: "nodeSpeedTimer", userInfo: nil, repeats: true)
