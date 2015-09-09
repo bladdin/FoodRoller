@@ -47,6 +47,10 @@ class GameViewController: UIViewController {
   }
   
   @IBAction func backButtonAction(sender: UIButton) {
+    sc.resetGame()
+    sc.removeAllChildren()
+    sc.removeAllActions()
+    sc.removeFromParent()
   }
   
   @IBAction func menuButtonAction(sender: UIButton) {
@@ -56,7 +60,6 @@ class GameViewController: UIViewController {
     sc.removeAllActions()
     sc.removeFromParent()
     self.dismissViewControllerAnimated(true, completion: nil)
-    
   }
   
   @IBAction func retryButtonAction(sender: UIButton) {
@@ -65,6 +68,7 @@ class GameViewController: UIViewController {
     sc.removeAllChildren()
     sc.removeAllActions()
     sc.removeFromParent()
+    
     presentScene()
   }
   

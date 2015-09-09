@@ -59,16 +59,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     self.physicsWorld.contactDelegate = self //Setting up physics world for contact with boundaries
     physicsWorld.gravity = CGVectorMake(0.0, gravityMagnitude)
     
+    let image = UIImage(named: "cactus")
+    
+    
+
     //Mark: Creating and looping through background and cactus images.
     for (var i : CGFloat = 0; i < 2; i++ ) {
       let bg = SKSpriteNode(imageNamed: "gameBackground")
-      let groundTexture = SKTexture(imageNamed: "cactus")
-      
       bg.size = CGSize(width: 1024, height: 768)
       bg.anchorPoint = CGPointZero
       bg.position = CGPoint(x: i * bg.size.width, y: 0)
       bg.name = "gameBackground"
       addChild(bg)
+      let groundTexture = SKTexture(image: image!)
       spikeNode = SKSpriteNode(texture: groundTexture)
       spikeNode.anchorPoint = CGPointZero
       spikeNode.position = CGPoint(x: i * spikeNode.size.width, y: -30 )
@@ -107,7 +110,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     self.hotdog.size = CGSizeMake(self.frame.size.width / 8, self.frame.size.height / 8)
     self.hotdog.zPosition = 100
     self.hotdog.position = CGPoint(x: self.frame.size.width / 2 , y: self.frame.size.height / 2)
-//    self.hotdog.physicsBody = SKPhysicsBody(texture: hotdogTexture1, size: self.hotdog.size)
     self.hotdog.physicsBody = SKPhysicsBody(circleOfRadius: self.hotdog.size.width / 2 )
     self.hotdog.physicsBody?.affectedByGravity = false
     hotdog.physicsBody?.categoryBitMask = hotdogCategory //Sets collider type to raw value 1
@@ -311,11 +313,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     gameVC.backButton.enabled = true
     flag = true
     gameVC.highestScore.text = "\(currentHighScore)"
+    nodeTimer.invalidate()
+    difficultyTimer.invalidate()
+    timer.invalidate()
+    timeForDifficultyIncrease = 3
   }
   
   func nodeSpeedTimer() {
 
-    self.speed = self.speed + 0.5
+    self.speed = self.speed + 0.25
    // gravityMagnitude -= CGFloat(3.0)
     physicsWorld.gravity = CGVectorMake(0.0, gravityMagnitude)
     timeForDifficultyIncrease = timeForDifficultyIncrease + 0.5
@@ -324,7 +330,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   }
   
   func nodeSpeed2Timer() {
-    self.speed = self.speed + 0.5
+    self.speed = self.speed + 0.25
     gravityMagnitude -= CGFloat(3.0)
     physicsWorld.gravity = CGVectorMake(0.0, gravityMagnitude)
     timeForDifficultyIncrease = timeForDifficultyIncrease + 0.5
