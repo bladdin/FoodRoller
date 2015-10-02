@@ -14,6 +14,7 @@ class MenuViewController: UIViewController {
   let clickedStartButton = UIImage(named: "startClicked")
   let clickedSettingsButton = UIImage(named: "settingsClicked")
   let clickedHelpButton = UIImage(named: "helpClicked")
+  var gameVC : GameViewController!
   
   @IBOutlet weak var titleImageView: UIImageView!
   @IBOutlet weak var startButtonOutlet: UIButton!
@@ -24,6 +25,7 @@ class MenuViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    gameVC = self.storyboard?.instantiateViewControllerWithIdentifier("Game") as! GameViewController
  
     if !AVAudioSession.sharedInstance().otherAudioPlaying {
       BackgroundSFX.playBackgroundSFX("SquishFart.mp3")
@@ -44,7 +46,8 @@ class MenuViewController: UIViewController {
 //  }
   
   @IBAction func startButtonAction(sender: UIButton) {
-    BackgroundSFX.playBackgroundSFX("SquishFart.mp3")
+    
+    presentViewController(gameVC, animated: true, completion: nil)
   }
   @IBAction func helpButtonAction(sender: UIButton) {
     BackgroundSFX.playBackgroundSFX("SquishFart.mp3")
@@ -60,7 +63,7 @@ class MenuViewController: UIViewController {
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "SettingsViewController"{
-      let controller = segue.destinationViewController as! SettingsViewController
+      _ = segue.destinationViewController as! SettingsViewController
       //keep for sound adjustment
       //      controller.delegate = self
     }

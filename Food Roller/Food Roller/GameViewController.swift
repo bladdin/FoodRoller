@@ -11,19 +11,19 @@ import SpriteKit
 import Social
 
 extension SKNode {
-  class func unarchiveFromFile(file : String) -> SKNode? {
-    if let path = NSBundle.mainBundle().pathForResource(file, ofType: "sks") {
-      var sceneData = NSData(contentsOfFile: path, options: .DataReadingMappedIfSafe, error: nil)!
-      var archiver = NSKeyedUnarchiver(forReadingWithData: sceneData)
-      
-      archiver.setClass(self.classForKeyedUnarchiver(), forClassName: "SKScene")
-      let scene = archiver.decodeObjectForKey(NSKeyedArchiveRootObjectKey) as! GameScene
-      archiver.finishDecoding()
-      return scene
-    } else {
-      return nil
-    }
-  }
+//  class func unarchiveFromFile(file : String) -> SKNode? {
+//    if let path = NSBundle.mainBundle().pathForResource(file, ofType: "sks") {
+//      var sceneData = NSData(contentsOfFile: path, options: .DataReadingMappedIfSafe , error: nil)!
+//      var archiver = NSKeyedUnarchiver(forReadingWithData: sceneData)
+//      
+//      archiver.setClass(self.classForKeyedUnarchiver(), forClassName: "SKScene")
+//      let scene = archiver.decodeObjectForKey(NSKeyedArchiveRootObjectKey) as! GameScene
+//      archiver.finishDecoding()
+//      return scene
+//    } else {
+//      return nil
+//    }
+//  }
 }
 
 
@@ -39,6 +39,14 @@ class GameViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    sc = GameScene()
+    sc.size = self.view.frame.size
+    sc.scaleMode = .AspectFill
+    sc.gameVC = self
+    
+  }
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
     presentScene()
   }
 
@@ -65,34 +73,30 @@ class GameViewController: UIViewController {
   @IBAction func retryButtonAction(sender: UIButton) {
     BackgroundSFX.playBackgroundSFX("SquishFart.mp3")
     sc.resetGame()
-    sc.removeAllChildren()
-    sc.removeAllActions()
-    sc.removeFromParent()
     
-    presentScene()
+    //presentScene()
   }
   
   @IBAction func shareButtonAction(sender: UIButton) {
     BackgroundSFX.playBackgroundSFX("SquishFart.mp3")
-    var score : String = sc.timerLabelNode.text
+    let score : String = sc.timerLabelNode.text!
 //    let activityViewController = UIActivityViewController(activityItems: ["WOW! My Score on Hotdog Slinger is: " + score + "\nThis is AWESOME!\nTry Hotdog Slinger now and beat my score!"], applicationActivities: nil)
-//    
+//
     //Generate the screenshot
     UIGraphicsBeginImageContext(view.frame.size)
-    let context: CGContextRef = UIGraphicsGetCurrentContext()
+    let context: CGContextRef = UIGraphicsGetCurrentContext()!
     view.layer.renderInContext(context)
     let screenShot: UIImage = UIGraphicsGetImageFromCurrentImageContext()
     UIGraphicsEndImageContext()
     
-    var postImage = UIImage(named: "\(screenShot)")
-    
-    
+    let postImage = UIImage(named: "\(screenShot)")
+
     socialShare(sharingText: "I just hit \(score) on Hotdog Slinger! Beat it!", sharingImage: postImage)
 
 //    self.presentViewController(activityViewController, animated: true, completion: nil)
   }
   
-  func socialShare(#sharingText: String?, sharingImage: UIImage?) {
+  func socialShare(sharingText sharingText: String?, sharingImage: UIImage?) {
     var sharingItems = [AnyObject]()
     
     if let text = sharingText {
@@ -111,21 +115,18 @@ class GameViewController: UIViewController {
   }
   
   func presentScene() {
-      let scene = GameScene()
-      // Configure the view.
-      sc = scene
+    
+      // Configure the view
       let skView = self.view as! SKView
 //      skView.showsFPS = true
 //      skView.showsNodeCount = true
       gameoverView.hidden = true
-      scene.size = self.view.frame.size
+    
       
       /* Sprite Kit applies additional optimizations to improve rendering performance */
       skView.ignoresSiblingOrder = true
       /* Set the scale mode to scale to fit the window */
-      scene.scaleMode = .AspectFill
-      scene.gameVC = self
-      skView.presentScene(scene)
+      skView.presentScene(sc)
     var previousHighScore = sc.currentHighScore
     highestScore.text = "\(previousHighScore)"
   }
@@ -134,14 +135,14 @@ class GameViewController: UIViewController {
     return true
   }
   
-  override func supportedInterfaceOrientations() -> Int {
+  override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
     if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
-      return Int(UIInterfaceOrientationMask.AllButUpsideDown.rawValue)
+      return UIInterfaceOrientationMask.AllButUpsideDown
     } else {
-      return Int(UIInterfaceOrientationMask.All.rawValue)
+      return UIInterfaceOrientationMask.All
     }
   }
-  
+
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Release any cached data, images, etc that aren't in use.

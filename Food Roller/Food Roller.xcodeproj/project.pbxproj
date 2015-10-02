@@ -28,7 +28,6 @@
 		6B3DF5FB1B90537C00F4289D /* mainHotdog.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3DF5FA1B90537C00F4289D /* mainHotdog.png */; };
 		6B5218891B8BE15700BF9DA4 /* hotdog.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B5218881B8BE15700BF9DA4 /* hotdog.png */; };
 		6B52188D1B8C474D00BF9DA4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B52188C1B8C474D00BF9DA4 /* Images.xcassets */; };
-		6B52188F1B8C51F100BF9DA4 /* gameBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B52188E1B8C51F100BF9DA4 /* gameBackground.png */; };
 		6B5218991B8D44F400BF9DA4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5218981B8D44F400BF9DA4 /* SettingsViewController.swift */; };
 		6B52189B1B8D4FE000BF9DA4 /* cactus.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B52189A1B8D4FE000BF9DA4 /* cactus.png */; };
 		6B5218BE1B8DAA8D00BF9DA4 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B5218B81B8DAA8D00BF9DA4 /* 1.png */; };
@@ -41,7 +40,6 @@
 		6BCED7231B8BAFBC006967AC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCED7221B8BAFBC006967AC /* MenuViewController.swift */; };
 		AE6916A21B90EF6D00DAD845 /* bensoundcreepy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE6916A11B90EF6D00DAD845 /* bensoundcreepy.mp3 */; };
 		AE8826C81B8DD7CA00486B91 /* bensoundCute.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE8826C51B8DD7CA00486B91 /* bensoundCute.mp3 */; };
-		AE8826C91B8DD7CA00486B91 /* bensoundFunnysong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE8826C61B8DD7CA00486B91 /* bensoundFunnysong.mp3 */; };
 		AE8826CC1B8DD87900486B91 /* BackgroundMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8826CB1B8DD87900486B91 /* BackgroundMusic.swift */; };
 		AE8826CE1B8DE06200486B91 /* SquishFart.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE8826CD1B8DE06200486B91 /* SquishFart.mp3 */; };
 		AECDC3CB1B8F83F400310CE0 /* SoundFX.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECDC3CA1B8F83F400310CE0 /* SoundFX.swift */; };
@@ -58,6 +56,8 @@
 		B57D74041B87D89200B3838B /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57D74031B87D89200B3838B /* GameViewController.swift */; };
 		B57D740C1B87D89200B3838B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B57D740A1B87D89200B3838B /* LaunchScreen.xib */; };
 		B57D74181B87D89200B3838B /* Food_RollerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57D74171B87D89200B3838B /* Food_RollerTests.swift */; };
+		B5BA3AD21BAC6F03002ED3A1 /* bensoundFunnysong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE8826C61B8DD7CA00486B91 /* bensoundFunnysong.mp3 */; };
+		B5BA3AD31BAC6F03002ED3A1 /* gameBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B52188E1B8C51F100BF9DA4 /* gameBackground.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -356,7 +356,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = CodeFellows;
 				TargetAttributes = {
 					B57D73F71B87D89200B3838B = {
@@ -419,18 +419,16 @@
 				6B3DF5ED1B902E5B00F4289D /* Block5.png in Resources */,
 				6B3DF5F11B9030CB00F4289D /* menuButton.png in Resources */,
 				6B0315521B8E72E1000AE4AA /* deadHotDog.png in Resources */,
-				AE8826C91B8DD7CA00486B91 /* bensoundFunnysong.mp3 in Resources */,
+				B5BA3AD21BAC6F03002ED3A1 /* bensoundFunnysong.mp3 in Resources */,
 				6B3DF5FB1B90537C00F4289D /* mainHotdog.png in Resources */,
-				AE8826C91B8DD7CA00486B91 /* bensoundFunnysong.mp3 in Resources */,
 				AE8826CE1B8DE06200486B91 /* SquishFart.mp3 in Resources */,
 				AE6916A21B90EF6D00DAD845 /* bensoundcreepy.mp3 in Resources */,
 				6B3DF5EB1B902E5B00F4289D /* Block3.png in Resources */,
 				AE8826C81B8DD7CA00486B91 /* bensoundCute.mp3 in Resources */,
-				6B52188F1B8C51F100BF9DA4 /* gameBackground.png in Resources */,
+				B5BA3AD31BAC6F03002ED3A1 /* gameBackground.png in Resources */,
 				6B0315561B8E9101000AE4AA /* bun.png in Resources */,
 				6B0315761B8F816D000AE4AA /* bunView.png in Resources */,
 				6B0315531B8E72E1000AE4AA /* pause.png in Resources */,
-				6B52188F1B8C51F100BF9DA4 /* gameBackground.png in Resources */,
 				6B5218C21B8DAA8D00BF9DA4 /* 5.png in Resources */,
 				6B5218891B8BE15700BF9DA4 /* hotdog.png in Resources */,
 			);
@@ -518,6 +516,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -590,9 +589,10 @@
 				INFOPLIST_FILE = "Food Roller/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Benjamin-Laddin.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "Hotdog Slinger";
 				PROVISIONING_PROFILE = "";
-				SDKROOT = iphoneos8.4;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -606,9 +606,10 @@
 				INFOPLIST_FILE = "Food Roller/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Benjamin-Laddin.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "Hotdog Slinger";
 				PROVISIONING_PROFILE = "";
-				SDKROOT = iphoneos8.4;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -629,6 +630,7 @@
 				);
 				INFOPLIST_FILE = "Food RollerTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Benjamin-Laddin.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Food Roller.app/Food Roller";
@@ -647,6 +649,7 @@
 				);
 				INFOPLIST_FILE = "Food RollerTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Benjamin-Laddin.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Food Roller.app/Food Roller";

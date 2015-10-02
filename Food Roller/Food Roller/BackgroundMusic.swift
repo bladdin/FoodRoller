@@ -20,20 +20,19 @@ class func playBackgroundMusic(filename: String) {
     let url = NSBundle.mainBundle().URLForResource(
       filename, withExtension: nil)
     if (url == nil) {
-      println("Could not find file: \(filename)")
+      print("Could not find file: \(filename)")
       return
     }
-    var error: NSError? = nil
-    backgroundMusicPlayer =
-      AVAudioPlayer(contentsOfURL: url, error: &error)
-    if backgroundMusicPlayer == nil {
-      println("Could not create audio player: \(error!)")
-      return
-    }
-    backgroundMusicPlayer.numberOfLoops = -1
+    do {
+    backgroundMusicPlayer = try
+      AVAudioPlayer(contentsOfURL: url!)
+    backgroundMusicPlayer.numberOfLoops = kBackgroundMusicLoop
     backgroundMusicPlayer.prepareToPlay()
     backgroundMusicPlayer.volume = musicVolume
     backgroundMusicPlayer.play()
+    } catch {
+      
+    }
   }
 }
   
