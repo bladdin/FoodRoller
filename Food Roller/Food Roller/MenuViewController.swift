@@ -60,7 +60,7 @@ class MenuViewController: UIViewController {
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "SettingsViewController"{
-      let controller = segue.destinationViewController as! SettingsViewController
+      _ = segue.destinationViewController as! SettingsViewController
       //keep for sound adjustment
       //      controller.delegate = self
     }

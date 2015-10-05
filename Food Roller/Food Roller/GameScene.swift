@@ -39,7 +39,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   var nodeTimer = NSTimer()
   var gravityMagnitude : CGFloat = -9.8
   var moveBobs: SKAction?
-  
+  var count = 0
   //Mark: DidMoveToView initial screen
   override func didMoveToView(view: SKView) {
     //Mark: Loading high score
@@ -59,31 +59,31 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     self.physicsWorld.contactDelegate = self //Setting up physics world for contact with boundaries
     physicsWorld.gravity = CGVectorMake(0.0, gravityMagnitude)
     
-    let image = UIImage(named: "cactus")
+//    let image = UIImage(named: "cactus")
     
     
 
     //Mark: Creating and looping through background and cactus images.
     for (var i : CGFloat = 0; i < 2; i++ ) {
-      let bg = SKSpriteNode(imageNamed: "gameBackground")
+      let bg = SKSpriteNode(imageNamed: "background")
       bg.size = CGSize(width: 1024, height: 768)
       bg.anchorPoint = CGPointZero
       bg.position = CGPoint(x: i * bg.size.width, y: 0)
       bg.name = "gameBackground"
       addChild(bg)
-      let groundTexture = SKTexture(image: image!)
-      spikeNode = SKSpriteNode(texture: groundTexture)
-      spikeNode.anchorPoint = CGPointZero
-      spikeNode.position = CGPoint(x: i * spikeNode.size.width, y: -30 )
-      let bottomBoundSize = CGSize(width: spikeNode.size.width, height: spikeNode.size.height + 130)
-      spikeNode.physicsBody = nil
+//      let groundTexture = SKTexture(image: image!)
+//      spikeNode = SKSpriteNode(texture: groundTexture)
+//      spikeNode.anchorPoint = CGPointZero
+//      spikeNode.position = CGPoint(x: i * spikeNode.size.width, y: -30 )
+//      _ = CGSize(width: spikeNode.size.width, height: spikeNode.size.height + 130)
+//      spikeNode.physicsBody = nil
       hotdog.physicsBody?.dynamic = true
-      spikeNode.name = "spikeBottom"
-      addChild(spikeNode)
+//      spikeNode.name = "spikeBottom"
+//      addChild(spikeNode)
     }
     
     //Mark: Killzone Boundary
-    let killZone = SKSpriteNode(color: UIColor.redColor(), size: CGSize(width:size.width, height: spikeNode.size.height - 30))
+    let killZone = SKSpriteNode(color: UIColor.redColor(), size: CGSize(width:size.width, height:60))
     
     killZone.anchorPoint = CGPointZero
     killZone.position = CGPointZero
@@ -97,12 +97,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     // HOTDOG NODE
-    var hotdogTexture1 = SKTexture(imageNamed: "1")
-    var hotdogTexture2 = SKTexture(imageNamed: "2")
-    var hotdogTexture3 = SKTexture(imageNamed: "3")
-    var hotdogTexture4 = SKTexture(imageNamed: "4")
-    var hotdogTexture5 = SKTexture(imageNamed: "5")
-    var hotdogTexture6 = SKTexture(imageNamed: "6")
+    let hotdogTexture1 = SKTexture(imageNamed: "1")
+    let hotdogTexture2 = SKTexture(imageNamed: "2")
+    let hotdogTexture3 = SKTexture(imageNamed: "3")
+    let hotdogTexture4 = SKTexture(imageNamed: "4")
+    let hotdogTexture5 = SKTexture(imageNamed: "5")
+    let hotdogTexture6 = SKTexture(imageNamed: "6")
     
     
     self.hotdog = SKSpriteNode(texture: hotdogTexture1)
@@ -116,8 +116,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     hotdog.physicsBody?.contactTestBitMask = killCategory
     hotdog.physicsBody?.collisionBitMask = sideboundsCategory | bobCategory
     
-    var run = SKAction.animateWithTextures([hotdogTexture1, hotdogTexture2, hotdogTexture3, hotdogTexture4, hotdogTexture5, hotdogTexture6], timePerFrame: 0.12)
-    var runForever = SKAction.repeatActionForever(run)
+    let run = SKAction.animateWithTextures([hotdogTexture1, hotdogTexture2, hotdogTexture3, hotdogTexture4, hotdogTexture5, hotdogTexture6], timePerFrame: 0.12)
+    let runForever = SKAction.repeatActionForever(run)
     hotdog.runAction(runForever)
     self.addChild(self.hotdog)
     
@@ -151,10 +151,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   func spawnBobs() {
     let bob = CreatePath.CreatePath(Int(RandomElements.randomPathVarYPosition(Int(self.frame.width * 1.5 ), max: Int(self.frame.width * 1.5) + 50 )), yInitialPosition: (RandomElements.randomPathVarYPosition(180, max: Int(self.frame.height))), width: (RandomElements.randomPathLength()!))
     CreatePath.MovePathObject(bob)
+    bob.name = "bob"
     self.addChild(bob)
     bob.runAction(moveAndRemove)
     bob.physicsBody?.categoryBitMask = bobCategory
     bob.physicsBody?.collisionBitMask = hotdogCategory
+    bob.physicsBody?.contactTestBitMask = hotdogCategory
+    
     lastBob = bob
   }
   
@@ -185,7 +188,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
       currentHighScore = highscore
       userDefaults.setValue(highscore, forKey: "highscore")
       userDefaults.synchronize()
-      println(currentHighScore)
+      print(currentHighScore)
     }
     spikeSpeed = 0
     backgroundSpeed = 0
@@ -194,7 +197,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     self.speed = 0 // stop the path
     
     // show dead hotdog
-    var dead = SKAction.animateWithTextures([deadHotdogTexture], timePerFrame: 1)
+    let dead = SKAction.animateWithTextures([deadHotdogTexture], timePerFrame: 1)
     self.hotdog.size = CGSize(width: 100, height: 85)
     self.hotdog.runAction(SKAction.repeatAction(dead, count: 1))
     gameVC.pauseButton.enabled = false
@@ -209,12 +212,23 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let bodyA = contact.bodyA
     let bodyB = contact.bodyB
     
-    if bodyA.categoryBitMask == hotdogCategory || bodyB.categoryBitMask == hotdogCategory {
-      
+    if bodyA.categoryBitMask == killCategory || bodyB.categoryBitMask == killCategory {
+      print("did begin contact")
       if flag == true{
         BackgroundSFX.playBackgroundSFX("pain.mp3")
-        flag = false}
+        flag = false
+      }
       gameIsOver()
+    } else if bodyA.categoryBitMask == bobCategory || bodyB.categoryBitMask == bobCategory{
+      if bodyA.node?.name == "bob" {
+        bodyA.node?.removeFromParent()
+        
+      } else {
+        bodyB.node?.removeFromParent()
+      }
+      count++
+      timerLabelNode.text = String(count)
+      print("hit the path")
     }
   }
   
@@ -228,11 +242,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     self.speed = 1
   }
   
+  
   //Mark: TouchesBegan
   //Touch drag start detection for slingshot action
   //Starts the game when user interacts with game screen
   //Initializes timers for the games when it starts.
-  override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+  override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
     if (gameStop == true) && (gameOver == false) {
       // pausing the game and get back to the game
       gameStop = false
@@ -251,26 +266,30 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     hotdog.physicsBody?.affectedByGravity = true
     for touch in touches {
-      if let touch = touch as? UITouch {
+//      if let touch = touch as? UITouch {
         startLocation = touch.locationInNode(self)
-      }
+//      }
     }
-    
   }
+  
+  
   
   //Mark: Touch end detection, Force Vector created
-  override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
+  override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
     for touch in touches {
-      if let touch = touch as? UITouch {
+//      if let touch = touch as? UITouch {
         endLocation = touch.locationInNode(self)
         BackgroundSFX.playBackgroundSFX("jump.mp3")
-        
         let difference = CGVectorMake(CGFloat((endLocation.x - startLocation.x) * -1), abs(endLocation.y - startLocation.y) * 0.5)
+        //let difference = CGVectorMake(CGFloat((endLocation.x - startLocation.x) * -1), abs(endLocation.y - startLocation.y) * 0.5)
         self.hotdog.physicsBody?.applyImpulse(difference)
-      }
+//      }
     }
+
   }
   
+
+
   //Mark: Update screen function
   override func update(currentTime: CFTimeInterval) {
     enumerateChildNodesWithName("gameBackground", usingBlock: { (node, stop) -> Void in
@@ -281,14 +300,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
       }
     })
-    enumerateChildNodesWithName("spikeBottom", usingBlock: { (node, stop) -> Void in
-      if let spike = node as? SKSpriteNode {
-        spike.position = CGPoint(x: spike.position.x - spikeSpeed , y: spike.position.y)
-        if spike.position.x <= spike.size.width * -1 {
-          spike.position = CGPoint(x: spike.position.x + spike.size.width * 2, y: spike.position.y)
-        }
-      }
-    })
+//    enumerateChildNodesWithName("spikeBottom", usingBlock: { (node, stop) -> Void in
+//      if let spike = node as? SKSpriteNode {
+//        spike.position = CGPoint(x: spike.position.x - spikeSpeed , y: spike.position.y)
+//        if spike.position.x <= spike.size.width * -1 {
+//          spike.position = CGPoint(x: spike.position.x + spike.size.width * 2, y: spike.position.y)
+//        }
+//      }
+//    })
     // if the hotdog goes off screen too far away, end the game
     if ((hotdog.position.x) < -100) || ((hotdog.position.y) > self.frame.height + 250 ) {
       gameIsOver()
@@ -299,7 +318,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   func updateTimer() {
     if !gameStop {
       timerCount++
-      timerLabelNode.text = String(timerCount)
+//      timerLabelNode.text = String(timerCount)
     }
   }
   

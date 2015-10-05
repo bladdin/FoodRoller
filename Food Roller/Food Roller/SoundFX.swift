@@ -29,21 +29,21 @@ class BackgroundSFX{
       return nil
     }
     
-    var error: NSError? = nil
-    
-    if let newPlayer = AVAudioPlayer(contentsOfURL: url, error: &error){
-      players.append(newPlayer)
-      newPlayer.numberOfLoops = 0
-      newPlayer.volume = sfxVolume
-      newPlayer.play()
-      return nil
-    
-    }else{
-      println("couldn't load \(url!.lastPathComponent): \(error)")
-      return nil
+      do {
+        let newPlayer = try AVAudioPlayer(contentsOfURL: url!)
+        players.append(newPlayer)
+        newPlayer.numberOfLoops = 0
+        newPlayer.volume = sfxVolume
+        newPlayer.play()
+        return nil
+      } catch {
+        print("couldn't load \(url!.lastPathComponent): \(error)")
+        return nil
+      }
+   
     }
-    }
-  return nil}
+    return nil
+  }
   
 
   class func adjustVolume(sfxVolume: Float){
