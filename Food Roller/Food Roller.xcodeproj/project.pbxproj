@@ -16,6 +16,9 @@
 		6B03155D1B8EADCD000AE4AA /* desert.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B03155B1B8EADCD000AE4AA /* desert.png */; };
 		6B0315741B8EFCA3000AE4AA /* shareButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0315711B8EFCA3000AE4AA /* shareButton.png */; };
 		6B0315761B8F816D000AE4AA /* bunView.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0315751B8F816D000AE4AA /* bunView.png */; };
+		6B06C1FE1BBD212E00CC608A /* bensoundFunnysong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE8826C61B8DD7CA00486B91 /* bensoundFunnysong.mp3 */; };
+		6B06C1FF1BBD212E00CC608A /* gameBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B52188E1B8C51F100BF9DA4 /* gameBackground.png */; };
+		6B06C2851BBD375700CC608A /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B06C2841BBD375700CC608A /* background.png */; settings = {ASSET_TAGS = (); }; };
 		6B3DF5E91B902E5B00F4289D /* Block1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3DF5E41B902E5B00F4289D /* Block1.png */; };
 		6B3DF5EA1B902E5B00F4289D /* Block2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3DF5E51B902E5B00F4289D /* Block2.png */; };
 		6B3DF5EB1B902E5B00F4289D /* Block3.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3DF5E61B902E5B00F4289D /* Block3.png */; };
@@ -28,7 +31,6 @@
 		6B3DF5FB1B90537C00F4289D /* mainHotdog.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3DF5FA1B90537C00F4289D /* mainHotdog.png */; };
 		6B5218891B8BE15700BF9DA4 /* hotdog.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B5218881B8BE15700BF9DA4 /* hotdog.png */; };
 		6B52188D1B8C474D00BF9DA4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B52188C1B8C474D00BF9DA4 /* Images.xcassets */; };
-		6B52188F1B8C51F100BF9DA4 /* gameBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B52188E1B8C51F100BF9DA4 /* gameBackground.png */; };
 		6B5218991B8D44F400BF9DA4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5218981B8D44F400BF9DA4 /* SettingsViewController.swift */; };
 		6B52189B1B8D4FE000BF9DA4 /* cactus.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B52189A1B8D4FE000BF9DA4 /* cactus.png */; };
 		6B5218BE1B8DAA8D00BF9DA4 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B5218B81B8DAA8D00BF9DA4 /* 1.png */; };
@@ -41,7 +43,6 @@
 		6BCED7231B8BAFBC006967AC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCED7221B8BAFBC006967AC /* MenuViewController.swift */; };
 		AE6916A21B90EF6D00DAD845 /* bensoundcreepy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE6916A11B90EF6D00DAD845 /* bensoundcreepy.mp3 */; };
 		AE8826C81B8DD7CA00486B91 /* bensoundCute.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE8826C51B8DD7CA00486B91 /* bensoundCute.mp3 */; };
-		AE8826C91B8DD7CA00486B91 /* bensoundFunnysong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE8826C61B8DD7CA00486B91 /* bensoundFunnysong.mp3 */; };
 		AE8826CC1B8DD87900486B91 /* BackgroundMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8826CB1B8DD87900486B91 /* BackgroundMusic.swift */; };
 		AE8826CE1B8DE06200486B91 /* SquishFart.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE8826CD1B8DE06200486B91 /* SquishFart.mp3 */; };
 		AECDC3CB1B8F83F400310CE0 /* SoundFX.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECDC3CA1B8F83F400310CE0 /* SoundFX.swift */; };
@@ -80,6 +81,7 @@
 		6B03155B1B8EADCD000AE4AA /* desert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = desert.png; sourceTree = "<group>"; };
 		6B0315711B8EFCA3000AE4AA /* shareButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shareButton.png; sourceTree = "<group>"; };
 		6B0315751B8F816D000AE4AA /* bunView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bunView.png; sourceTree = "<group>"; };
+		6B06C2841BBD375700CC608A /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = ../../../../../../Downloads/background.png; sourceTree = "<group>"; };
 		6B3DF5E41B902E5B00F4289D /* Block1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Block1.png; sourceTree = "<group>"; };
 		6B3DF5E51B902E5B00F4289D /* Block2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Block2.png; sourceTree = "<group>"; };
 		6B3DF5E61B902E5B00F4289D /* Block3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Block3.png; sourceTree = "<group>"; };
@@ -116,7 +118,7 @@
 		B535A7E91B8B8BF1000AF550 /* RandomElements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomElements.swift; sourceTree = "<group>"; };
 		B535A7ED1B8BA2A5000AF550 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B535A7EF1B8BB231000AF550 /* RandomCaller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomCaller.swift; sourceTree = "<group>"; };
-		B57D73F81B87D89200B3838B /* Hotdog Slinger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hotdog Slinger.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B57D73F81B87D89200B3838B /* Food Roller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food Roller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B57D73FC1B87D89200B3838B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B57D73FD1B87D89200B3838B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B57D73FF1B87D89200B3838B /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				6B3DF5F21B90311200F4289D /* retryButton.png */,
 				6B3DF5F01B9030CB00F4289D /* menuButton.png */,
 				6B0315711B8EFCA3000AE4AA /* shareButton.png */,
+				6B06C2841BBD375700CC608A /* background.png */,
 				6B0315551B8E9101000AE4AA /* bun.png */,
 				6B0315501B8E72E1000AE4AA /* pause.png */,
 				6B0315751B8F816D000AE4AA /* bunView.png */,
@@ -261,7 +264,7 @@
 		B57D73F91B87D89200B3838B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B57D73F81B87D89200B3838B /* Hotdog Slinger.app */,
+				B57D73F81B87D89200B3838B /* Food Roller.app */,
 				B57D74111B87D89200B3838B /* Food RollerTests.xctest */,
 			);
 			name = Products;
@@ -328,7 +331,7 @@
 			);
 			name = "Food Roller";
 			productName = "Food Roller";
-			productReference = B57D73F81B87D89200B3838B /* Hotdog Slinger.app */;
+			productReference = B57D73F81B87D89200B3838B /* Food Roller.app */;
 			productType = "com.apple.product-type.application";
 		};
 		B57D74101B87D89200B3838B /* Food RollerTests */ = {
@@ -356,12 +359,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = CodeFellows;
 				TargetAttributes = {
 					B57D73F71B87D89200B3838B = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = A4CYB57ULV;
+						DevelopmentTeam = 597HR9EHGW;
 					};
 					B57D74101B87D89200B3838B = {
 						CreatedOnToolsVersion = 6.4;
@@ -405,6 +408,7 @@
 				6B5218C01B8DAA8D00BF9DA4 /* 3.png in Resources */,
 				6B3DF5EC1B902E5B00F4289D /* Block4.png in Resources */,
 				6B03155A1B8EA538000AE4AA /* rope.png in Resources */,
+				6B06C2851BBD375700CC608A /* background.png in Resources */,
 				6B5218BF1B8DAA8D00BF9DA4 /* 2.png in Resources */,
 				6B5218C11B8DAA8D00BF9DA4 /* 4.png in Resources */,
 				6B52188D1B8C474D00BF9DA4 /* Images.xcassets in Resources */,
@@ -419,18 +423,16 @@
 				6B3DF5ED1B902E5B00F4289D /* Block5.png in Resources */,
 				6B3DF5F11B9030CB00F4289D /* menuButton.png in Resources */,
 				6B0315521B8E72E1000AE4AA /* deadHotDog.png in Resources */,
-				AE8826C91B8DD7CA00486B91 /* bensoundFunnysong.mp3 in Resources */,
+				6B06C1FE1BBD212E00CC608A /* bensoundFunnysong.mp3 in Resources */,
 				6B3DF5FB1B90537C00F4289D /* mainHotdog.png in Resources */,
-				AE8826C91B8DD7CA00486B91 /* bensoundFunnysong.mp3 in Resources */,
 				AE8826CE1B8DE06200486B91 /* SquishFart.mp3 in Resources */,
 				AE6916A21B90EF6D00DAD845 /* bensoundcreepy.mp3 in Resources */,
 				6B3DF5EB1B902E5B00F4289D /* Block3.png in Resources */,
 				AE8826C81B8DD7CA00486B91 /* bensoundCute.mp3 in Resources */,
-				6B52188F1B8C51F100BF9DA4 /* gameBackground.png in Resources */,
+				6B06C1FF1BBD212E00CC608A /* gameBackground.png in Resources */,
 				6B0315561B8E9101000AE4AA /* bun.png in Resources */,
 				6B0315761B8F816D000AE4AA /* bunView.png in Resources */,
 				6B0315531B8E72E1000AE4AA /* pause.png in Resources */,
-				6B52188F1B8C51F100BF9DA4 /* gameBackground.png in Resources */,
 				6B5218C21B8DAA8D00BF9DA4 /* 5.png in Resources */,
 				6B5218891B8BE15700BF9DA4 /* hotdog.png in Resources */,
 			);
@@ -518,6 +520,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -585,14 +588,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Benjamin Laddin (DF9JBJX4QD)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Benjamin Laddin (DF9JBJX4QD)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Food Roller/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "Hotdog Slinger";
+				PRODUCT_BUNDLE_IDENTIFIER = "Benjamin-Laddin.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "Food Roller";
 				PROVISIONING_PROFILE = "";
-				SDKROOT = iphoneos8.4;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -601,14 +605,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Benjamin Laddin (DF9JBJX4QD)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Benjamin Laddin (DF9JBJX4QD)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Food Roller/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "Hotdog Slinger";
+				PRODUCT_BUNDLE_IDENTIFIER = "Benjamin-Laddin.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "Food Roller";
 				PROVISIONING_PROFILE = "";
-				SDKROOT = iphoneos8.4;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -629,6 +634,7 @@
 				);
 				INFOPLIST_FILE = "Food RollerTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Benjamin-Laddin.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Food Roller.app/Food Roller";
@@ -647,6 +653,7 @@
 				);
 				INFOPLIST_FILE = "Food RollerTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Benjamin-Laddin.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Food Roller.app/Food Roller";

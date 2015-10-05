@@ -13,16 +13,21 @@ import Social
 extension SKNode {
   class func unarchiveFromFile(file : String) -> SKNode? {
     if let path = NSBundle.mainBundle().pathForResource(file, ofType: "sks") {
-      var sceneData = NSData(contentsOfFile: path, options: .DataReadingMappedIfSafe, error: nil)!
-      var archiver = NSKeyedUnarchiver(forReadingWithData: sceneData)
-      
-      archiver.setClass(self.classForKeyedUnarchiver(), forClassName: "SKScene")
-      let scene = archiver.decodeObjectForKey(NSKeyedArchiveRootObjectKey) as! GameScene
-      archiver.finishDecoding()
-      return scene
+      do {
+        let sceneData = try NSData(contentsOfFile: path, options:  NSDataReadingOptions.DataReadingMappedIfSafe)
+        let archiver = NSKeyedUnarchiver(forReadingWithData: sceneData)
+        archiver.setClass(self.classForKeyedUnarchiver(), forClassName: "SKScene")
+        let scene = archiver.decodeObjectForKey(NSKeyedArchiveRootObjectKey) as! GameScene
+        archiver.finishDecoding()
+        return scene
+      } catch {
+        // if error occurs
+      }
+
     } else {
       return nil
     }
+    return nil
   }
 }
 
@@ -74,17 +79,17 @@ class GameViewController: UIViewController {
   
   @IBAction func shareButtonAction(sender: UIButton) {
     BackgroundSFX.playBackgroundSFX("SquishFart.mp3")
-    var score : String = sc.timerLabelNode.text
+    let score : String = sc.timerLabelNode.text!
 //    let activityViewController = UIActivityViewController(activityItems: ["WOW! My Score on Hotdog Slinger is: " + score + "\nThis is AWESOME!\nTry Hotdog Slinger now and beat my score!"], applicationActivities: nil)
 //    
     //Generate the screenshot
     UIGraphicsBeginImageContext(view.frame.size)
-    let context: CGContextRef = UIGraphicsGetCurrentContext()
+    let context: CGContextRef = UIGraphicsGetCurrentContext()!
     view.layer.renderInContext(context)
     let screenShot: UIImage = UIGraphicsGetImageFromCurrentImageContext()
     UIGraphicsEndImageContext()
     
-    var postImage = UIImage(named: "\(screenShot)")
+    let postImage = UIImage(named: "\(screenShot)")
     
     
     socialShare(sharingText: "I just hit \(score) on Hotdog Slinger! Beat it!", sharingImage: postImage)
@@ -92,7 +97,7 @@ class GameViewController: UIViewController {
 //    self.presentViewController(activityViewController, animated: true, completion: nil)
   }
   
-  func socialShare(#sharingText: String?, sharingImage: UIImage?) {
+  func socialShare(sharingText sharingText: String?, sharingImage: UIImage?) {
     var sharingItems = [AnyObject]()
     
     if let text = sharingText {
@@ -126,21 +131,27 @@ class GameViewController: UIViewController {
       scene.scaleMode = .AspectFill
       scene.gameVC = self
       skView.presentScene(scene)
-    var previousHighScore = sc.currentHighScore
+    let previousHighScore = sc.currentHighScore
     highestScore.text = "\(previousHighScore)"
   }
   
   override func shouldAutorotate() -> Bool {
     return true
   }
-  
-  override func supportedInterfaceOrientations() -> Int {
-    if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
-      return Int(UIInterfaceOrientationMask.AllButUpsideDown.rawValue)
-    } else {
-      return Int(UIInterfaceOrientationMask.All.rawValue)
-    }
-  }
+//  override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+//    if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
+//      return UIInterfaceOrientationMask.AllButUpsideDown.rawValue
+//    } else {
+//      return UIInterfaceOrientationMask.All.rawValue
+//    }
+//  }
+//  override func supportedInterfaceOrientations() -> Int {
+//    if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
+//      return Int(UIInterfaceOrientationMask.AllButUpsideDown.rawValue)
+//    } else {
+//      return Int(UIInterfaceOrientationMask.All.rawValue)
+//    }
+//  }
   
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
