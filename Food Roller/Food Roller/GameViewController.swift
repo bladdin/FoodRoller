@@ -86,13 +86,15 @@ class GameViewController: UIViewController {
     UIGraphicsBeginImageContext(view.frame.size)
     let context: CGContextRef = UIGraphicsGetCurrentContext()!
     view.layer.renderInContext(context)
-    let screenShot: UIImage = UIGraphicsGetImageFromCurrentImageContext()
-    UIGraphicsEndImageContext()
     
-    let postImage = UIImage(named: "\(screenShot)")
+    let screenShot = self.view?.pb_takeSnapshot()
+//    let screenShot: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+//    UIGraphicsEndImageContext()
+    
+//    let postImage = UIImage(named: "\(screenShot)")
     
     
-    socialShare(sharingText: "I just hit \(score) on Hotdog Slinger! Beat it!", sharingImage: postImage)
+    socialShare(sharingText: "I just hit \(score) on Hotdog Slinger! Beat it!", sharingImage: screenShot)
 
 //    self.presentViewController(activityViewController, animated: true, completion: nil)
   }
@@ -160,5 +162,20 @@ class GameViewController: UIViewController {
   
   override func prefersStatusBarHidden() -> Bool {
     return true
+  }
+}
+
+extension UIView {
+  
+  func pb_takeSnapshot() -> UIImage {
+    UIGraphicsBeginImageContextWithOptions(bounds.size, false, UIScreen.mainScreen().scale)
+    
+    drawViewHierarchyInRect(self.bounds, afterScreenUpdates: true)
+    
+    // old style: layer.renderInContext(UIGraphicsGetCurrentContext())
+    
+    let image = UIGraphicsGetImageFromCurrentImageContext()
+    UIGraphicsEndImageContext()
+    return image
   }
 }

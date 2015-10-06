@@ -30,7 +30,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   var arrayOfPathsInGame = [SKSpriteNode()]
   var timerLabelNode = SKLabelNode(text: "0")
   var timer = NSTimer()
-  var timerCount = 0
+//  var timerCount = 0
   var lastFrameTime : Int!
   var changeInTime : Int!
   var timeSinceLastNode : Int!
@@ -83,7 +83,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     //Mark: Killzone Boundary
-    let killZone = SKSpriteNode(color: UIColor.redColor(), size: CGSize(width:size.width, height:60))
+    let killZone = SKSpriteNode(color: UIColor.redColor(), size: CGSize(width:size.width+1000, height:60))
     
     killZone.anchorPoint = CGPointZero
     killZone.position = CGPointZero
@@ -183,7 +183,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   func gameIsOver() {
     
     BackgroundMusic.playBackgroundMusic("bensoundcreepy.mp3")
-    highscore = timerCount
+    highscore = count
     if highscore > currentHighScore {
       currentHighScore = highscore
       userDefaults.setValue(highscore, forKey: "highscore")
@@ -226,6 +226,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
       } else {
         bodyB.node?.removeFromParent()
       }
+      nodeSpeedTimer();
       count++
       timerLabelNode.text = String(count)
       print("hit the path")
@@ -260,9 +261,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     if gameStarted == false {
       self.speed = 1
       gameStarted = true
-      nodeTimer = NSTimer.scheduledTimerWithTimeInterval(timeForDifficultyIncrease, target: self, selector: "nodeSpeedTimer", userInfo: nil, repeats: true)
+//      nodeTimer = NSTimer.scheduledTimerWithTimeInterval(timeForDifficultyIncrease, target: self, selector: "nodeSpeedTimer", userInfo: nil, repeats: true)
       
-      timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "updateTimer", userInfo: nil, repeats: true)
+//      timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "updateTimer", userInfo: nil, repeats: true)
     }
     hotdog.physicsBody?.affectedByGravity = true
     for touch in touches {
@@ -281,7 +282,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         endLocation = touch.locationInNode(self)
         BackgroundSFX.playBackgroundSFX("jump.mp3")
         let difference = CGVectorMake(CGFloat((endLocation.x - startLocation.x) * -1), abs(endLocation.y - startLocation.y) * 0.5)
-        //let difference = CGVectorMake(CGFloat((endLocation.x - startLocation.x) * -1), abs(endLocation.y - startLocation.y) * 0.5)
         self.hotdog.physicsBody?.applyImpulse(difference)
 //      }
     }
@@ -309,18 +309,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 //      }
 //    })
     // if the hotdog goes off screen too far away, end the game
-    if ((hotdog.position.x) < -100) || ((hotdog.position.y) > self.frame.height + 250 ) {
+    if ((hotdog.position.x) < -500) || ((hotdog.position.y) > self.frame.height + 1000 ) {
       gameIsOver()
     }
   }
   
   //Mark: Timer counter
-  func updateTimer() {
-    if !gameStop {
-      timerCount++
+//  func updateTimer() {
+//    if !gameStop {
+//      timerCount++
 //      timerLabelNode.text = String(timerCount)
-    }
-  }
+//    }
+//  }
   
   //Mark: Reset game function
   func resetGame() {
@@ -332,28 +332,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     gameVC.backButton.enabled = true
     flag = true
     gameVC.highestScore.text = "\(currentHighScore)"
-    nodeTimer.invalidate()
-    difficultyTimer.invalidate()
-    timer.invalidate()
-    timeForDifficultyIncrease = 3
   }
   
   func nodeSpeedTimer() {
-
-    self.speed = self.speed + 0.25
+    self.speed = self.speed + 0.05
     gravityMagnitude -= CGFloat(1.5)
     physicsWorld.gravity = CGVectorMake(0.0, gravityMagnitude)
-    timeForDifficultyIncrease = timeForDifficultyIncrease + 0.5
-    difficultyTimer = NSTimer.scheduledTimerWithTimeInterval(timeForDifficultyIncrease, target: self, selector: "nodeSpeed2Timer", userInfo: nil, repeats: true)
     nodeTimer.invalidate()
-  }
-  
-  func nodeSpeed2Timer() {
-    self.speed = self.speed + 0.25
-    gravityMagnitude -= CGFloat(1.5)
-    physicsWorld.gravity = CGVectorMake(0.0, gravityMagnitude)
-    timeForDifficultyIncrease = timeForDifficultyIncrease + 0.5
-    nodeTimer = NSTimer.scheduledTimerWithTimeInterval(timeForDifficultyIncrease, target: self, selector: "nodeSpeedTimer", userInfo: nil, repeats: true)
-    difficultyTimer.invalidate()
   }
 }
