@@ -314,6 +314,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   
   //Mark: Reset game function
   func resetGame() {
+    BackgroundMusic.playBackgroundMusic("bensoundFunnysong.mp3")
     backgroundSpeed = 1
     spikeSpeed = 1
     timerLabelNode.text = "0" // reset the timer

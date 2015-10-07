@@ -16,9 +16,6 @@
 		6B03155D1B8EADCD000AE4AA /* desert.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B03155B1B8EADCD000AE4AA /* desert.png */; };
 		6B0315741B8EFCA3000AE4AA /* shareButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0315711B8EFCA3000AE4AA /* shareButton.png */; };
 		6B0315761B8F816D000AE4AA /* bunView.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0315751B8F816D000AE4AA /* bunView.png */; };
-		6B06C1FE1BBD212E00CC608A /* bensoundFunnysong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE8826C61B8DD7CA00486B91 /* bensoundFunnysong.mp3 */; };
-		6B06C1FF1BBD212E00CC608A /* gameBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B52188E1B8C51F100BF9DA4 /* gameBackground.png */; };
-		6B06C2851BBD375700CC608A /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B06C2841BBD375700CC608A /* background.png */; settings = {ASSET_TAGS = (); }; };
 		6B3DF5E91B902E5B00F4289D /* Block1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3DF5E41B902E5B00F4289D /* Block1.png */; };
 		6B3DF5EA1B902E5B00F4289D /* Block2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3DF5E51B902E5B00F4289D /* Block2.png */; };
 		6B3DF5EB1B902E5B00F4289D /* Block3.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3DF5E61B902E5B00F4289D /* Block3.png */; };
@@ -45,6 +42,7 @@
 		AE8826C81B8DD7CA00486B91 /* bensoundCute.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE8826C51B8DD7CA00486B91 /* bensoundCute.mp3 */; };
 		AE8826CC1B8DD87900486B91 /* BackgroundMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8826CB1B8DD87900486B91 /* BackgroundMusic.swift */; };
 		AE8826CE1B8DE06200486B91 /* SquishFart.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE8826CD1B8DE06200486B91 /* SquishFart.mp3 */; };
+		AE96553E1BC5C66200861252 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = AE96553D1BC5C66200861252 /* background.png */; settings = {ASSET_TAGS = (); }; };
 		AECDC3CB1B8F83F400310CE0 /* SoundFX.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECDC3CA1B8F83F400310CE0 /* SoundFX.swift */; };
 		AECDC3D11B8F9C0500310CE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AECDC3D01B8F9C0500310CE0 /* Main.storyboard */; };
 		AECDC3D61B8FAA9C00310CE0 /* pain.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AECDC3D41B8FAA9C00310CE0 /* pain.mp3 */; };
@@ -83,7 +81,6 @@
 		6B03155B1B8EADCD000AE4AA /* desert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = desert.png; sourceTree = "<group>"; };
 		6B0315711B8EFCA3000AE4AA /* shareButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shareButton.png; sourceTree = "<group>"; };
 		6B0315751B8F816D000AE4AA /* bunView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bunView.png; sourceTree = "<group>"; };
-		6B06C2841BBD375700CC608A /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = ../../../../../../Downloads/background.png; sourceTree = "<group>"; };
 		6B3DF5E41B902E5B00F4289D /* Block1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Block1.png; sourceTree = "<group>"; };
 		6B3DF5E51B902E5B00F4289D /* Block2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Block2.png; sourceTree = "<group>"; };
 		6B3DF5E61B902E5B00F4289D /* Block3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Block3.png; sourceTree = "<group>"; };
@@ -112,6 +109,7 @@
 		AE8826C61B8DD7CA00486B91 /* bensoundFunnysong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bensoundFunnysong.mp3; sourceTree = "<group>"; };
 		AE8826CB1B8DD87900486B91 /* BackgroundMusic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundMusic.swift; sourceTree = "<group>"; };
 		AE8826CD1B8DE06200486B91 /* SquishFart.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SquishFart.mp3; sourceTree = "<group>"; };
+		AE96553D1BC5C66200861252 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		AECDC3CA1B8F83F400310CE0 /* SoundFX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundFX.swift; sourceTree = "<group>"; };
 		AECDC3D01B8F9C0500310CE0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AECDC3D41B8FAA9C00310CE0 /* pain.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pain.mp3; sourceTree = "<group>"; };
@@ -195,7 +193,7 @@
 				6B3DF5F21B90311200F4289D /* retryButton.png */,
 				6B3DF5F01B9030CB00F4289D /* menuButton.png */,
 				6B0315711B8EFCA3000AE4AA /* shareButton.png */,
-				6B06C2841BBD375700CC608A /* background.png */,
+				AE96553D1BC5C66200861252 /* background.png */,
 				6B0315551B8E9101000AE4AA /* bun.png */,
 				6B0315501B8E72E1000AE4AA /* pause.png */,
 				6B0315751B8F816D000AE4AA /* bunView.png */,
@@ -410,7 +408,6 @@
 				6B5218C01B8DAA8D00BF9DA4 /* 3.png in Resources */,
 				6B3DF5EC1B902E5B00F4289D /* Block4.png in Resources */,
 				6B03155A1B8EA538000AE4AA /* rope.png in Resources */,
-				6B06C2851BBD375700CC608A /* background.png in Resources */,
 				6B5218BF1B8DAA8D00BF9DA4 /* 2.png in Resources */,
 				6B5218C11B8DAA8D00BF9DA4 /* 4.png in Resources */,
 				6B52188D1B8C474D00BF9DA4 /* Images.xcassets in Resources */,
@@ -427,6 +424,7 @@
 				6B0315521B8E72E1000AE4AA /* deadHotDog.png in Resources */,
 				B5BA3AD21BAC6F03002ED3A1 /* bensoundFunnysong.mp3 in Resources */,
 				6B3DF5FB1B90537C00F4289D /* mainHotdog.png in Resources */,
+				AE96553E1BC5C66200861252 /* background.png in Resources */,
 				AE8826CE1B8DE06200486B91 /* SquishFart.mp3 in Resources */,
 				AE6916A21B90EF6D00DAD845 /* bensoundcreepy.mp3 in Resources */,
 				6B3DF5EB1B902E5B00F4289D /* Block3.png in Resources */,
