@@ -59,6 +59,8 @@
 		B57D74041B87D89200B3838B /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57D74031B87D89200B3838B /* GameViewController.swift */; };
 		B57D740C1B87D89200B3838B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B57D740A1B87D89200B3838B /* LaunchScreen.xib */; };
 		B57D74181B87D89200B3838B /* Food_RollerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57D74171B87D89200B3838B /* Food_RollerTests.swift */; };
+		B5BA3AD21BAC6F03002ED3A1 /* bensoundFunnysong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE8826C61B8DD7CA00486B91 /* bensoundFunnysong.mp3 */; };
+		B5BA3AD31BAC6F03002ED3A1 /* gameBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B52188E1B8C51F100BF9DA4 /* gameBackground.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -423,13 +425,13 @@
 				6B3DF5ED1B902E5B00F4289D /* Block5.png in Resources */,
 				6B3DF5F11B9030CB00F4289D /* menuButton.png in Resources */,
 				6B0315521B8E72E1000AE4AA /* deadHotDog.png in Resources */,
-				6B06C1FE1BBD212E00CC608A /* bensoundFunnysong.mp3 in Resources */,
+				B5BA3AD21BAC6F03002ED3A1 /* bensoundFunnysong.mp3 in Resources */,
 				6B3DF5FB1B90537C00F4289D /* mainHotdog.png in Resources */,
 				AE8826CE1B8DE06200486B91 /* SquishFart.mp3 in Resources */,
 				AE6916A21B90EF6D00DAD845 /* bensoundcreepy.mp3 in Resources */,
 				6B3DF5EB1B902E5B00F4289D /* Block3.png in Resources */,
 				AE8826C81B8DD7CA00486B91 /* bensoundCute.mp3 in Resources */,
-				6B06C1FF1BBD212E00CC608A /* gameBackground.png in Resources */,
+				B5BA3AD31BAC6F03002ED3A1 /* gameBackground.png in Resources */,
 				6B0315561B8E9101000AE4AA /* bun.png in Resources */,
 				6B0315761B8F816D000AE4AA /* bunView.png in Resources */,
 				6B0315531B8E72E1000AE4AA /* pause.png in Resources */,
