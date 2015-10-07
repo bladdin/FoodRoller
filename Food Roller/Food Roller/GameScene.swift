@@ -24,8 +24,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   
   let hotdogCategory : UInt32 = 0x1 << 0;
   let killCategory : UInt32 = 0x1 << 1;
-  let bobCategory  : UInt32 = 0x1 << 2;
-  let sideboundsCategory : UInt32 = 0x1 << 3;
+  let bobCategory  : UInt32 = 0x1 << UInt32(kBobCategory);
+  let sideboundsCategory : UInt32 = 0x1 << UInt32(kSideBoundsCategory);
   
   var arrayOfPathsInGame = [SKSpriteNode()]
   var timerLabelNode = SKLabelNode(text: "0")
@@ -37,7 +37,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   var nextPipeTime = 3
   var difficultyTimer = NSTimer()
   var nodeTimer = NSTimer()
-  var gravityMagnitude : CGFloat = -9.8
+  var gravityMagnitude = CGFloat(kGravityMagnitude)
   var moveBobs: SKAction?
   var count = 0
   //Mark: DidMoveToView initial screen
@@ -54,7 +54,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     BackgroundMusic.playBackgroundMusic("bensoundFunnysong.mp3")
     
     //Mark: World set up physics body
-    physicsBody = SKPhysicsBody(edgeLoopFromRect: CGRect(x: -300, y: 0, width: self.size.width + 310, height: self.size.height + 500))
+    
+    physicsBody = SKPhysicsBody(edgeLoopFromRect: CGRect(x:CGFloat(kWorldFrameX), y: 0, width: self.size.width + CGFloat(kWorldFrameWidth), height: self.size.height + CGFloat(kWorldFrameHeight)))
     physicsBody?.categoryBitMask = sideboundsCategory
     self.physicsWorld.contactDelegate = self //Setting up physics world for contact with boundaries
     physicsWorld.gravity = CGVectorMake(0.0, gravityMagnitude)
@@ -68,7 +69,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
       let bg = SKSpriteNode(imageNamed: "background")
       bg.size = CGSize(width: 1024, height: 768)
       bg.anchorPoint = CGPointZero
-      bg.position = CGPoint(x: i * bg.size.width, y: 0)
+      bg.position = CGPoint(x: CGFloat(i) * bg.size.width, y: 0)
       bg.name = "gameBackground"
       addChild(bg)
 //      let groundTexture = SKTexture(image: image!)
@@ -82,12 +83,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 //      addChild(spikeNode)
     }
     
+    //
+    //let groundTexture = SKTexture(image: newImage!)
+    spikeNode = SKSpriteNode(texture: self.myTexture)
+    spikeNode.anchorPoint = CGPointZero
+    spikeNode.position = CGPoint(x: CGFloat(0) * spikeNode.size.width, y: CGFloat(kSpikeNodePositionY) )
+    spikeNode.physicsBody = nil
+    hotdog.physicsBody?.dynamic = true
+    spikeNode.name = "spikeTest"
+    addChild(spikeNode)
+    
     //Mark: Killzone Boundary
     let killZone = SKSpriteNode(color: UIColor.redColor(), size: CGSize(width:size.width+1000, height:60))
     
     killZone.anchorPoint = CGPointZero
     killZone.position = CGPointZero
-    killZone.physicsBody = SKPhysicsBody(rectangleOfSize: killZone.size, center: CGPoint(x: size.width / 2,y: killZone.size.height / 2 - 30))
+    killZone.physicsBody = SKPhysicsBody(rectangleOfSize: killZone.size, center: CGPoint(x: size.width / CGFloat(kKillZoneDivisor),y: killZone.size.height / (CGFloat(kKillZoneDivisor)) - CGFloat(kKillZoneYSubtract)))
     killZone.physicsBody?.categoryBitMask = killCategory
     killZone.physicsBody?.contactTestBitMask = hotdogCategory
     killZone.physicsBody?.collisionBitMask = 0
@@ -107,10 +118,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     self.hotdog = SKSpriteNode(texture: hotdogTexture1)
     self.hotdog.name = "hotdog"
-    self.hotdog.size = CGSizeMake(self.frame.size.width / 8, self.frame.size.height / 8)
-    self.hotdog.zPosition = 100
-    self.hotdog.position = CGPoint(x: self.frame.size.width / 2 , y: self.frame.size.height / 2)
-    self.hotdog.physicsBody = SKPhysicsBody(circleOfRadius: self.hotdog.size.width / 2 )
+    self.hotdog.size = CGSizeMake(self.frame.size.width / kHotdogDivisor, self.frame.size.height / kHotdogDivisor)
+    self.hotdog.zPosition = CGFloat(kHotdogZPosition)
+    self.hotdog.position = CGPoint(x: self.frame.size.width / kHotdogPositionDivisior , y: self.frame.size.height / kHotdogPositionDivisior)
+    self.hotdog.physicsBody = SKPhysicsBody(circleOfRadius: self.hotdog.size.width / kHotdogRadiusDivisor )
     self.hotdog.physicsBody?.affectedByGravity = false
     hotdog.physicsBody?.categoryBitMask = hotdogCategory //Sets collider type to raw value 1
     hotdog.physicsBody?.contactTestBitMask = killCategory
@@ -121,25 +132,28 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     hotdog.runAction(runForever)
     self.addChild(self.hotdog)
     
+    
     //Mark: Time Label Node
-    timerLabelNode.position = CGPoint(x: self.frame.size.width/2 , y: 7*self.frame.size.height/8)
-    timerLabelNode.zPosition = 100
-    timerLabelNode.fontSize = 65
+    timerLabelNode.position = CGPoint(x: self.frame.size.width/kTimerLabelNodeXDivisor , y: kTimerLabelNodeYMultiplier*self.frame.size.height/kTimerLabeNodeYDivisor)
+    timerLabelNode.zPosition = kTImerLabelNodeZ
+    timerLabelNode.fontSize = kTimerLabelNodeFontSize
     timerLabelNode.fontName = "MarkerFelt-Wide"
     self.addChild(timerLabelNode)
     
     //MARK: Moves the Path Nodes AKA Bobs
-    let distanceBobsMove = CGFloat(self.frame.width * 2 + (bob.frame.width * 2))
+    let distanceBobsMove = CGFloat(self.frame.width * kDistanceBobsMove + (bob.frame.width * kDistanceBobsMove))
     moveBobs = SKAction.moveByX(-distanceBobsMove, y: 0.0, duration: NSTimeInterval(nodeSpeed * distanceBobsMove))
     let removeBobs = SKAction.removeFromParent()
     moveAndRemove = SKAction.sequence([moveBobs!, removeBobs])
-    
-    
+    arrayOfPathsInGame.removeAtIndex(0)
+    setupBobs()
+  
+  }
+  
+  func setupBobs() {
     //MARK: Spawns Path Nodes AKA Bobs
     let spawn = SKAction.runBlock({() in self.spawnBobs()})
-    let delay = SKAction.waitForDuration(NSTimeInterval(3))
-    
-    //let delay = SKAction.waitForDuration(NSTimeInterval(2))
+    let delay = SKAction.waitForDuration(kBobSpawnTimerDelay)
     
     
     let initialSpawn = SKAction.sequence([spawn, delay])
@@ -149,10 +163,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   
   //Mark: Pathway spawning AKA Bobs
   func spawnBobs() {
-    let bob = CreatePath.CreatePath(Int(RandomElements.randomPathVarYPosition(Int(self.frame.width * 1.5 ), max: Int(self.frame.width * 1.5) + 50 )), yInitialPosition: (RandomElements.randomPathVarYPosition(180, max: Int(self.frame.height))), width: (RandomElements.randomPathLength()!))
+   
+    let bob = CreatePath.CreatePath(RandomElements.randomPathVarYPosition(Int(self.frame.width * kSpawnBobsXMultiplier), max: Int(self.frame.width * kSpawnBobsXMultiplier + kSpawnBobsXAddition)), yInitialPosition: RandomElements.randomPathVarYPosition(Int(kSpawnBobsYStart), max: Int(self.frame.height)), width: RandomElements.randomPathLength()!)
+    arrayOfPathsInGame.append(bob)
     CreatePath.MovePathObject(bob)
     bob.name = "bob"
     self.addChild(bob)
+    bob.name = "bob";
     bob.runAction(moveAndRemove)
     bob.physicsBody?.categoryBitMask = bobCategory
     bob.physicsBody?.collisionBitMask = hotdogCategory
@@ -296,7 +313,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
       if let bg = node as? SKSpriteNode {
         bg.position = CGPoint(x: bg.position.x - backgroundSpeed , y: bg.position.y)
         if bg.position.x <= bg.size.width * -1 {
-          bg.position = CGPoint(x: bg.position.x + bg.size.width * 2, y: bg.position.y)
+          bg.position = CGPoint(x: bg.position.x + bg.size.width * kUpdateBGMultiplier, y: bg.position.y)
         }
       }
     })

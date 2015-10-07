@@ -44,6 +44,14 @@ class GameViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    sc = GameScene()
+    sc.size = self.view.frame.size
+    sc.scaleMode = .AspectFill
+    sc.gameVC = self
+    
+  }
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
     presentScene()
   }
 
@@ -70,18 +78,15 @@ class GameViewController: UIViewController {
   @IBAction func retryButtonAction(sender: UIButton) {
     BackgroundSFX.playBackgroundSFX("SquishFart.mp3")
     sc.resetGame()
-    sc.removeAllChildren()
-    sc.removeAllActions()
-    sc.removeFromParent()
     
-    presentScene()
+    //presentScene()
   }
   
   @IBAction func shareButtonAction(sender: UIButton) {
     BackgroundSFX.playBackgroundSFX("SquishFart.mp3")
     let score : String = sc.timerLabelNode.text!
 //    let activityViewController = UIActivityViewController(activityItems: ["WOW! My Score on Hotdog Slinger is: " + score + "\nThis is AWESOME!\nTry Hotdog Slinger now and beat my score!"], applicationActivities: nil)
-//    
+//
     //Generate the screenshot
     UIGraphicsBeginImageContext(view.frame.size)
     let context: CGContextRef = UIGraphicsGetCurrentContext()!
@@ -118,14 +123,13 @@ class GameViewController: UIViewController {
   }
   
   func presentScene() {
-      let scene = GameScene()
-      // Configure the view.
-      sc = scene
+    
+      // Configure the view
       let skView = self.view as! SKView
 //      skView.showsFPS = true
 //      skView.showsNodeCount = true
       gameoverView.hidden = true
-      scene.size = self.view.frame.size
+    
       
       /* Sprite Kit applies additional optimizations to improve rendering performance */
       skView.ignoresSiblingOrder = true

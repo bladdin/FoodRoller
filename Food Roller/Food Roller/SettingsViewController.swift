@@ -38,8 +38,8 @@ class SettingsViewController: UIViewController {
       navigationController?.navigationBarHidden = false
       backgroundMusicLabel.text = "Background Music"
       soundEffectLabel.text = "Sound Effect"
-      backgroundMusicLabel.font = UIFont(name: "ChalkboardSE-Regular", size: 24)
-      soundEffectLabel.font = UIFont(name: "ChalkboardSE-Regular", size: 24)
+      backgroundMusicLabel.font = UIFont(name: "ChalkboardSE-Regular", size: CGFloat(kBackgroundLabelSize))
+      soundEffectLabel.font = UIFont(name: "ChalkboardSE-Regular", size: CGFloat(kSoundEffectsLabelSize))
     }
 
   override func viewWillDisappear(animated: Bool) {

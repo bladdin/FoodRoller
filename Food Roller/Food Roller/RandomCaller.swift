@@ -19,7 +19,7 @@ class RandomCaller{
     let newMinNumber = minNumber / 10
     let multiplier = (maxNumer - minNumber) / 10
     var randomNumber = Int(arc4random_uniform(UInt32(multiplier))+UInt32(newMinNumber))
-    randomNumber = randomNumber * 10
+    randomNumber = randomNumber * kRandomXandYDivisorAndMultiplier
     return randomNumber
   }
   

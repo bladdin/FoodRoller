@@ -33,6 +33,9 @@ class func playBackgroundMusic(filename: String) {
     backgroundMusicPlayer.prepareToPlay()
     backgroundMusicPlayer.volume = musicVolume
     backgroundMusicPlayer.play()
+    } catch {
+      
+    }
   }
 }
   

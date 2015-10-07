@@ -113,17 +113,17 @@
                                     <constraint firstAttribute="height" constant="17" id="kNC-Hh-gZy"/>
                                     <constraint firstAttribute="width" constant="63" id="wti-Kk-xH5"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obp-Cd-mW8">
                                 <rect key="frame" x="521" y="50" width="40" height="22"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="gz5-Ts-psw"/>
-                                    <constraint firstAttribute="height" constant="22" id="xFd-ap-ln3"/>
+                                    <constraint firstAttribute="height" constant="17" id="kNC-Hh-gZy"/>
+                                    <constraint firstAttribute="width" constant="63" id="wti-Kk-xH5"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -134,14 +134,14 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Obp-Cd-mW8" secondAttribute="trailing" constant="19" id="1NL-Xc-CrP"/>
                             <constraint firstItem="5R7-kM-SLm" firstAttribute="leading" secondItem="1Ms-vl-08f" secondAttribute="trailing" constant="15" id="6zD-Zw-Mmb"/>
                             <constraint firstItem="1Ms-vl-08f" firstAttribute="top" secondItem="5R7-kM-SLm" secondAttribute="top" constant="2" id="Ah5-w8-iee"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="siN-Pf-hVN" secondAttribute="trailing" constant="10" id="LJd-mS-F6S"/>
-                            <constraint firstItem="siN-Pf-hVN" firstAttribute="top" secondItem="PCf-gQ-wO7" secondAttribute="bottom" constant="10" id="ZI2-dg-cdi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="siN-Pf-hVN" secondAttribute="trailing" id="LJd-mS-F6S"/>
+                            <constraint firstItem="siN-Pf-hVN" firstAttribute="top" secondItem="PCf-gQ-wO7" secondAttribute="bottom" constant="8" id="ZI2-dg-cdi"/>
                             <constraint firstItem="xcC-Ag-HpL" firstAttribute="width" secondItem="bdc-N1-crn" secondAttribute="width" id="d7R-lB-b2s"/>
                             <constraint firstAttribute="centerY" secondItem="xcC-Ag-HpL" secondAttribute="centerY" id="fSk-jr-W2b"/>
                             <constraint firstItem="1Ms-vl-08f" firstAttribute="leading" secondItem="bdc-N1-crn" secondAttribute="leadingMargin" constant="10" id="i4f-WM-4yb"/>
                             <constraint firstAttribute="centerX" secondItem="xcC-Ag-HpL" secondAttribute="centerX" id="kTt-kq-grT"/>
                             <constraint firstItem="1Ms-vl-08f" firstAttribute="top" secondItem="PCf-gQ-wO7" secondAttribute="bottom" constant="15" id="qSo-rd-RMn"/>
-                            <constraint firstItem="Obp-Cd-mW8" firstAttribute="top" secondItem="siN-Pf-hVN" secondAttribute="bottom" constant="3" id="sJ1-t2-c3W"/>
+                            <constraint firstItem="Obp-Cd-mW8" firstAttribute="top" secondItem="siN-Pf-hVN" secondAttribute="bottom" constant="5" id="sJ1-t2-c3W"/>
                         </constraints>
                     </view>
                     <connections>
@@ -261,6 +261,13 @@
                                     <segue destination="Xdd-54-USa" kind="show" id="wsJ-Wd-fB5"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainHotdog.png" translatesAutoresizingMaskIntoConstraints="NO" id="mxf-Oc-jKh">
+                                <rect key="frame" x="170" y="127" width="260" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="bDK-ax-huJ"/>
+                                    <constraint firstAttribute="width" constant="260" id="gyQ-N8-LDE"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0g-3h-hqh">
                                 <rect key="frame" x="111" y="467" width="130" height="60"/>
                                 <constraints>
@@ -292,16 +299,9 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="LVB-YS-i5n" kind="presentation" id="T84-ft-Scv"/>
+                                    <action selector="startButtonAction:" destination="u0I-zM-b83" eventType="touchUpInside" id="Vdb-OP-Ldf"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainHotdog.png" translatesAutoresizingMaskIntoConstraints="NO" id="mxf-Oc-jKh">
-                                <rect key="frame" x="170" y="127" width="260" height="400"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="400" id="bDK-ax-huJ"/>
-                                    <constraint firstAttribute="width" constant="260" id="gyQ-N8-LDE"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>

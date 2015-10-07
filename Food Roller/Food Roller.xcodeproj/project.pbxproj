@@ -59,6 +59,8 @@
 		B57D74041B87D89200B3838B /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57D74031B87D89200B3838B /* GameViewController.swift */; };
 		B57D740C1B87D89200B3838B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B57D740A1B87D89200B3838B /* LaunchScreen.xib */; };
 		B57D74181B87D89200B3838B /* Food_RollerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57D74171B87D89200B3838B /* Food_RollerTests.swift */; };
+		B5BA3AD21BAC6F03002ED3A1 /* bensoundFunnysong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE8826C61B8DD7CA00486B91 /* bensoundFunnysong.mp3 */; };
+		B5BA3AD31BAC6F03002ED3A1 /* gameBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B52188E1B8C51F100BF9DA4 /* gameBackground.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */

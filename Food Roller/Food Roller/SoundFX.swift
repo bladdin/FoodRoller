@@ -15,7 +15,7 @@ class BackgroundSFX{
   static var backgroundSFXPlayer: AVAudioPlayer!
   
 //  
-  class func playBackgroundSFX(filename: String) -> Void? {
+  class func playBackgroundSFX(filename: String)  {
     if !AVAudioSession.sharedInstance().otherAudioPlaying {
     let url = NSBundle.mainBundle().URLForResource(
       filename, withExtension: nil)
