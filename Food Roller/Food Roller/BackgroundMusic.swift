@@ -24,12 +24,9 @@ class func playBackgroundMusic(filename: String) {
       return
     }
     do {
-    backgroundMusicPlayer = try AVAudioPlayer(contentsOfURL: url!)
-    } catch {
-      print("Could not create audio player")
-      return
-    }
-    backgroundMusicPlayer.numberOfLoops = -1
+    backgroundMusicPlayer = try
+      AVAudioPlayer(contentsOfURL: url!)
+    backgroundMusicPlayer.numberOfLoops = kBackgroundMusicLoop
     backgroundMusicPlayer.prepareToPlay()
     backgroundMusicPlayer.volume = musicVolume
     backgroundMusicPlayer.play()

@@ -16,8 +16,8 @@ class RandomCaller{
   }
   
   class func cratesRandomXandY(maxNumer: Int, minNumber: Int) ->Int{
-    let newMinNumber = minNumber / 10
-    let multiplier = (maxNumer - minNumber) / 10
+    let newMinNumber = minNumber / kRandomXandYDivisorAndMultiplier
+    let multiplier = (maxNumer - minNumber) / kRandomXandYDivisorAndMultiplier
     var randomNumber = Int(arc4random_uniform(UInt32(multiplier))+UInt32(newMinNumber))
     randomNumber = randomNumber * kRandomXandYDivisorAndMultiplier
     return randomNumber

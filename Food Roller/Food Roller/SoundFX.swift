@@ -26,23 +26,23 @@ class BackgroundSFX{
       playerToUse.numberOfLoops = 0
       playerToUse.volume = sfxVolume
       playerToUse.play()
-      return nil
-    }
-    
+      
+      }
       do {
-        let newPlayer = try AVAudioPlayer(contentsOfURL: url!)
-        players.append(newPlayer)
-        newPlayer.numberOfLoops = 0
-        newPlayer.volume = sfxVolume
-        newPlayer.play()
-        return nil
+        if let url = url {
+    let newPlayer = try AVAudioPlayer(contentsOfURL: url)
+      players.append(newPlayer)
+      newPlayer.numberOfLoops = 0
+      newPlayer.volume = sfxVolume
+      newPlayer.play()
+        }
       } catch {
         print("couldn't load \(url!.lastPathComponent): \(error)")
-        return nil
+//        return nil
       }
    
     }
-    return nil
+//    return nil
   }
   
 
