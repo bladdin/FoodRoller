@@ -13,12 +13,6 @@ import SpriteKit
 //Mark: Number of random numbers created
 let kNumberOfRandoms = 5
 
-//MARK: Random Number Constants
-let krandomNumber1 = 1
-let krandomNumber2 = 2
-let krandomNumber3 = 3
-let krandomNumber4 = 4
-let krandomNumber5 = 5
 
 //MARK: Path Lenght Constants
 let kPath1Length = 1
@@ -46,7 +40,7 @@ let kBobCategory = 2
 let kSideBoundsCategory = 3
 
 //MARK: Gravity
-let kGravityMagnitude = -(9.8)
+let kGravityMagnitude = -(5.0)
 
 //MARK: World Setup in GameScene
 let kWorldFrameX = -300
@@ -57,9 +51,6 @@ let kWorldFrameHeight = 500
 let kBackgroundLoop = 2
 let kBackgroundWidth = 1024
 let kBackgroundHeight = 768
-
-//MARK: Spike Node Position in GameScene
-let kSpikeNodePositionY = -30
 
 //MARK: Bottom Bounds in GameScene
 let kBottomBoundsHeightAdd = 130
@@ -100,18 +91,13 @@ let kTouchEndsMultiplier : CGFloat = 0.5
 //MARK: Update Background in GameScene
 let kUpdateBGMultiplier : CGFloat = 2
 
-//MARK: Update Spikes in GameScene
-let KUpdateSpikeMultiplier : CGFloat = 2
-
 //MARK: Update HotDog Too Far Away
 let kHotDogTooFarAwayX : CGFloat = -100
 let KHotDogTooFarAwayY : CGFloat = 250
 
 //MARK Difficulty increase
-let kDifficultyTimerReset : NSTimeInterval = 3
-let kAddMoreSpeedToGame : CGFloat = 0.25
-let kAddMoreGravity : CGFloat = 1.5
-let kAddTimeToTimers : NSTimeInterval = 0.75
+let kAddMoreSpeedToGame : CGFloat = 0.03
+let kAddMoreGravity : CGFloat = 0.15
 
 //Mark: Speeds
 let kParalaxMultiplyer : CGFloat = 1.15

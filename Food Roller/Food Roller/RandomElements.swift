@@ -14,25 +14,24 @@ class RandomElements{
   
   //MARK: Random Path Length
   class func randomPathLength() -> Int?{
-    let random = RandomCaller.createsRandomNumber(kNumberOfRandoms)
-    switch random {
-    case krandomNumber1:
-      return kPath1Length
-    case krandomNumber2:
-      return kPath2Length
-    case krandomNumber3:
-      return kPath3Length
-    case krandomNumber4:
-      return kPath4Length
-    case krandomNumber5:
-      return kPath5Length
-    default:
-      return nil
-    }
+    return RandomCaller.createsRandomNumber(5)
+//    switch random {
+//    case 1:
+//      return 1
+//    case 2:
+//      return 2
+//    case 3:
+//      return kPath3Length
+//    case 4:
+//      return kPath4Length
+//    case 5:
+//      return kPath5Length
+//    default:
+//      return nil
+//    }
   }
   //MARK: Random Path Y Variable Position
   class func randomPathVarYPosition(min : Int, max : Int ) -> Int!{
-    let random = RandomCaller.cratesRandomXandY(max, minNumber: min)
-    return random
+    return RandomCaller.cratesRandomXandY(max, minNumber: min)
   }
 }

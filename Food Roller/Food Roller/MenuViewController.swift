@@ -28,7 +28,6 @@ class MenuViewController: UIViewController {
     gameVC = self.storyboard?.instantiateViewControllerWithIdentifier("Game") as! GameViewController
  
     if !AVAudioSession.sharedInstance().otherAudioPlaying {
-      BackgroundSFX.playBackgroundSFX("SquishFart.mp3")
       BackgroundMusic.playBackgroundMusic("bensoundCute.mp3")
     }
     
