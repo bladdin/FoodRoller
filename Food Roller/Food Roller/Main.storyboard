@@ -9,7 +9,7 @@
         <!--Game View Controller-->
         <scene sceneID="CtS-rA-C9T">
             <objects>
-                <viewController storyboardIdentifier="Game" id="LVB-YS-i5n" customClass="GameViewController" customModule="Food_Roller" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Game" id="LVB-YS-i5n" customClass="GameViewController" customModule="Hotdog_Slinger" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PCf-gQ-wO7"/>
                         <viewControllerLayoutGuide type="bottom" id="b3d-qh-BLL"/>
@@ -160,7 +160,7 @@
         <!--Menu View Controller-->
         <scene sceneID="sjh-mL-zf8">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="u0I-zM-b83" customClass="MenuViewController" customModule="Food_Roller" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="u0I-zM-b83" customClass="MenuViewController" customModule="Hotdog_Slinger" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8Tj-eU-MIm"/>
                         <viewControllerLayoutGuide type="bottom" id="7uY-O6-7rb"/>
@@ -355,7 +355,7 @@
         <!--Settings View Controller-->
         <scene sceneID="T5I-l8-CyU">
             <objects>
-                <viewController id="ILQ-wP-xnC" customClass="SettingsViewController" customModule="Food_Roller" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ILQ-wP-xnC" customClass="SettingsViewController" customModule="Hotdog_Slinger" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hMJ-jo-fBm"/>
                         <viewControllerLayoutGuide type="bottom" id="PXM-rY-UxF"/>
@@ -444,7 +444,7 @@
         <!--Help View Controller-->
         <scene sceneID="rRg-XV-jx8">
             <objects>
-                <viewController id="Xdd-54-USa" customClass="HelpViewController" customModule="Food_Roller" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Xdd-54-USa" customClass="HelpViewController" customModule="Hotdog_Slinger" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Tdp-8c-5Uu"/>
                         <viewControllerLayoutGuide type="bottom" id="5u0-sa-9LP"/>
@@ -527,6 +527,6 @@
         <image name="title.png" width="600" height="349"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="j0Y-YV-0eW"/>
+        <segue reference="ky1-Hn-hY5"/>
     </inferredMetricsTieBreakers>
 </document>
