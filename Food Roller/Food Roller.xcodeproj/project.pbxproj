@@ -118,7 +118,7 @@
 		B535A7E91B8B8BF1000AF550 /* RandomElements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomElements.swift; sourceTree = "<group>"; };
 		B535A7ED1B8BA2A5000AF550 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B535A7EF1B8BB231000AF550 /* RandomCaller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomCaller.swift; sourceTree = "<group>"; };
-		B57D73F81B87D89200B3838B /* Food Roller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food Roller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B57D73F81B87D89200B3838B /* Hotdog Slinger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hotdog Slinger.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B57D73FC1B87D89200B3838B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B57D73FD1B87D89200B3838B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B57D73FF1B87D89200B3838B /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -264,7 +264,7 @@
 		B57D73F91B87D89200B3838B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B57D73F81B87D89200B3838B /* Food Roller.app */,
+				B57D73F81B87D89200B3838B /* Hotdog Slinger.app */,
 				B57D74111B87D89200B3838B /* Food RollerTests.xctest */,
 			);
 			name = Products;
@@ -331,7 +331,7 @@
 			);
 			name = "Food Roller";
 			productName = "Food Roller";
-			productReference = B57D73F81B87D89200B3838B /* Food Roller.app */;
+			productReference = B57D73F81B87D89200B3838B /* Hotdog Slinger.app */;
 			productType = "com.apple.product-type.application";
 		};
 		B57D74101B87D89200B3838B /* Food RollerTests */ = {
@@ -594,7 +594,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Benjamin-Laddin.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "Food Roller";
+				PRODUCT_NAME = "Hotdog Slinger";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -611,7 +611,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Benjamin-Laddin.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "Food Roller";
+				PRODUCT_NAME = "Hotdog Slinger";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;

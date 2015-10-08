@@ -43,6 +43,7 @@ class GameViewController: UIViewController {
     sc.size = self.view.frame.size
     sc.scaleMode = .AspectFill
     sc.gameVC = self
+
     
   }
   override func viewWillAppear(animated: Bool) {

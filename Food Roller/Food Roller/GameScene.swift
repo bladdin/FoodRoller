@@ -66,6 +66,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
       bg.size = CGSize(width: 1024, height: 768)
       bg.anchorPoint = CGPointZero
       bg.position = CGPoint(x: CGFloat(i) * bg.size.width, y: 0)
+//      bg.zPosition = -100
       bg.name = "gameBackground"
       addChild(bg)
       hotdog.physicsBody?.dynamic = true
@@ -73,7 +74,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     //Mark: Killzone Boundary
-    let killZone = SKSpriteNode(color: UIColor.redColor(), size: CGSize(width:size.width+1000, height:60))
+    let killZone = SKSpriteNode(color: UIColor.redColor(), size: CGSize(width:size.width+1000, height:80))
     
     killZone.anchorPoint = CGPointZero
     killZone.position = CGPointZero
@@ -101,12 +102,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     timerLabelNode.fontName = "MarkerFelt-Wide"
     self.addChild(timerLabelNode)
     
-    //MARK: Moves the Path Nodes AKA Bobs
+    
     let distanceBobsMove = CGFloat(self.frame.width * kDistanceBobsMove + (bob.frame.width * kDistanceBobsMove))
     moveBobs = SKAction.moveByX(-distanceBobsMove, y: 0.0, duration: NSTimeInterval(nodeSpeed * distanceBobsMove))
     let removeBobs = SKAction.removeFromParent()
     moveAndRemove = SKAction.sequence([moveBobs!, removeBobs])
-    arrayOfPathsInGame.removeAtIndex(0)
+    //    arrayOfPathsInGame.removeAtIndex(0)
     setupPickles()
     
   }
@@ -136,9 +137,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   //Mark: Pathway spawning AKA Bobs
   func spawnBobs() {
 //    let bob = CreatePath.CreatePath(<#T##xInitialPosition: Int##Int#>, yInitialPosition: <#T##Int#>, width: <#T##Int#>)
-    let bob = CreatePath.CreatePath(RandomElements.randomPathVarYPosition(Int(self.frame.width * 1.5), max: Int(self.frame.width * 1.5 + 50)), yInitialPosition: RandomElements.randomPathVarYPosition(Int(180), max: Int(self.frame.height)), width: RandomElements.randomPathLength()!)
+    let bob = CreatePath.CreatePath(Int(RandomElements.randomPathVarYPosition(Int(self.frame.width * 1.5), max: Int(self.frame.width * 1.5 + 50))), yInitialPosition: RandomElements.randomPathVarYPosition(Int(180), max: Int(self.frame.height)), width: RandomElements.randomPathLength()!)
     
-    arrayOfPathsInGame.append(bob)
+//    arrayOfPathsInGame.append(bob)
     CreatePath.MovePathObject(bob)
     bob.name = "bob"
     self.addChild(bob)
@@ -155,7 +156,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     if gameStop == false {
       gameStop = true
       gameOver = false
-      spikeSpeed = 0
       backgroundSpeed = 0
       hotdog.paused = true
       hotdog.physicsBody?.resting = true
@@ -289,6 +289,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   // play the game scene music when hit retry button
   func retryGame () {
     BackgroundMusic.playBackgroundMusic("bensoundFunnysong.mp3")
+    backgroundSpeed = 1
+    
   }
   
   //Mark: Reset game function
@@ -309,7 +311,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   }
   
   func resetDifficulty() {
-    self.speed = 1
     backgroundSpeed = 1
     gravityMagnitude = CGFloat(kGravityMagnitude)
   }
@@ -328,7 +329,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
       node.removeFromParent()
       self.gameVC.gameoverView.hidden = true
     }
-    self.setupPickles()
+//    self.setupPickles()
     
   }
   
