@@ -63,6 +63,7 @@ class GameViewController: UIViewController {
   
   @IBAction func menuButtonAction(sender: UIButton) {
     // segue to menu
+    BackgroundSFX.playBackgroundSFX("SquishFart.mp3")
     sc.resetGame()
     sc.removeAllChildren()
     sc.removeAllActions()
@@ -73,8 +74,7 @@ class GameViewController: UIViewController {
   @IBAction func retryButtonAction(sender: UIButton) {
     BackgroundSFX.playBackgroundSFX("SquishFart.mp3")
     sc.resetGame()
-    
-    //presentScene()
+    sc.retryGame()
   }
   
   @IBAction func shareButtonAction(sender: UIButton) {
