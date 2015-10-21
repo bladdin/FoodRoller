@@ -368,7 +368,7 @@
 					};
 					B57D74101B87D89200B3838B = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = A4CYB57ULV;
+						DevelopmentTeam = 597HR9EHGW;
 						TestTargetID = B57D73F71B87D89200B3838B;
 					};
 				};
@@ -593,7 +593,7 @@
 				INFOPLIST_FILE = "Food Roller/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Benjamin-Laddin.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "Hotdog-Slinger.Hotdog-Slinger";
 				PRODUCT_NAME = "Hotdog Slinger";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
@@ -610,7 +610,7 @@
 				INFOPLIST_FILE = "Food Roller/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Benjamin-Laddin.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "Hotdog-Slinger.Hotdog-Slinger";
 				PRODUCT_NAME = "Hotdog Slinger";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;

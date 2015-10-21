@@ -39,21 +39,19 @@ class MenuViewController: UIViewController {
     
   }
   
-//  func animation() {
-//    var destLocation = CGPoint(x: 130, y: 28)
-//    titleImageView.
-//  }
   
   @IBAction func startButtonAction(sender: UIButton) {
+//    BackgroundSFX.playBackgroundSFX("SquishFart.mp3")
+
     
-    presentViewController(gameVC, animated: true, completion: nil)
+    presentViewController(gameVC, animated: false, completion: nil)
   }
   @IBAction func helpButtonAction(sender: UIButton) {
-    BackgroundSFX.playBackgroundSFX("SquishFart.mp3")
+//    BackgroundSFX.playBackgroundSFX("SquishFart.mp3")
   }
   
   @IBAction func settingsButton(sender: UIButton) {
-    BackgroundSFX.playBackgroundSFX("SquishFart.mp3")
+//    BackgroundSFX.playBackgroundSFX("SquishFart.mp3")
   }
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
