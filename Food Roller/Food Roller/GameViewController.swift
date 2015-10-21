@@ -10,22 +10,6 @@ import UIKit
 import SpriteKit
 import Social
 
-extension SKNode {
-//  class func unarchiveFromFile(file : String) -> SKNode? {
-//    if let path = NSBundle.mainBundle().pathForResource(file, ofType: "sks") {
-//      var sceneData = NSData(contentsOfFile: path, options: .DataReadingMappedIfSafe , error: nil)!
-//      var archiver = NSKeyedUnarchiver(forReadingWithData: sceneData)
-//      
-//      archiver.setClass(self.classForKeyedUnarchiver(), forClassName: "SKScene")
-//      let scene = archiver.decodeObjectForKey(NSKeyedArchiveRootObjectKey) as! GameScene
-//      archiver.finishDecoding()
-//      return scene
-//    } else {
-//      return nil
-//    }
-//  }
-}
-
 
 class GameViewController: UIViewController {
   var gameoverView = UIView()
@@ -66,7 +50,7 @@ class GameViewController: UIViewController {
   
   @IBAction func menuButtonAction(sender: UIButton) {
     // segue to menu
-    BackgroundSFX.playBackgroundSFX("SquishFart.mp3")
+//    BackgroundSFX.playBackgroundSFX("SquishFart.mp3")
     sc.resetGame()
     sc.removeAllChildren()
     sc.removeAllActions()
@@ -75,15 +59,16 @@ class GameViewController: UIViewController {
   }
   
   @IBAction func retryButtonAction(sender: UIButton) {
-    BackgroundSFX.playBackgroundSFX("SquishFart.mp3")
+//    BackgroundSFX.playBackgroundSFX("SquishFart.mp3")
+    gameoverView.hidden = true;
     sc.resetGame()
     sc.retryGame()
   }
   
   @IBAction func shareButtonAction(sender: UIButton) {
-    BackgroundSFX.playBackgroundSFX("SquishFart.mp3")
+//    BackgroundSFX.playBackgroundSFX("SquishFart.mp3")
     let score : String = sc.timerLabelNode.text!
-//    let activityViewController = UIActivityViewController(activityItems: ["WOW! My Score on Hotdog Slinger is: " + score + "\nThis is AWESOME!\nTry Hotdog Slinger now and beat my score!"], applicationActivities: nil)
+
 //
     //Generate the screenshot
     UIGraphicsBeginImageContext(view.frame.size)
@@ -91,15 +76,9 @@ class GameViewController: UIViewController {
     view.layer.renderInContext(context)
     
     let screenShot = self.view?.pb_takeSnapshot()
-//    let screenShot: UIImage = UIGraphicsGetImageFromCurrentImageContext()
-//    UIGraphicsEndImageContext()
-    
-//    let postImage = UIImage(named: "\(screenShot)")
-    
+
     
     socialShare(sharingText: "I just hit \(score) on Hotdog Slinger! Beat it!", sharingImage: screenShot)
-
-//    self.presentViewController(activityViewController, animated: true, completion: nil)
   }
   
   func socialShare(sharingText sharingText: String?, sharingImage: UIImage?) {

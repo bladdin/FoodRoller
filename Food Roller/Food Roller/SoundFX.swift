@@ -38,16 +38,13 @@ class BackgroundSFX{
         }
       } catch {
         print("couldn't load \(url!.lastPathComponent): \(error)")
-//        return nil
       }
    
     }
-//    return nil
   }
   
 
   class func adjustVolume(sfxVolume: Float){
-  //  println("sfxvol: \(sfxVolume)")
     players.map { (player) in
       player.volume = sfxVolume
     }

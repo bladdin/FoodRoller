@@ -32,6 +32,6 @@ var musicPlayer : AVAudioPlayer!
 var timeForDifficultyIncrease : NSTimeInterval = 3
 
 var nodeSpeed:CGFloat = 0.01
-var musicVolume:Float = 0.5
-var sfxVolume: Float = 0.5
+var musicVolume:Float = 0.3
+var sfxVolume: Float = 0.05
  

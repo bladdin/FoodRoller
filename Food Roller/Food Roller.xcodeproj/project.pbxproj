@@ -368,7 +368,7 @@
 					};
 					B57D74101B87D89200B3838B = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = A4CYB57ULV;
+						DevelopmentTeam = 597HR9EHGW;
 						TestTargetID = B57D73F71B87D89200B3838B;
 					};
 				};

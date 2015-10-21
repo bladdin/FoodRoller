@@ -12,14 +12,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="desert.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ikm-MI-XYZ">
-                    <rect key="frame" x="0.0" y="40" width="400" height="560"/>
+                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="Ikm-MI-XYZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="OTF-ez-g9d"/>
                 <constraint firstAttribute="trailing" secondItem="Ikm-MI-XYZ" secondAttribute="trailing" id="TM7-Qu-GGx"/>
-                <constraint firstItem="Ikm-MI-XYZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="40" id="e9I-Xn-wVN"/>
+                <constraint firstItem="Ikm-MI-XYZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="e9I-Xn-wVN"/>
                 <constraint firstAttribute="bottom" secondItem="Ikm-MI-XYZ" secondAttribute="bottom" id="xYO-X9-UWe"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
